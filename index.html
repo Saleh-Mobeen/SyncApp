@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>app</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="home-body">
+    <section id="top-tab">
+        <h1>App</h1>
+
+
+        <button id="add-contact-btn">Add Contcact</button>
+
+        <details>
+            <summary>
+                <div class="my-profile">
+                    <img src="" alt="no img" id="profilePic">
+                </div>
+            </summary>
+
+            <div id="profile-opt">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px">
+                        <path
+                            d="M384-480q-60 0-102-42t-42-102q0-60 42-102t102-42q60 0 102 42t42 102q0 60-42 102t-102 42ZM96-192v-92q0-26 12.5-47.5T143-366q55-32 116-49t125-17q11 0 20.5.5T425-430q-7 17-10.5 35t-5.5 36l-25-1q-54 0-106 14t-99 42q-4.95 2.94-7.98 8.24Q168-290.47 168-284v20h251q4.85 18.63 12.92 36.81Q440-209 451-192H96Zm543 48-12-56q-14-5-26.5-12T577-228l-55 17-32-55 41-40q-4-14-3.5-29t3.5-29l-41-39 32-56 54 16q11-10 24-17.5t27-11.5l13-56h64l13 56q14 5 27 12t24 17l54-15 32 55-40 38q2 15 2 30.05 0 15.06-3 28.95l41 39-32 55-55-16q-11 9-23.5 16.5T717-200l-14 56h-64Zm33.21-120Q702-264 723-285.21t21-51Q744-366 722.79-387t-51-21Q642-408 621-386.79t-21 51Q600-306 621.21-285t51 21Zm-288-288Q414-552 435-573.21t21-51Q456-654 434.79-675t-51-21Q354-696 333-674.79t-21 51Q312-594 333.21-573t51 21Zm-.21-72Zm35 360Z" />
+                    </svg>
+
+                    <button onclick="location.href='profile.html'">My Profile</button>
+                </div>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px">
+                        <path
+                            d="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24 12L590-80H370Zm70-80h79l14-106q31-8 57.5-23.5T639-327l99 41 39-68-86-65q5-14 7-29.5t2-31.5q0-16-2-31.5t-7-29.5l86-65-39-68-99 42q-22-23-48.5-38.5T533-694l-13-106h-79l-14 106q-31 8-57.5 23.5T321-633l-99-41-39 68 86 64q-5 15-7 30t-2 32q0 16 2 31t7 30l-86 65 39 68 99-42q22 23 48.5 38.5T427-266l13 106Zm42-180q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Zm-2-140Z" />
+                    </svg>
+                    <button>Settings</button>
+                </div>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px">
+                        <path
+                            d="M216-144q-29.7 0-50.85-21.15Q144-186.3 144-216v-528q0-29.7 21.15-50.85Q186.3-816 216-816h264v72H216v528h264v72H216Zm432-168-51-51 81-81H384v-72h294l-81-81 51-51 168 168-168 168Z" />
+                    </svg>
+                    <button id="SignOut">Sign Out</button>
+                </div>
+            </div>
+        </details>
+    </section>
+
+    <section class="contacts-sec">
+
+    </section>
+
+    <section class="add-contact-sec">
+        <form id="add-contact-form" nosvalidate>
+            <h2>Add A New Contact</h2>
+            <div class="ani-input">
+                <input type="email" id="add-contact-email" placeholder=" " spellcheck="false">
+                <label for="add-contact-email">Contact Email</label><br>
+            </div>
+            <span class="texterr">Whow!! Erorr</span>
+            <input type="submit" value="Add contact" id="add-contact-sub">
+
+        </form>
+
+    </section>
+
+    <div id="loading">
+        <p>Loading Resources...</p>
+        <section>
+
+            <div style="--delay: 1s;"></div>
+            <div style="--delay: 2s;"></div>
+            <div style="--delay: 3s;"></div>
+            <div style="--delay: 4s;"></div>
+            <div style="--delay: 5s;"></div>
+            <div style="--delay: 6s;"></div>
+            <div style="--delay: 7s;"></div>
+            <div style="--delay: 8s;"></div>
+        </section>
+        <button onclick="location.reload()">Reload</button>
+
+    </div>
+
+    <script src="home.js" type="module"></script>
+</body>
+
+</html>

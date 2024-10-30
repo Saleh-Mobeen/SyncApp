@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up | chat app</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="auth-body">
+    <section id="auth-sec">
+        <input type="checkbox" class="hide-btn">
+
+        <div class="sign-in">
+            <h1>Sign in</h1>
+            <form id="sign-in-f" novalidate>
+
+                <div class="ani-input">
+                    <input type="email" id="sign-in-email" placeholder=" ">
+                    <label for="sign-in-email">Email</label><br>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="var(--acc)">
+                        <path
+                            d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
+                    </svg>
+                </div>
+                <br>
+                <div class="ani-input">
+                    <input type="password" id="sign-in-pass" placeholder=" " maxlength="16" minlength="6">
+                    <label for="sign-in-pass">Password</label><br>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="var(--acc)">
+                        <path
+                            d="M280-400q-33 0-56.5-23.5T200-480q0-33 23.5-56.5T280-560q33 0 56.5 23.5T360-480q0 33-23.5 56.5T280-400Zm0 160q-100 0-170-70T40-480q0-100 70-170t170-70q67 0 121.5 33t86.5 87h352l120 120-180 180-80-60-80 60-85-60h-47q-32 54-86.5 87T280-240Zm0-80q56 0 98.5-34t56.5-86h125l58 41 82-61 71 55 75-75-40-40H435q-14-52-56.5-86T280-640q-66 0-113 47t-47 113q0 66 47 113t113 47Z" />
+                    </svg>
+                </div>
+                <br>
+
+                <div class="sub-container">
+                    <div class="load-sub">
+                        <input type="submit" value="Sign in" class="submit-f">
+                    </div>
+
+                    <div>
+                        <button class="link-btn" type="button" id="fgbtn">forgot password</button><br><br>
+                    </div>
+                </div>
+            </form>
+            <br>
+            <div class="alter-auth">
+                <button onclick="signchange()" class="link-btn">don't have an account? Sign up</button>
+            </div>
+
+            <div class="err" id="sign-in-err">
+                <h4>hello</h4>
+            </div>
+
+
+        </div>
+
+        <div class="sign-up">
+            <h1>Sign up</h1>
+
+            <form id="sign-up-f" novalidate>
+
+                <div class="ani-input">
+                    <input type="text" id="sign-up-name" placeholder=" " spellcheck="false">
+                    <label for="sign-up-name">Full Name</label><br>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="var(--acc)">
+                        <path
+                            d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z" />
+                    </svg>
+                </div>
+                <br>
+                <div class="ani-input">
+                    <input type="email" id="sign-up-email" placeholder=" ">
+                    <label for="sign-up-email">Email</label><br>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="var(--acc)">
+                        <path
+                            d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
+                    </svg>
+                </div>
+                <br>
+                <div class="ani-input">
+                    <input type="password" id="sign-up-pass" placeholder=" " maxlength="16" minlength="6">
+                    <label for="sign-up-pass">Password</label><br>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="var(--acc)">
+                        <path
+                            d="M280-400q-33 0-56.5-23.5T200-480q0-33 23.5-56.5T280-560q33 0 56.5 23.5T360-480q0 33-23.5 56.5T280-400Zm0 160q-100 0-170-70T40-480q0-100 70-170t170-70q67 0 121.5 33t86.5 87h352l120 120-180 180-80-60-80 60-85-60h-47q-32 54-86.5 87T280-240Zm0-80q56 0 98.5-34t56.5-86h125l58 41 82-61 71 55 75-75-40-40H435q-14-52-56.5-86T280-640q-66 0-113 47t-47 113q0 66 47 113t113 47Z" />
+                    </svg>
+                </div>
+                <br>
+                <div class="ani-input">
+                    <input type="password" id="sign-up-cnf" placeholder=" " maxlength="16" minlength="6">
+                    <label for="sign-up-cnf">Confirm Password</label><br>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="var(--acc)">
+                        <path
+                            d="M280-400q-33 0-56.5-23.5T200-480q0-33 23.5-56.5T280-560q33 0 56.5 23.5T360-480q0 33-23.5 56.5T280-400Zm0 160q-100 0-170-70T40-480q0-100 70-170t170-70q67 0 121.5 33t86.5 87h352l120 120-180 180-80-60-80 60-85-60h-47q-32 54-86.5 87T280-240Zm0-80q56 0 98.5-34t56.5-86h125l58 41 82-61 71 55 75-75-40-40H435q-14-52-56.5-86T280-640q-66 0-113 47t-47 113q0 66 47 113t113 47Z" />
+                    </svg>
+                </div>
+                <br>
+                <div class="load-sub">
+                    <input type="submit" value="Sign up" class="submit-f">
+                </div>
+
+            </form>
+            <br>
+            <div class="alter-auth">
+                <br><br>
+                <button onclick="signchange()" class="link-btn">already have an account? Sign in</button>
+            </div>
+
+
+            <div class="err" id="sign-up-err">
+                <h4>helloss 11111111</h4>
+            </div>
+        </div>
+
+
+        <div class="para-auth">
+            <h2>Welcome To smach</h2>
+            <p>Smach is a simple chat application which is easy to use. Its robust architecture enables it to send
+                messages in just a matter of seconds</p>
+        </div>
+
+    </section>
+
+    <script>
+
+        const signpara = document.getElementsByClassName('para-auth')[0]
+        const hidebtn = document.getElementsByClassName('hide-btn')[0]
+
+        function signchange() {
+
+            setTimeout(() => {
+
+                hidebtn.click()
+            }, 500)
+
+            const element = document.getElementsByClassName('para-auth')[0];
+
+            element.classList.remove('animate-sign-change');
+            void element.offsetWidth;
+            element.classList.add('animate-sign-change');
+        }
+
+
+    </script>
+
+    <script src="auth.js" type="module"></script>
+</body>
+
+</html>
