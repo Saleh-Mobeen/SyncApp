@@ -1,11 +1,11 @@
-import { getChat, waitForAuth, sendMessage, addListener, userData, getuser } from "./firebase.js";
+import { getChat, waitForAuth, sendMessage, addListener, userData, goOffline } from "./firebase.js";
 
 const messageF = document.getElementById('message-f');
 const chatArea = document.getElementsByClassName('chat-area')[0];
 
 const chHead = document.getElementsByClassName('ch-head')[0];
 
-
+goOffline()
 await waitForAuth()
 loadChat()
 

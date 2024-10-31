@@ -25,14 +25,17 @@ export let userData = {};
 const usersColl = collection(db, 'Users');
 const messegesColl = collection(db, 'Messages');
 
-enableIndexedDbPersistence(db)
-    .catch((err) => {
-        if (err.code === 'failed-precondition') {
-            console.error('Multiple tabs open, persistence can only be enabled in one tab at a time.');
-        } else if (err.code === 'unimplemented') {
-            console.error('The current browser does not support offline persistence.');
-        }
-    });
+export async function goOffline() {
+
+    enableIndexedDbPersistence(db)
+        .catch((err) => {
+            if (err.code === 'failed-precondition') {
+                console.error('Multiple tabs open, persistence can only be enabled in one tab at a time.');
+            } else if (err.code === 'unimplemented') {
+                console.error('The current browser does not support offline persistence.');
+            }
+        });
+}
 
 
 console.log(authInstance);
@@ -93,18 +96,7 @@ async function updateuserdata() {
 
     } catch (error) {
         if (!navigator.onLine) {
-
-
-            if (data) {
-                userData = data.auth
-                console.log('offline');
-
-            } else {
-
-                throw new Error("No connection");
-            }
-
-
+            throw new Error("No connection");
 
         } else {
             throw new Error(error);

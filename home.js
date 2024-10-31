@@ -1,4 +1,4 @@
-import { authInstance, addNewContact, getContacts, waitForAuth, userData } from './firebase.js'
+import { authInstance, addNewContact, getContacts, waitForAuth, userData, goOffline } from './firebase.js'
 
 const chatSec = document.getElementsByClassName('contacts-sec')[0]
 const addcontactSec = document.getElementsByClassName('add-contact-sec')[0]
@@ -144,6 +144,7 @@ function makeerr(ele, err) {
 
 document.body.style.pointerEvents = 'none'
 loading.children[0].textContent = 'Initializing User...'
+goOffline()
 waitForAuth().then(user => {
     console.log(authInstance);
     document.body.style.pointerEvents = 'all'
@@ -153,6 +154,7 @@ waitForAuth().then(user => {
     initialzeuser()
 
 }).catch(error => {
+    showauth()
 
     console.error(error);
     console.log('no internet');

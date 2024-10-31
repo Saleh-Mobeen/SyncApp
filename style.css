@@ -35,6 +35,7 @@ body {
     align-items: center;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
 
 }
 
@@ -396,6 +397,7 @@ input:-moz-autofill {
 
 .contact {
     display: flex;
+    align-items: center;
     padding: 10px;
     cursor: pointer;
     transition: background-color 0.1s ease, box-shadow 0.1s ease;
@@ -884,8 +886,8 @@ details summary::marker {
 /***********************************/
 @media (max-width: 925px) {
     #auth-body {
-        width: auto;
-        height: auto;
+        width: 100vw;
+        height: 100vh;
     }
 
     #auth-sec {
@@ -898,13 +900,22 @@ details summary::marker {
         border-radius: 0px;
     }
 
+    #auth-sec::before {
+        display: none;
+    }
+
     .para-auth {
         justify-content: center;
         border-radius: 0px;
         border-top-left-radius: 100px;
         border-top-right-radius: 100px;
-        height: 200px;
+        height: 150px;
         width: calc(100vw - 100px);
+    }
+
+    .sign-in>h1,
+    .sign-up>h1 {
+        font-size: 2em !important;
     }
 
 
@@ -915,7 +926,7 @@ details summary::marker {
         100% {
             position: absolute;
             bottom: 0;
-            height: 200px;
+            height: 150px;
         }
 
         50% {
@@ -928,11 +939,41 @@ details summary::marker {
 
     #sign-in-err {
         margin-top: 100px;
+        font-size: 0.8em;
         align-self: center;
     }
 
     #sign-up-err {
         margin-top: 50px;
+        font-size: 0.8em;
         align-self: center;
+    }
+
+    /************************************/
+
+    #top-tab {
+        height: 70px;
+    }
+
+    #top-tab>h1 {
+        font-size: 1.5em;
+    }
+
+    .my-profile {
+        width: 50px;
+        height: 50px;
+    }
+
+    .my-profile img {
+        height: 50px;
+    }
+
+    .contact-img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .contact-img img {
+        height: 50px;
     }
 }
