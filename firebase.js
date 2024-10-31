@@ -1,5 +1,5 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js';
-import { getFirestore, collection, addDoc, query, where, getDocs, onSnapshot, serverTimestamp, updateDoc, doc, arrayUnion, enableIndexedDbPersistence } from 'https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js';
+import { getFirestore, collection, addDoc, query, where, getDocs, onSnapshot, serverTimestamp, updateDoc, doc, arrayUnion, enableIndexedDbPersistence, clearIndexedDbPersistence, terminate } from 'https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js';
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, sendPasswordResetEmail, updateProfile } from 'https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js';
 import { getStorage, ref, uploadBytes, getDownloadURL, deleteObject, listAll, getMetadata, updateMetadata } from 'https://www.gstatic.com/firebasejs/10.12.4/firebase-storage.js';
 const firebaseConfig = {
@@ -36,6 +36,8 @@ export async function goOffline() {
             }
         });
 }
+
+
 
 
 console.log(authInstance);
@@ -139,6 +141,22 @@ export async function signUp(username, email, password) {
 
     } catch (error) {
         throw error;
+    }
+}
+
+export async function clearCache() {
+    try {
+        await terminate(db);
+
+        await clearIndexedDbPersistence(db);
+    } catch (err) {
+        if (err.code === 'failed-precondition') {
+            console.error("Cannot clear persistence while Firestore is in use.");
+        } else if (err.code === 'unimplemented') {
+            console.error("Persistence is not supported by this browser.");
+        } else {
+            console.error("Error clearing cache:", err);
+        }
     }
 }
 

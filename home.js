@@ -1,4 +1,4 @@
-import { authInstance, addNewContact, getContacts, waitForAuth, userData, goOffline } from './firebase.js'
+import { authInstance, addNewContact, getContacts, waitForAuth, userData, goOffline, clearCache } from './firebase.js'
 
 const chatSec = document.getElementsByClassName('contacts-sec')[0]
 const addcontactSec = document.getElementsByClassName('add-contact-sec')[0]
@@ -104,6 +104,7 @@ async function initialzeuser() {
 }
 
 document.getElementById('SignOut').addEventListener('click', async () => {
+    await clearCache()
     await authInstance.signOut()
     showauth()
 })
