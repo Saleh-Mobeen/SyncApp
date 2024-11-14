@@ -1,8 +1,10 @@
-const CACHE_NAME = 'chat-app-image-cache-v1';
+const CACHE_NAME = 'SyncApp-image-cache-v1';
 
 self.addEventListener('fetch', (event) => {
 
     const request = event.request;
+    console.log(request);
+
 
     // Check if the request is for an image
     if (request.destination === 'image' && request.url.startsWith('https://')) {
@@ -30,7 +32,50 @@ self.addEventListener('fetch', (event) => {
             })
         );
     } else {
-        console.log('no', event);
+        console.log('other', event);
+        event.respondWith(
+            caches.match(event.request).then(response => {
+                return response || fetch(event.request);
+            })
+        );
 
     }
+});
+
+const cacheName = 'SyncApp-v1';
+const assets = [
+    './',
+    './auth.html',
+    './auth.js',
+
+    './chatroom.html',
+    './chatroom.js',
+
+    './firebase.js',
+
+    './home.js',
+    './index.html',
+
+    './logo white.svg',
+    './logo.svg',
+    './icon 192.png',
+    './icon 512.png',
+
+    './manifest.json',
+
+    './settings.html',
+    './settings.js',
+
+    './style.css',
+
+
+
+];
+
+self.addEventListener('install', event => {
+    event.waitUntil(
+        caches.open(cacheName).then(cache => {
+            return cache.addAll(assets);
+        })
+    );
 });

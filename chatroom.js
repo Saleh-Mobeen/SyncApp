@@ -3,7 +3,6 @@ import { getChat, waitForAuth, sendMessage, addListener, userData, goOffline } f
 const messageF = document.getElementById('message-f');
 const chatArea = document.getElementsByClassName('chat-area')[0];
 
-const chHead = document.getElementsByClassName('ch-head')[0];
 
 goOffline()
 await waitForAuth()
@@ -19,9 +18,10 @@ async function loadChat() {
 
     const otherUserData = userData.contacts.filter(contact => contact.email == email)[0]
 
-    chHead.children[0].children[0].src = otherUserData.profilePicurl
-    chHead.children[1].children[0].textContent = otherUserData.username
-    chHead.children[1].children[1].textContent = otherUserData.email
+
+    document.querySelector('.ch-profile>img').src = otherUserData.profilePicurl
+    document.querySelector('#ch-info>h2').textContent = otherUserData.username
+    document.querySelector('#ch-info>p').textContent = otherUserData.email
 
 
     const chatsnap = await getChat(email);

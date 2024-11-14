@@ -39,6 +39,7 @@ body {
 
 }
 
+
 #home-body {
     display: flex;
     flex-direction: column;
@@ -63,6 +64,36 @@ body {
     overflow-x: hidden;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    margin: 1%;
+    color: var(--acc);
+}
+
+
+.logo-home {
+    display: flex;
+    align-items: center;
+
+}
+
+.logo h1,
+.logo-home {
+    margin: 0 10px;
+}
+
+.logo img,
+.logo-home {
+    width: 40px;
+    height: 40px;
+}
+
+
+
 .texterr {
     opacity: 0;
     align-self: start;
@@ -83,7 +114,6 @@ body {
 #auth-sec {
     display: flex;
     justify-content: space-between;
-    border: 2px solid #333;
     width: 900px;
     height: 700px;
     background-color: var(--bg-secon);
@@ -95,11 +125,11 @@ body {
     position: absolute;
     width: 900px;
     height: 700px;
-    border-radius: 10px;
+    border-radius: 11px;
     z-index: -1;
     opacity: 0.5;
     background: linear-gradient(to right, #555, 60%, var(--acc));
-    filter: blur(8px);
+    filter: blur(10px);
 
 }
 
@@ -126,10 +156,11 @@ body {
     /* border: 1px solid; */
 }
 
-h1 {
+.sign-in>h1,
+.sign-up>h1 {
     color: var(--prim-tx);
-    font-size: 2.5rem;
-
+    font-size: 1.7em;
+    font-weight: bold;
 }
 
 .ani-input {
@@ -160,6 +191,7 @@ h1 {
     position: absolute;
     background-color: var(--inp-bg);
     padding: 0px;
+    font-size: 1em;
     text-wrap: nowrap;
     transition: transform 0.3s ease, color 0.3s ease;
 }
@@ -209,7 +241,8 @@ input:-moz-autofill {
 
 .para-auth p {
     width: 300px;
-    font-size: 1.1em;
+    font-size: 1.0em;
+    line-height: 1.5em;
 }
 
 
@@ -225,6 +258,7 @@ input:-moz-autofill {
     border: none;
     color: var(--bg-secon);
     font-size: 1em;
+    font-weight: bold;
     border-radius: 5px;
     transition: transform 0.1s ease, box-shadow 0.2s ease;
 }
@@ -277,7 +311,7 @@ input:-moz-autofill {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    font-size: 0.8em;
+    font-size: 0.75em;
 }
 
 .link-btn {
@@ -351,14 +385,15 @@ input:-moz-autofill {
     align-items: center;
     justify-content: space-between;
     width: 100vw;
-    height: 100px;
+    height: 90px;
     background-color: var(--acc);
-
+    box-shadow: 0 0 10px #555;
 }
 
 #top-tab h1 {
     color: var(--bg-secon);
-    margin: 0px 50px;
+    margin: 0px 30px;
+    font-size: 1.6em;
 
 }
 
@@ -366,8 +401,8 @@ input:-moz-autofill {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 75px;
-    height: 75px;
+    width: 60px;
+    height: 60px;
     margin: 0px 50px;
     overflow: hidden;
     border-radius: 40px;
@@ -382,7 +417,7 @@ input:-moz-autofill {
 
 
 .my-profile img {
-    height: 75px;
+    height: 60px;
 
 }
 
@@ -681,24 +716,22 @@ details summary::marker {
     padding: 10px;
 }
 
-.ch-head>button {
-    display: grid;
-    place-items: center;
+.ch-head>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
     position: absolute;
     left: 2%;
-
-    background-color: transparent;
-    border: 2px solid var(--prim-tx);
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
     transition: background-color 0.1s ease;
 }
 
-.ch-head>button:hover {
+.ch-head>a:hover {
     background-color: rgba(245, 245, 245, 0.1);
 
 }
+
+
 
 .msg-area {
     display: flex;
@@ -890,6 +923,15 @@ details summary::marker {
         height: 100vh;
     }
 
+    .logo>h1 {
+        font-size: 1em;
+        margin: 0;
+    }
+
+    .logo>img {
+        height: 20px;
+    }
+
     #auth-sec {
         flex-direction: column;
         justify-content: space-between;
@@ -911,6 +953,11 @@ details summary::marker {
         border-top-right-radius: 100px;
         height: 150px;
         width: calc(100vw - 100px);
+    }
+
+    .para-auth p {
+        width: 95vw;
+        line-height: 1.2em;
     }
 
     .sign-in>h1,
