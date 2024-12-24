@@ -59,7 +59,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100vh;
     background-color: var(--chat-bg);
     overflow-x: hidden;
 }
@@ -633,6 +632,14 @@ details summary::marker {
     box-shadow: 0px 0px 15px #333;
 }
 
+#add-contact-form .contact-btn {
+    margin: 0;
+    align-self: self-end;
+    background-color: transparent;
+    border: none;
+
+}
+
 #add-contact-form h2 {
     margin-bottom: 50px;
 }
@@ -666,18 +673,31 @@ details summary::marker {
 /***********************************/
 
 #profile-body .settings-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: var(--bg-secon);
-    width: calc(100vw - 400px);
-    height: calc(100vh - 600px);
-    padding: 100px;
+    width: 90%;
+    height: 80%;
+    padding: 100px 0px;
+    box-sizing: border-box;
     border-radius: 30px;
     box-shadow: 0 0 10px 2px#333;
+}
+
+#profile-body>a {
+    position: fixed;
+    top: 5%;
+    left: 5%;
 }
 
 .setting {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    width: 100%;
+    border-bottom: 1px solid var(--secon-tx);
+    border-top: 1px solid var(--secon-tx);
 }
 
 .set-label {
@@ -733,20 +753,13 @@ details summary::marker {
 
 
 
-.msg-area {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-    overflow-x: hidden;
-}
 
 .ch-profile {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 75px;
-    height: 75px;
+    aspect-ratio: 1/1;
     margin: 0px 15px;
     overflow: hidden;
     border-radius: 40px;
@@ -769,25 +782,38 @@ details summary::marker {
     margin-left: 10px;
 }
 
+.msg-area {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
 #ch-info * {
     margin: 0;
 }
 
 #message-f {
     display: flex;
+    width: 100%;
+    padding: 1%;
+    height: min-content;
+
     /* border: 1px solid; */
     /* padding: 10px; */
 }
 
 #message-f input {
-    width: calc(100vw - 100px);
-    height: 20px;
     border: 2px solid #999;
     border-right: none;
     background-color: var(--inp-bg);
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    font-size: 1.5em;
+    font-size: 0.9em;
+    width: 100%;
     padding: 10px;
     outline: none;
 }
@@ -806,8 +832,8 @@ details summary::marker {
 .chat-area {
     display: flex;
     flex-direction: column;
-    height: inherit;
-    /* overflow-y: scroll; */
+    height: 100%;
+    margin-bottom: 100px;
 }
 
 .message {
@@ -1022,5 +1048,19 @@ details summary::marker {
 
     .contact-img img {
         height: 50px;
+    }
+
+    .ch-profile {
+        width: 50px;
+    }
+
+    .ch-head p {
+        font-size: 0.8em;
+        max-width: 150px;
+        overflow-x: hidden;
+    }
+
+    .ch-head h2 {
+        font-size: 1em;
     }
 }

@@ -5,28 +5,33 @@ const addcontactSec = document.getElementsByClassName('add-contact-sec')[0]
 const addContactForm = document.getElementById('add-contact-form')
 const loading = document.getElementById('loading')
 
-const addContactBtn = document.getElementById('add-contact-btn')
+const addContactBtn = document.getElementsByClassName('contact-btn')
 
 let contactShow = false
 
-addContactBtn.addEventListener('click', () => {
-    if (contactShow) {
-        contactShow = false
-    } else {
-        contactShow = true
-    }
+for (const ele of addContactBtn) {
+    console.log(ele);
 
-    if (contactShow) {
-        addcontactSec.style.display = 'flex'
-        chatSec.style.display = 'none'
-    } else {
-        addcontactSec.style.display = 'none'
-        chatSec.style.display = 'block'
-    }
+    ele.addEventListener('click', () => {
+        if (contactShow) {
+            contactShow = false
+        } else {
+            contactShow = true
+        }
+
+        if (contactShow) {
+            addcontactSec.style.display = 'flex'
+            chatSec.style.display = 'none'
+        } else {
+            addcontactSec.style.display = 'none'
+            chatSec.style.display = 'block'
+        }
 
 
-})
+    })
 
+
+}
 addContactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     let newcontactEmail = e.target[0]
@@ -145,7 +150,6 @@ function makeerr(ele, err) {
 
 document.body.style.pointerEvents = 'none'
 loading.children[0].textContent = 'Initializing User...'
-goOffline()
 waitForAuth().then(user => {
     console.log(authInstance);
     document.body.style.pointerEvents = 'all'

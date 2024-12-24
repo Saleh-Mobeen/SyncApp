@@ -1,6 +1,5 @@
 import { updateProfilepic, waitForAuth, goOffline } from "./firebase.js";
 
-goOffline()
 await waitForAuth()
 console.log('ready');
 

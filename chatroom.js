@@ -4,7 +4,6 @@ const messageF = document.getElementById('message-f');
 const chatArea = document.getElementsByClassName('chat-area')[0];
 
 
-goOffline()
 await waitForAuth()
 loadChat()
 

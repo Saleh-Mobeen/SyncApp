@@ -3,15 +3,12 @@ const CACHE_NAME = 'SyncApp-image-cache-v1';
 self.addEventListener('fetch', (event) => {
 
     const request = event.request;
-    console.log(request);
 
 
     // Check if the request is for an image
     if (request.destination === 'image' && request.url.startsWith('https://')) {
-        console.log(event);
         event.respondWith(
             caches.match(request).then((cachedResponse) => {
-                console.log(cachedResponse);
 
                 // If the image is already cached, return it
                 if (cachedResponse) {
@@ -32,12 +29,11 @@ self.addEventListener('fetch', (event) => {
             })
         );
     } else {
-        console.log('other', event);
-        event.respondWith(
-            caches.match(event.request).then(response => {
-                return response || fetch(event.request);
-            })
-        );
+        // event.respondWith(
+        //     caches.match(event.request).then(response => {
+        //         return response || fetch(event.request);
+        //     })
+        // );
 
     }
 });
@@ -79,3 +75,10 @@ self.addEventListener('install', event => {
         })
     );
 });
+
+
+
+
+
+
+

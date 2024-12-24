@@ -24,6 +24,7 @@ export const storage = getStorage(app);
 export let userData = {};
 const usersColl = collection(db, 'Users');
 const messegesColl = collection(db, 'Messages');
+goOffline()
 
 export async function goOffline() {
 
@@ -40,9 +41,12 @@ export async function goOffline() {
 
 
 
+
+
+
 console.log(authInstance);
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./service worker.js')
+    navigator.serviceWorker.register('./service worker.js', { type: 'module' })
         .then(registration => {
             console.log('Service Worker registered with scope:', registration.scope);
         })
@@ -87,10 +91,12 @@ async function updateuserdata() {
 
         const q = query(usersColl, where('email', '==', authInstance.currentUser.email));
         const querySnap = await getDocs(q);
+        console.log(querySnap);
 
         const docsSnap = querySnap.docs[0];
 
         let currentData = docsSnap.data();
+
         userData = currentData;
         userData.ref = docsSnap.ref;
 
@@ -177,9 +183,23 @@ export async function addNewContact(email) {
 
             // Update the target user's contacts
             let targetUserData = targetUserDocSnap.data();
-            const updatedTargetUserContacts = [...(targetUserData.contacts || []), { username: userData.username, email: userData.email, profilePicurl: userData.profilePic.url }];
 
-            const updatedCurrentUserContacts = [...(userData.contacts || []), { username: targetUserData.username, email: targetUserData.email, profilePicurl: targetUserData.profilePic.url }];
+            function generateFileURL(username) {
+                const baseURL = "https://firebasestorage.googleapis.com/v0/b/test-8dd1b.appspot.com/o/";
+                const filePathTemplate = "Profile%20pics%2F{username}?alt=media";
+
+                // Replace the placeholder with the actual username
+                const encodedUsername = encodeURIComponent(username); // Encode username to make it URL-safe
+                const filePath = filePathTemplate.replace("{username}", encodedUsername);
+
+                // Combine base URL and file path
+                const fileURL = `${baseURL}${filePath}`;
+                return fileURL;
+            }
+
+            const updatedTargetUserContacts = [...(targetUserData.contacts || []), { username: userData.username, email: userData.email, profilePicurl: generateFileURL(userData.username) }];
+
+            const updatedCurrentUserContacts = [...(userData.contacts || []), { username: targetUserData.username, email: targetUserData.email, profilePicurl: generateFileURL(targetUserData.username) }];
 
             if (!targetUserData.contacts.includes(userData.email) && !userData.contacts.includes(email)) {
                 // Update target user
