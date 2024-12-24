@@ -34,7 +34,7 @@ for (const ele of addContactBtn) {
 }
 addContactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    let newcontactEmail = e.target[0]
+    let newcontactEmail = e.target[1]
     let valid = true
 
     if (!newcontactEmail.checkValidity() || authInstance.currentUser.email == newcontactEmail.value || newcontactEmail.value.trim() == "") {
