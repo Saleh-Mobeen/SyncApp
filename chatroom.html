@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat | SyncApp</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.svg" type="image/x-icon">
+
     <link rel="manifest" href="manifest.json">
 
 </head>
@@ -33,8 +35,15 @@
     </section>
     <section class="msg-area">
         <form id="message-f">
-            <input type="text">
-            <button type="submit">></button>
+            <textarea rows="1" placeholder="Type your message..."
+                oninput="this.style.height = 'auto';this.style.height = `${this.scrollHeight}px`"></textarea>
+            <button type="submit">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#e8eaed">
+                    <path
+                        d="M120-160v-640l760 320-760 320Zm80-120 474-200-474-200v140l240 60-240 60v140Zm0 0v-400 400Z" />
+                </svg>
+            </button>
         </form>
     </section>
 

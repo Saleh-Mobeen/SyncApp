@@ -1,8 +1,10 @@
-import { updateProfilepic, waitForAuth, goOffline } from "./firebase.js";
+import { updateProfilepic, waitForAuth, goOffline, userData } from "./firebase.js";
 
 await waitForAuth()
 console.log('ready');
 
+document.querySelector('.set-prof-pic>img').src = userData.profilePic.url
+document.querySelector('.set-profile-sec>h1').textContent = userData.username
 
 const picLoader = document.getElementById('pf-pic-upload')
 

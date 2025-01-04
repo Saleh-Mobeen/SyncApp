@@ -2,6 +2,7 @@ import { getChat, waitForAuth, sendMessage, addListener, userData, goOffline } f
 
 const messageF = document.getElementById('message-f');
 const chatArea = document.getElementsByClassName('chat-area')[0];
+let msgGdate = 10
 
 
 await waitForAuth()
@@ -31,7 +32,6 @@ async function loadChat() {
 
 
     chatData.messages.forEach(e => {
-
         showmsg(e.text, e.timestamp, e.sender, false)
 
     })
@@ -41,14 +41,16 @@ async function loadChat() {
         e.preventDefault()
         console.log(e);
 
+        if (e.target[0].value.trim() != '') {
 
-        const message = {
-            text: e.target[0].value,
-            sender: userData.email
+            const message = {
+                text: e.target[0].value,
+                sender: userData.email
 
+            }
+            sendMessage(message, chatref)
+            e.target[0].value = ""
         }
-        sendMessage(message, chatref)
-        e.target[0].value = ""
 
     })
 
@@ -70,6 +72,18 @@ function showmsg(text, timestamp, sender, animate = true) {
 
 
     }
+
+    if (new Date(timestamp).toDateString() != msgGdate) {
+        msgGdate = new Date(timestamp).toDateString()
+
+        addDateTag(msgGdate)
+        console.log(msgGdate);
+    }
+
+
+
+
+
     p.textContent = text
     time.textContent = new Date(timestamp).toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" });
     msgdiv.classList.add('message')
@@ -86,6 +100,13 @@ function showmsg(text, timestamp, sender, animate = true) {
 
         }
     }
+}
+
+function addDateTag(date) {
+    const tag = document.createElement('div')
+    tag.classList.add('date-tag')
+    tag.innerHTML = `<p>${date}</p>`
+    chatArea.appendChild(tag)
 }
 
 

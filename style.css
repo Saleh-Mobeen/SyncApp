@@ -17,7 +17,7 @@
     --msg-recv-bg: #bdc3c7;
     --msg-recv-bg-2: #e0e4e7;
     --inp-bg: #ffffff;
-    --inp-bord: #dfe6e9;
+    --inp-bord: hsl(198, 19%, 60%);
     --inp-act: #00b400;
     --err-tx: #e74c3c;
     --err-bg: #ffe6e6;
@@ -384,7 +384,7 @@ input:-moz-autofill {
     align-items: center;
     justify-content: space-between;
     width: 100vw;
-    height: 90px;
+    height: 70px;
     background-color: var(--acc);
     box-shadow: 0 0 10px #555;
 }
@@ -417,7 +417,7 @@ input:-moz-autofill {
 
 .my-profile img {
     height: 60px;
-
+    pointer-events: none;
 }
 
 .contacts-sec {
@@ -456,8 +456,37 @@ input:-moz-autofill {
 
 .contact-img img {
     height: 60px;
+    pointer-events: none;
 }
 
+.full-img {
+    position: fixed;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    border-radius: 0;
+    /* margin: 10%; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.full-img::after {
+    content: '';
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: all;
+}
+
+.full-img img {
+    width: auto;
+    height: auto;
+    max-width: 90vw;
+    max-height: 90vh;
+}
 
 #profile-opt {
     display: flex;
@@ -669,7 +698,7 @@ details summary::marker {
 
 
 /***********************************/
-/*      PROFILE                    */
+/*      SETTINGS                   */
 /***********************************/
 
 #profile-body .settings-area {
@@ -689,6 +718,32 @@ details summary::marker {
     position: fixed;
     top: 5%;
     left: 5%;
+}
+
+.set-profile-sec {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.set-profile-sec h1 {
+    font-size: 1.8em;
+}
+
+.set-prof-pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    aspect-ratio: 1/1;
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+.set-prof-pic>img {
+    height: 100%;
 }
 
 .setting {
@@ -729,6 +784,9 @@ details summary::marker {
 /*      CHAT ROOM                  */
 /***********************************/
 .ch-head {
+    position: fixed;
+    width: 100%;
+    z-index: 100000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -758,7 +816,7 @@ details summary::marker {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 75px;
+    width: 50px;
     aspect-ratio: 1/1;
     margin: 0px 15px;
     overflow: hidden;
@@ -772,7 +830,7 @@ details summary::marker {
 }
 
 .ch-profile img {
-    height: 75px;
+    height: 100%;
 
 }
 
@@ -788,6 +846,7 @@ details summary::marker {
     justify-content: center;
     align-items: center;
     bottom: 0;
+    padding: 0;
     width: 100vw;
     overflow-x: hidden;
 }
@@ -797,36 +856,48 @@ details summary::marker {
 }
 
 #message-f {
+    position: relative;
     display: flex;
+    align-items: end;
     width: 100%;
-    padding: 1%;
-    height: min-content;
+    margin: 10px 20px;
+    /* height: min-content; */
 
-    /* border: 1px solid; */
-    /* padding: 10px; */
 }
 
-#message-f input {
-    border: 2px solid #999;
-    border-right: none;
+#message-f textarea {
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px solid var(--inp-bord);
+    border-radius: 10px;
     background-color: var(--inp-bg);
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    font-size: 0.9em;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    resize: none;
+    overflow: hidden;
+    /* scrollbar-width: none; */
+    padding: 0.5em;
     width: 100%;
-    padding: 10px;
+    height: auto;
+    min-height: 1.5rem;
+    margin-right: 5px;
     outline: none;
 }
 
 #message-f button {
+    right: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-weight: bold;
     font-size: 2em;
     background-color: var(--acc);
-    border: 2px solid #999;
-    width: 50px;
+    border: 1px solid var(--inp-bord);
+    height: 100%;
+    padding: 5px;
+    aspect-ratio: 1/1;
     border-left: none;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-radius: 50px;
 }
 
 .chat-area {
@@ -843,6 +914,7 @@ details summary::marker {
     margin: 5px;
     max-width: 50vw;
     text-wrap: wrap;
+    overflow-wrap: anywhere;
 }
 
 .message>p {
@@ -879,6 +951,19 @@ details summary::marker {
     margin-top: 25px;
 }
 
+.date-tag {
+    align-self: center;
+    background-color: var(--bg);
+    padding: 10px;
+    margin: 30px 0px;
+    box-shadow: 0 0 10px #c9c9c9;
+    border-radius: 10px;
+}
+
+.date-tag p {
+    margin: 0;
+    font-size: 0.7rem;
+}
 
 @keyframes OnewMsg {
     0% {

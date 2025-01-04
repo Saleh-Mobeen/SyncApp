@@ -37,6 +37,7 @@ addContactForm.addEventListener('submit', async (e) => {
     let newcontactEmail = e.target[1]
     let valid = true
 
+
     if (!newcontactEmail.checkValidity() || authInstance.currentUser.email == newcontactEmail.value || newcontactEmail.value.trim() == "") {
         valid = false
         makeInvalid(newcontactEmail)
@@ -91,10 +92,24 @@ async function initialzeuser() {
                 <h2>${e.username}</h2>
         `
 
-        contDiv.addEventListener('click', () => {
-            const a = document.createElement('a');
-            a.href = `chatroom.html?var=${contDiv.getAttribute('data-email')}`
-            a.click()
+        contDiv.addEventListener('click', (e) => {
+            if (e.target != contDiv.getElementsByClassName('contact-img')[0]) {
+
+                const a = document.createElement('a');
+                a.href = `chatroom.html?var=${contDiv.getAttribute('data-email')}`
+                a.click()
+            }
+        })
+
+        contDiv.getElementsByClassName('contact-img')[0].addEventListener('click', () => {
+            contDiv.getElementsByClassName('contact-img')[0].classList.add('full-img')
+            setTimeout(() => {
+
+                document.addEventListener('click', () => {
+                    contDiv.getElementsByClassName('contact-img')[0].classList.remove('full-img')
+
+                }, { once: true })
+            }, 100)
         })
 
         chatSec.appendChild(contDiv)
