@@ -177,73 +177,82 @@ export async function addNewContact(email) {
 
     if (!targetUserSnap.empty) {
         if (userData) {
-
             const targetUserDocSnap = targetUserSnap.docs[0];
             const targetUserDocRef = targetUserDocSnap.ref;
 
-            // Update the target user's contacts
-            let targetUserData = targetUserDocSnap.data();
+            const targetUserData = targetUserDocSnap.data();
 
             function generateFileURL(username) {
                 const baseURL = "https://firebasestorage.googleapis.com/v0/b/test-8dd1b.appspot.com/o/";
                 const filePathTemplate = "Profile%20pics%2F{username}?alt=media";
-
-                // Replace the placeholder with the actual username
                 const encodedUsername = encodeURIComponent(username); // Encode username to make it URL-safe
-                const filePath = filePathTemplate.replace("{username}", encodedUsername);
-
-                // Combine base URL and file path
-                const fileURL = `${baseURL}${filePath}`;
-                return fileURL;
+                return `${baseURL}${filePathTemplate.replace("{username}", encodedUsername)}`;
             }
 
-            const updatedTargetUserContacts = [...(targetUserData.contacts || []), { username: userData.username, email: userData.email, profilePicurl: generateFileURL(userData.username) }];
+            function removeRepeatingContacts(arr) {
+                return arr.filter((item, index, array) =>
+                    array.findIndex(contact => contact.email === item.email) === index
+                );
+            }
 
-            const updatedCurrentUserContacts = [...(userData.contacts || []), { username: targetUserData.username, email: targetUserData.email, profilePicurl: generateFileURL(targetUserData.username) }];
+            const newContactForTargetUser = {
+                username: userData.username,
+                email: userData.email,
+                profilePicurl: generateFileURL(userData.username),
+            };
 
-            if (!targetUserData.contacts.includes(userData.email) && !userData.contacts.includes(email)) {
-                // Update target user
-                await updateDoc(targetUserDocRef, {
-                    contacts: updatedTargetUserContacts
-                });
+            const newContactForCurrentUser = {
+                username: targetUserData.username,
+                email: targetUserData.email,
+                profilePicurl: generateFileURL(targetUserData.username),
+            };
 
-                // Update current user
-                await updateDoc(userData.ref, {
-                    contacts: updatedCurrentUserContacts
-                });
+            const targetUserContacts = targetUserData.contacts || [];
+            const currentUserContacts = userData.contacts || [];
 
-                await updateuserdata()
+            const isTargetUserContactExists = targetUserContacts.some(contact => contact.email === userData.email);
+            const isCurrentUserContactExists = currentUserContacts.some(contact => contact.email === email);
+
+            if (!isTargetUserContactExists && !isCurrentUserContactExists) {
+                console.log('Adding new contacts');
+
+                const updatedTargetUserContacts = removeRepeatingContacts([...targetUserContacts, newContactForTargetUser]);
+                await updateDoc(targetUserDocRef, { contacts: updatedTargetUserContacts });
+
+                const updatedCurrentUserContacts = removeRepeatingContacts([...currentUserContacts, newContactForCurrentUser]);
+                await updateDoc(userData.ref, { contacts: updatedCurrentUserContacts });
+
+                await updateuserdata();
                 console.log("Successfully updated both contacts lists.");
 
-                // make a chat room
-
-                const chatdocref = await addDoc(messegesColl, {
-
+                await addDoc(messegesColl, {
                     type: 'personal',
                     members: `${email},${userData.email}`,
+                    messages: [],
+                });
 
-                    messages: []
-                })
+                console.log("Chat room created.");
             } else {
-                throw new Error("Users already in contact");
+                throw new Error("Users are already in contact.");
             }
-
         } else {
-            throw new Error("Current user not found");
+            throw new Error("Current user not found.");
         }
     } else {
-
         if ('connection' in navigator) {
             if (!navigator.onLine) {
                 throw new Error("No connection. Check your internet.");
             } else {
-                throw new Error("User doesn't exist");
+                throw new Error("User doesn't exist.");
             }
         } else {
-            throw new Error("User doesn't exist");
+            throw new Error("User doesn't exist.");
         }
     }
 }
+
+
+
 
 
 export async function getContacts() {
