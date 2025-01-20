@@ -455,17 +455,18 @@ input:-moz-autofill {
 }
 
 .contact-img img {
-    height: 60px;
+    height: 100%;
     pointer-events: none;
 }
 
-.full-img {
+div.full-img {
     position: fixed;
     width: auto;
     height: auto;
     overflow: visible;
     border-radius: 0;
-    /* margin: 10%; */
+    height: auto;
+    width: auto;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -1131,9 +1132,7 @@ details summary::marker {
         height: 50px;
     }
 
-    .contact-img img {
-        height: 50px;
-    }
+
 
     .ch-profile {
         width: 50px;

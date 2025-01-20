@@ -6,7 +6,7 @@ let msgGdate = 10
 
 
 await waitForAuth()
-loadChat()
+await loadChat()
 
 
 async function loadChat() {
@@ -35,6 +35,9 @@ async function loadChat() {
         showmsg(e.text, e.timestamp, e.sender, false)
 
     })
+
+
+    document.querySelector('html').scrollTop = document.querySelector('html').scrollHeight;
 
 
     messageF.addEventListener('submit', async e => {
@@ -90,6 +93,13 @@ function showmsg(text, timestamp, sender, animate = true) {
     msgdiv.appendChild(time)
     msgdiv.appendChild(p)
     chatArea.appendChild(msgdiv)
+
+    const html = document.querySelector('html')
+    html.style.scrollBehavior = 'smooth'
+    html.scrollTop = html.scrollHeight;
+    html.style.scrollBehavior = 'auto'
+
+
     if (animate) {
         if (sender == userData.email) {
             msgdiv.style.animation = 'UnewMsg 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)'
