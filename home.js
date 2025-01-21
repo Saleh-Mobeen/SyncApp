@@ -172,6 +172,7 @@ waitForAuth().then(user => {
 
     showauth()
     initialzeuser()
+    subscribeForNoti()
 
 }).catch(error => {
     showauth()
@@ -208,3 +209,46 @@ function showauth() {
         a.click()
     }
 }
+
+
+// notification
+async function subscribeForNoti() {
+
+    const publicVapidKey = 'BK8CC-c42AiLrsY2Rg7md_0iUnqkrWbO_-xmAxv6vP-9JLqyYFAvFMxKWS_6htPwNCzClLG7U7se4X5g3P8b9OY';
+
+    function urlBase64ToUint8Array(base64String) {
+        const padding = '='.repeat((4 - (base64String.length % 4)) % 4);
+        const base64 = (base64String + padding).replace(/-/g, '+').replace(/_/g, '/');
+        const rawData = window.atob(base64);
+        const outputArray = new Uint8Array(rawData.length);
+        for (let i = 0; i < rawData.length; ++i) {
+            outputArray[i] = rawData.charCodeAt(i);
+        }
+        return outputArray;
+    }
+
+    const registration = await navigator.serviceWorker.getRegistration('./service worker.js')
+    var subscription = await registration.pushManager.subscribe({
+        userVisibleOnly: true,
+        applicationServerKey: urlBase64ToUint8Array(publicVapidKey)
+    });
+
+    subscription = {
+        id: userData.email,
+        sub: subscription
+    }
+
+    fetch('http://syncapp.glitch.me/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(subscription)
+    }).then(succ => {
+
+        console.log('Subscribed:', subscription);
+    }).catch(err => {
+        console.log('Subscribition failed', err);
+    })
+
+}
+
+
