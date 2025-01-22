@@ -557,6 +557,13 @@ details summary::marker {
     margin: 20px;
 }
 
+#loading span {
+    font-size: 1em;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
 #loading section div {
     width: 20px;
     height: 20px;

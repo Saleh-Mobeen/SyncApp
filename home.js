@@ -238,7 +238,7 @@ async function subscribeForNoti() {
         sub: subscription
     }
 
-    fetch('https://syncapp.glitch.me/subscribe', {
+    fetch('http://syncapp.glitch.me/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(subscription)
