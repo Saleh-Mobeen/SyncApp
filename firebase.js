@@ -41,7 +41,7 @@ export async function goOffline() {
 
 
 
-
+localStorage.setItem('test', JSON.stringify('hello test'))
 
 
 
@@ -75,13 +75,13 @@ export function waitForAuth() {
 
 
             unsubscribe();
-            resolve(user); // Resolve with user object (or null if not signed in)
+            resolve(user);
             console.log(authInstance);
 
 
         }, (error) => {
             unsubscribe();
-            reject(error); // Reject the promise if there's an error
+            reject(error);
         });
     });
 

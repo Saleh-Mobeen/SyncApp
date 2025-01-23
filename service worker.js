@@ -65,6 +65,9 @@ const assets = [
 
 ];
 
+console.log(localStorage.getItem('test'));
+
+
 self.addEventListener('install', event => {
     self.skipWaiting()
     event.waitUntil(
