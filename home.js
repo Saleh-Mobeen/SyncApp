@@ -1,4 +1,4 @@
-import { authInstance, addNewContact, getContacts, waitForAuth, userData, goOffline, clearCache } from './firebase.js'
+import { authInstance, addNewContact, getContacts, waitForAuth, userData, goOffline, clearCache, version } from './firebase.js'
 
 const chatSec = document.getElementsByClassName('contacts-sec')[0]
 const addcontactSec = document.getElementsByClassName('add-contact-sec')[0]
@@ -165,6 +165,10 @@ function makeerr(ele, err) {
 
 document.body.style.pointerEvents = 'none'
 loading.children[0].textContent = 'Initializing User...'
+loading.lastElementChild.textContent = 'sync-app-v-' + version
+console.log(version);
+
+
 waitForAuth().then(user => {
     console.log(authInstance);
     document.body.style.pointerEvents = 'all'
@@ -173,6 +177,7 @@ waitForAuth().then(user => {
     showauth()
     initialzeuser()
     subscribeForNoti()
+
 
 }).catch(error => {
     showauth()

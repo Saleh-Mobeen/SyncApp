@@ -1,21 +1,18 @@
-const CACHE_NAME = 'SyncApp-image-cache-v1.2';
+const CACHE_NAME = 'SyncApp-image-cache-v1.2.1';
 
 self.addEventListener('fetch', (event) => {
 
     const request = event.request;
 
 
-    // Check if the request is for an image
     if (request.destination === 'image' && request.url.startsWith('https://')) {
         event.respondWith(
             caches.match(request).then((cachedResponse) => {
 
-                // If the image is already cached, return it
                 if (cachedResponse) {
                     return cachedResponse;
                 }
 
-                // Otherwise, fetch the image, cache it, and return the fetched response
                 return caches.open(CACHE_NAME).then((cache) => {
                     console.log(cache);
 
@@ -69,9 +66,18 @@ const assets = [
 ];
 
 self.addEventListener('install', event => {
+    self.skipWaiting()
     event.waitUntil(
         caches.open(cacheName).then(cache => {
             return cache.addAll(assets);
+        })
+    );
+});
+
+self.addEventListener('activate', (event) => {
+    event.waitUntil(
+        self.clients.claim().then(() => {
+            console.log('Service Worker activated and clients claimed.');
         })
     );
 });
@@ -84,21 +90,42 @@ self.addEventListener('update', event => {
     );
 });
 
-self.addEventListener('push', event => {
+self.addEventListener('push', async event => {
     const data = event.data.json();
     console.log('Push received:', data);
+    if (await checkClientIsVisible()) {
 
-    const options = {
-        body: data.body,
-        icon: '/icon 512.png',
-    };
+        console.log('app open');
+    } else {
+        console.log('app close');
 
-    event.waitUntil(self.registration.showNotification(data.title, options));
+
+        const options = {
+            body: data.body,
+            icon: '/icon 512.png',
+        };
+
+        event.waitUntil(self.registration.showNotification(data.title, options));
+
+    }
 });
 
 
+async function checkClientIsVisible() {
+    const windowClients = await clients.matchAll({
+        type: "window",
+        includeUncontrolled: true,
+    });
+
+    for (var i = 0; i < windowClients.length; i++) {
+        if (windowClients[i].visibilityState === "visible") {
+            return true;
+        }
+    }
+
+    return false;
 
 
-
+}
 
 

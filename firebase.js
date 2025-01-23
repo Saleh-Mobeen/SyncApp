@@ -19,6 +19,7 @@ export const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 export let authInstance = getAuth(app);
 export const storage = getStorage(app);
+export const version = '1.2.1'
 
 
 export let userData = {};
