@@ -1015,13 +1015,18 @@ svg {
 
 .message>span {
     position: absolute;
-    right: 0px;
+    right: 0;
     top: 0;
     font-size: 0.7em;
     margin: 2px 5px;
     color: var(--secon-tx);
 
 }
+
+.message[type=other]>span {
+    left: 0;
+}
+
 
 .message[type=user] {
     justify-content: right;
