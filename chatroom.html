@@ -34,9 +34,18 @@
 
     </section>
     <section class="msg-area">
+        <div class="reply-holder">
+            <button id="cancel-reply"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#5F6368">
+                    <path
+                        d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+                </svg></button>
+            <div id="reply-message">
+
+            </div>
+        </div>
         <form id="message-f">
             <textarea rows="1" placeholder="Type your message..."
-                oninput="this.style.height = 'auto';this.style.height = `${this.scrollHeight}px`"></textarea>
+                oninput="if(this.scrollHeight < 100){this.style.height = 'auto';this.style.height = `${this.scrollHeight}px`;this.style.overflow = 'hidden'}else{this.style.overflow = 'auto'}"></textarea>
             <button type="submit">
                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                     fill="#e8eaed">

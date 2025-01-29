@@ -1,6 +1,10 @@
 import { getChat, waitForAuth, sendMessage, addListener, userData, goOffline } from "./firebase.js";
 
 const messageF = document.getElementById('message-f');
+const msgInp = messageF.querySelector('textarea')
+const replymsg = document.getElementById('reply-message');
+let chatref;
+let chatData;
 const chatArea = document.getElementsByClassName('chat-area')[0];
 let msgGdate = 10
 
@@ -21,18 +25,18 @@ async function loadChat() {
 
     document.querySelector('.ch-profile>img').src = otherUserData.profilePicurl
     document.querySelector('#ch-info>h2').textContent = otherUserData.username
-    document.querySelector('#ch-info>p').textContent = otherUserData.email
+    document.querySelector('#ch-info>p').textContent = otherUserData.email.length > 20 ? otherUserData.email.slice(0, 20).concat('...') : otherUserData.email
 
 
     const chatsnap = await getChat(email);
-    const chatData = chatsnap.docs[0].data()
-    const chatref = chatsnap.docs[0].ref
+    chatData = chatsnap.docs[0].data()
+    chatref = chatsnap.docs[0].ref
     console.log(chatData);
 
 
 
     chatData.messages.forEach(e => {
-        showmsg(e.text, e.timestamp, e.sender, false)
+        showmsg(e.text, e.timestamp, e.sender, false, e.replyTo)
 
     })
 
@@ -42,28 +46,51 @@ async function loadChat() {
 
     messageF.addEventListener('submit', async e => {
         e.preventDefault()
-        console.log(e);
+        msgsub()
 
-        if (e.target[0].value.trim() != '') {
 
+
+    })
+
+    msgInp.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            if (event.shiftKey) {
+
+            } else {
+
+                event.preventDefault();
+                msgsub()
+            }
+        }
+    })
+
+    function msgsub() {
+        if (msgInp.value.trim() != '') {
             const message = {
-                text: e.target[0].value,
+                text: msgInp.value.trim(),
                 sender: userData.email
 
             }
-            sendMessage(message, chatref)
-            e.target[0].value = ""
-        }
+            console.log(msgInp.classList.contains('reply-inp'));
 
-    })
+            if (messageF.classList.contains('reply-inp')) {
+                message.replyTo = messageF.getAttribute('data-reply-ts')
+            }
+            sendMessage(message, chatref)
+            cancelReply()
+            msgInp.value = ""
+            msgInp.style.height = 'auto'; msgInp.style.height = `${msgInp.scrollHeight}px`
+        }
+    }
 
     addListener(chatref, showmsg)
 }
 
-function showmsg(text, timestamp, sender, animate = true) {
+function showmsg(text, timestamp, sender, animate = true, replyto) {
     console.log('new msg' + text);
 
     const msgdiv = document.createElement('div')
+
     const time = document.createElement('span')
     const p = document.createElement('p')
 
@@ -85,13 +112,31 @@ function showmsg(text, timestamp, sender, animate = true) {
 
 
 
-
-
     p.textContent = text
     time.textContent = new Date(timestamp).toLocaleString(undefined, { hour: "2-digit", minute: "2-digit" });
     msgdiv.classList.add('message')
     msgdiv.appendChild(time)
     msgdiv.appendChild(p)
+
+    console.log(replyto);
+
+    if (replyto) {
+        const replybox = document.createElement('div')
+
+        replybox.classList.add('reply-box')
+        replybox.innerHTML = `<p>${chatData.messages.find(msg => msg.timestamp == replyto).text}</p>`
+        msgdiv.prepend(replybox)
+    }
+
+    if (sender != userData.email) {
+
+        const replybtn = document.createElement('button')
+        replybtn.setAttribute('data-timestamp', timestamp)
+        replybtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#333"><path d="M744-210v-144q0-50-35-85t-85-35H282l123 123-51 51-210-210 210-210 51 51-123 123h342q80 0 136 56t56 136v144h-72Z"/></svg>'
+        replybtn.onclick = handlereply
+        msgdiv.appendChild(replybtn)
+    }
+
     chatArea.appendChild(msgdiv)
 
     const html = document.querySelector('html')
@@ -119,4 +164,19 @@ function addDateTag(date) {
     chatArea.appendChild(tag)
 }
 
+async function handlereply(e) {
+    const replyts = e.target.getAttribute('data-timestamp');
+    messageF.setAttribute('data-reply-ts', replyts)
+    replymsg.innerHTML = chatData.messages.find(msg => msg.timestamp == replyts).text
+    messageF.classList.add('reply-inp')
 
+}
+
+document.getElementById('cancel-reply').addEventListener("click", cancelReply)
+function cancelReply() {
+    messageF.classList.remove('reply-inp')
+    setTimeout(() => {
+        messageF.removeAttribute('data-reply-ts')
+        replymsg.innerHTML = ''
+    }, 500);
+}

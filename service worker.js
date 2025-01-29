@@ -1,4 +1,4 @@
-const CACHE_NAME = 'SyncApp-image-cache-v1.2.1';
+const CACHE_NAME = 'SyncApp-image-cache-v1.2.2';
 
 self.addEventListener('fetch', (event) => {
 
@@ -65,7 +65,6 @@ const assets = [
 
 ];
 
-console.log(localStorage.getItem('test'));
 
 
 self.addEventListener('install', event => {

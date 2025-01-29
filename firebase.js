@@ -19,7 +19,7 @@ export const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 export let authInstance = getAuth(app);
 export const storage = getStorage(app);
-export const version = '1.2.1'
+export const version = '1.2.2'
 
 
 export let userData = {};
@@ -337,6 +337,7 @@ export async function sendMessage(message, ref) {
     message.timestamp = new Date().getTime()
 
 
+
     await updateDoc(ref, {
         messages: arrayUnion(message)
     })
@@ -368,7 +369,11 @@ export async function addListener(ref, func) {
             console.log(data);
             if (data[data.length - 1]) {
 
-                func(data[data.length - 1].text, data[data.length - 1].timestamp, data[data.length - 1].sender)
+                func(data[data.length - 1].text,
+                    data[data.length - 1].timestamp,
+                    data[data.length - 1].sender,
+                    true,
+                    data[data.length - 1].replyTo)
             }
 
         } else {

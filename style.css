@@ -61,6 +61,7 @@ body {
     justify-content: space-between;
     background-color: var(--chat-bg);
     overflow-x: hidden;
+    margin-bottom: 100px;
 }
 
 .logo {
@@ -817,7 +818,9 @@ details summary::marker {
 
 }
 
-
+svg {
+    pointer-events: none;
+}
 
 
 .ch-profile {
@@ -851,12 +854,12 @@ details summary::marker {
 .msg-area {
     position: fixed;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     bottom: 0;
-    padding: 0;
+    padding: 10px 20px;
     width: 100vw;
-    overflow-x: hidden;
 }
 
 #ch-info * {
@@ -868,10 +871,49 @@ details summary::marker {
     display: flex;
     align-items: end;
     width: 100%;
-    margin: 10px 20px;
-    /* height: min-content; */
-
 }
+
+.reply-holder:has(+ .reply-inp) {
+    /* display: block; */
+    height: max-content;
+    transform: translateY(0px);
+}
+
+.reply-holder {
+    position: relative;
+    box-sizing: border-box;
+    margin: 0;
+    /* min-height: 60px; */
+    align-self: flex-start;
+    background-color: var(--err-bg);
+    width: calc(100% - 105px);
+    border: 1px solid var(--inp-bord);
+    border-bottom: none;
+    border-radius: 10px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    margin: 0 10px;
+    padding: 10px;
+    height: 0px;
+    interpolate-size: allow-keywords;
+    transition: height 0.5s ease, transform 0.5s ease;
+    transform: translateY(25px);
+    /* display: none; */
+}
+
+
+.reply-holder>button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    padding: 0;
+    margin: 0;
+    aspect-ratio: 1/1;
+    border: none;
+    background-color: transparent;
+}
+
 
 #message-f textarea {
     display: inline-block;
@@ -883,9 +925,8 @@ details summary::marker {
     font-family: Arial, Helvetica, sans-serif;
     resize: none;
     overflow: hidden;
-    /* scrollbar-width: none; */
     padding: 0.5em;
-    width: 100%;
+    width: calc(100% - 85px);
     height: auto;
     min-height: 1.5rem;
     margin-right: 5px;
@@ -912,27 +953,72 @@ details summary::marker {
     display: flex;
     flex-direction: column;
     height: 100%;
-    margin-bottom: 100px;
+    margin-bottom: 10%;
 }
 
 .message {
+    position: relative;
     display: flex;
+    flex-direction: column;
     border-radius: 20px;
     padding: 0.1em 2em;
+    padding-top: 1rem;
     margin: 5px;
     max-width: 50vw;
     text-wrap: wrap;
+    white-space: pre-line;
     overflow-wrap: anywhere;
+}
+
+.message>button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    font-size: 1em;
+    padding: 2px;
+    border: none;
+    bottom: 5px;
+    border-radius: 20px;
+    opacity: 0.8;
+    background-color: var(--chat-bg);
+    color: #333;
+}
+
+
+.message[type=other]>button {
+    right: 5px;
+}
+
+
+.message>.reply-box {
+    background-color: rgba(0, 0, 0, 0.1);
+    /* margin: 10px; */
+    border-radius: 5px;
+
+}
+
+.reply-box p {
+    margin: 0;
+    padding: 0.4em;
+    font-size: 0.8rem;
+    width: 100%;
 }
 
 .message>p {
     font-size: 0.9rem;
+    margin-top: 5px;
 }
 
 .message>span {
     position: absolute;
+    right: 0px;
+    top: 0;
     font-size: 0.7em;
-    margin: 0px -25px;
+    margin: 2px 5px;
     color: var(--secon-tx);
 
 }
