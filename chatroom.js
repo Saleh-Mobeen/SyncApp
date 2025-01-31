@@ -36,7 +36,7 @@ async function loadChat() {
 
 
     chatData.messages.forEach(e => {
-        showmsg(e.text, e.timestamp, e.sender, false, e.replyTo)
+        showmsg(e, false)
 
     })
 
@@ -86,8 +86,17 @@ async function loadChat() {
     addListener(chatref, showmsg)
 }
 
-function showmsg(text, timestamp, sender, animate = true, replyto) {
-    console.log('new msg' + text);
+function showmsg(msgdata, animate = true) {
+
+    console.log(msgdata);
+
+    const { text, timestamp, sender, replyTo } = msgdata
+    console.log('new msg' + text, replyTo, chatData.messages.includes(msgdata));
+
+
+    if (!chatData.messages.includes(msgdata)) {
+        chatData.messages.push(msgdata)
+    }
 
     const msgdiv = document.createElement('div')
 
@@ -118,13 +127,13 @@ function showmsg(text, timestamp, sender, animate = true, replyto) {
     msgdiv.appendChild(time)
     msgdiv.appendChild(p)
 
-    console.log(replyto);
+    console.log(replyTo);
 
-    if (replyto) {
+    if (replyTo) {
         const replybox = document.createElement('div')
 
         replybox.classList.add('reply-box')
-        replybox.innerHTML = `<p>${chatData.messages.find(msg => msg.timestamp == replyto).text}</p>`
+        replybox.innerHTML = `<p>${chatData.messages.find(msg => msg.timestamp == replyTo).text}</p>`
         msgdiv.prepend(replybox)
     }
 

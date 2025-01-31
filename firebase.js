@@ -368,12 +368,9 @@ export async function addListener(ref, func) {
             const data = e.data().messages
             console.log(data);
             if (data[data.length - 1]) {
+                console.log(data[data.length - 1]);
 
-                func(data[data.length - 1].text,
-                    data[data.length - 1].timestamp,
-                    data[data.length - 1].sender,
-                    true,
-                    data[data.length - 1].replyTo)
+                func(data[data.length - 1])
             }
 
         } else {

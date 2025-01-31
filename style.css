@@ -152,7 +152,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 500px;
+    width: 100%;
     /* border: 1px solid; */
 }
 
@@ -910,6 +910,7 @@ svg {
     padding: 0;
     margin: 0;
     aspect-ratio: 1/1;
+    cursor: pointer;
     border: none;
     background-color: transparent;
 }
@@ -983,6 +984,7 @@ svg {
     border: none;
     bottom: 5px;
     border-radius: 20px;
+    cursor: pointer;
     opacity: 0.8;
     background-color: var(--chat-bg);
     color: #333;
