@@ -1,4 +1,4 @@
-const CACHE_NAME = 'SyncApp-cache-v1.2.2';
+const CACHE_NAME = 'SyncApp-cache-v1.2.3';
 
 self.addEventListener('fetch', (event) => {
 
