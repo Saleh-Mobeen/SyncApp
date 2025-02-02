@@ -421,6 +421,62 @@ input:-moz-autofill {
     pointer-events: none;
 }
 
+#update.hidden {
+    display: none;
+}
+
+#update {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+    pointer-events: none;
+}
+
+#update button {
+    float: right;
+    border: none;
+    background-color: transparent;
+}
+
+#update>div {
+    position: absolute;
+    width: calc(100% - 100px);
+    height: calc(100% - 100px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1000px;
+    max-height: 800px;
+    background-color: var(--bg-secon);
+    border: 2px solid var(--acc);
+    border-radius: 10px;
+    padding: 30px;
+    pointer-events: all;
+    box-sizing: border-box;
+}
+
+
+#update h1 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+#update ul {
+    margin: 0;
+    line-height: 1.5em;
+}
+
+#update>div>div {
+    display: flex;
+    padding: 50px 10px;
+    height: 100%;
+}
+
+
 .contacts-sec {
     width: 100vw;
     height: calc(100vh - 100px);

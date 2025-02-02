@@ -1,4 +1,4 @@
-import { authInstance, addNewContact, getContacts, waitForAuth, userData, goOffline, clearCache, version } from './firebase.js'
+import { authInstance, addNewContact, getContacts, waitForAuth, userData, clearCache, version } from './firebase.js'
 
 const chatSec = document.getElementsByClassName('contacts-sec')[0]
 const addcontactSec = document.getElementsByClassName('add-contact-sec')[0]
@@ -169,14 +169,15 @@ loading.lastElementChild.textContent = 'sync-app-v-' + version
 console.log(version);
 
 
-waitForAuth().then(user => {
+waitForAuth().then(async () => {
     console.log(authInstance);
     document.body.style.pointerEvents = 'all'
     loading.style.display = 'none'
 
     showauth()
+    await subscribeForNoti()
     initialzeuser()
-    subscribeForNoti()
+    showupdate()
 
 
 }).catch(error => {
@@ -202,7 +203,20 @@ waitForAuth().then(user => {
 
 })
 
+function showupdate() {
+    const latestVersion = version;
+    const seenVersion = localStorage.getItem("seenVersion");
+    document.querySelector('#update>div>h1>span').textContent = version
 
+    if (seenVersion !== latestVersion) {
+        document.querySelector('#update').classList.remove('hidden')
+        document.querySelector('#update button').addEventListener('click', (e) => {
+            document.querySelector('#update').classList.add('hidden')
+
+        })
+        localStorage.setItem("seenVersion", latestVersion);
+    }
+}
 
 function showauth() {
 
