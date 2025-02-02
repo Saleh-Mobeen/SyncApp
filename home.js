@@ -174,13 +174,13 @@ waitForAuth().then(user => {
     document.body.style.pointerEvents = 'all'
     loading.style.display = 'none'
 
-    // showauth()
+    showauth()
     initialzeuser()
     subscribeForNoti()
 
 
 }).catch(error => {
-    // showauth()
+    showauth()
 
     console.error(error);
     console.log('no internet');
