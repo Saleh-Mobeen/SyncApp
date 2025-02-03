@@ -64,6 +64,13 @@ body {
     margin-bottom: 100px;
 }
 
+#t-p-body {
+    background-color: rgb(215, 215, 215);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -153,6 +160,7 @@ body {
     align-items: center;
     flex-direction: column;
     width: 100%;
+    height: 100%;
     /* border: 1px solid; */
 }
 
@@ -356,6 +364,10 @@ input:-moz-autofill {
     margin: 0px 0px;
 }
 
+.tp-agree {
+    font-size: 0.7em;
+    margin-top: auto;
+}
 
 
 @keyframes sign-change {
@@ -444,8 +456,8 @@ input:-moz-autofill {
 
 #update>div {
     position: absolute;
-    width: calc(100% - 100px);
-    height: calc(100% - 100px);
+    width: calc(100% - 50px);
+    height: calc(100% - 80px);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -454,26 +466,38 @@ input:-moz-autofill {
     background-color: var(--bg-secon);
     border: 2px solid var(--acc);
     border-radius: 10px;
-    padding: 30px;
+    padding: 20px;
     pointer-events: all;
     box-sizing: border-box;
 }
 
 
 #update h1 {
-    font-size: 1.5em;
+    font-size: 1em;
     margin: 0;
 }
 
 #update ul {
     margin: 0;
     line-height: 1.5em;
+    font-size: 1em;
+    padding-inline-start: 1;
+}
+
+#update ul li {
+    margin: 10px 0px;
+}
+
+#update ul li::marker {
+    margin: 0;
+    padding: 0;
 }
 
 #update>div>div {
     display: flex;
-    padding: 50px 10px;
+    padding: 50px 0px;
     height: 100%;
+    width: 100%;
 }
 
 
@@ -1148,7 +1172,30 @@ svg {
     }
 }
 
+/***********************************/
+/*      Privacy And Terms          */
+/***********************************/
 
+#t-p-body>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(240, 240, 240);
+    padding: 20px 50px;
+    width: 90%;
+    margin: 10%;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+#t-p-body div.polices {
+    align-items: unset;
+}
+
+#t-p-body h1 {
+    align-self: center;
+}
 
 
 

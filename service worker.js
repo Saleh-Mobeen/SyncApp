@@ -14,7 +14,6 @@ self.addEventListener('fetch', (event) => {
                 }
 
                 return caches.open(CACHE_NAME).then((cache) => {
-                    console.log(cache);
 
                     return fetch(request).then((networkResponse) => {
                         console.log(networkResponse);
@@ -35,7 +34,11 @@ self.addEventListener('fetch', (event) => {
     }
 });
 
-const cacheName = 'SyncApp-v1';
+self.addEventListener("navigate", async () => {
+    console.log('nav');
+
+})
+
 const assets = [
     './',
     './auth.html',
@@ -67,10 +70,11 @@ const assets = [
 
 
 
+
 self.addEventListener('install', event => {
     self.skipWaiting()
     event.waitUntil(
-        caches.open(cacheName).then(cache => {
+        caches.open(CACHE_NAME).then(cache => {
             return cache.addAll(assets);
         })
     );

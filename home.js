@@ -175,7 +175,7 @@ waitForAuth().then(async () => {
     loading.style.display = 'none'
 
     showauth()
-    await subscribeForNoti()
+    subscribeForNoti()
     initialzeuser()
     showupdate()
 
