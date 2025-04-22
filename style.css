@@ -516,6 +516,25 @@ input:-moz-autofill {
     padding: 10px;
     cursor: pointer;
     transition: background-color 0.1s ease, box-shadow 0.1s ease;
+    z-index: 1;
+}
+
+.contact::before {
+    content: attr(data-msg-count);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--high-l);
+    width: 20px;
+    transform: translate(50px, -22px);
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+    font-size: 0.8em;
+}
+
+.contact[data-msg-count='none']::before {
+    display: none;
 }
 
 .contact:hover {
@@ -1335,6 +1354,9 @@ svg {
         height: 50px;
     }
 
+    .contact::before {
+        transform: translate(40px, -19px);
+    }
 
 
     .ch-profile {

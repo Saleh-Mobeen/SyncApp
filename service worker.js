@@ -1,8 +1,13 @@
+import { indexedStorage } from './indexedStorage.js';
+
+
 const CACHE_NAME = 'SyncApp-cache-v1.2.3';
 
-self.addEventListener('fetch', (event) => {
+
+self.addEventListener('fetch', async (event) => {
 
     const request = event.request;
+
 
 
     if (request.destination === 'image' && request.url.startsWith('https://')) {
@@ -68,8 +73,14 @@ const assets = [
 
 ];
 
-
-
+let instances = null;
+self.addEventListener('message', event => {
+    const { type, payload } = event.data;
+    if (type === 'store') {
+        instances = payload
+        console.log('SW stored object:', payload);
+    }
+});
 
 self.addEventListener('install', event => {
     self.skipWaiting()
@@ -99,23 +110,71 @@ self.addEventListener('update', event => {
 self.addEventListener('push', async event => {
     const data = event.data.json();
     console.log('Push received:', data);
+    addNewMsg(data.data.from)
+
     if (await checkClientIsVisible()) {
 
         console.log('app open');
     } else {
         console.log('app close');
+        console.log(data.data.from);
 
 
-        const options = {
-            body: data.body,
-            icon: '/icon 512.png',
-        };
-
-        event.waitUntil(self.registration.showNotification(data.title, options));
+        event.waitUntil(self.registration.showNotification(data.title, data));
 
     }
+
+
 });
 
+self.addEventListener('notificationclick', function (event) {
+    event.notification.close();
+    console.log('click noti');
+
+    event.waitUntil(
+        clients.matchAll({ type: "window", includeUncontrolled: true }).then(clientList => {
+            for (const client of clientList) {
+                console.log(event);
+
+                if (client.url === event.notification.data.url && 'focus' in client) {
+                    console.log('window open');
+
+                    return client.focus();
+                }
+            }
+
+            if (clients.openWindow) {
+                console.log('no window open');
+
+                return clients.openWindow(event.notification.data.url);
+
+            }
+        })
+    );
+});
+
+async function addNewMsg(sender) {
+    let msgs = await indexedStorage.getItem(sender)
+    console.log(msgs);
+
+    if (!msgs) {
+        await indexedStorage.setItem(sender, 0)
+        console.log('made');
+
+        msgs = 0
+    }
+    await indexedStorage.setItem(sender, msgs + 1)
+
+    self.clients.matchAll().then(clients => {
+        for (const client of clients) {
+            client.postMessage({
+                type: 'new-msg',
+                sender: sender,
+                value: msgs + 1
+            });
+        }
+    });
+}
 
 async function checkClientIsVisible() {
     const windowClients = await clients.matchAll({

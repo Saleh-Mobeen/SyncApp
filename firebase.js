@@ -2,6 +2,7 @@ import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.4/fireba
 import { getFirestore, collection, addDoc, query, where, getDocs, onSnapshot, serverTimestamp, updateDoc, doc, arrayUnion, enableIndexedDbPersistence, clearIndexedDbPersistence, terminate } from 'https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js';
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, sendPasswordResetEmail, updateProfile } from 'https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js';
 import { getStorage, ref, uploadBytes, getDownloadURL, deleteObject, listAll, getMetadata, updateMetadata } from 'https://www.gstatic.com/firebasejs/10.12.4/firebase-storage.js';
+
 const firebaseConfig = {
     apiKey: "AIzaSyCoxhTf3yZr__OXSykIbrLC8KGlkWxiBf4",
     authDomain: "test-8dd1b.firebaseapp.com",
@@ -22,8 +23,12 @@ export const storage = getStorage(app);
 export let version = (await (await fetch("manifest.json")).json()).version;
 console.log(version);
 
-
-
+window.scripts = {}
+export async function regScript(name, func) {
+    if (!window.scripts[name]) {
+        window.scripts[name] = func
+    }
+}
 
 
 export let userData = {};
@@ -44,9 +49,67 @@ export async function goOffline() {
 }
 
 
+export async function initLinks() {
+    window.addEventListener("popstate", popstate)
+    function popstate(e) {
 
-localStorage.setItem('test', JSON.stringify('hello test'))
+        console.log(e);
+        e.preventDefault()
+        loadPage(location.pathname)
 
+
+
+    }
+    document.querySelectorAll("a").forEach(a => {
+        a.addEventListener("click", async event => {
+            event.preventDefault()
+            history.pushState(null, '', a.href);
+
+            loadPage(a.href)
+            window.removeEventListener("popstate", popstate)
+
+        })
+
+    }, { once: true })
+
+    async function loadPage(pageurl) {
+        window.scrollTo({ top: 0, behavior: "instant" });
+
+        console.log('click');
+
+        const page = await (await fetch(pageurl, { cache: 'no-store' })).text()
+        const doc = new DOMParser().parseFromString(page, "text/html")
+        console.log(doc);
+
+        document.head.innerHTML = doc.head.innerHTML
+        document.body.innerHTML = doc.body.innerHTML
+
+
+        reloadScripts(doc)
+    }
+    function reloadScripts(doc) {
+        const scripts = doc.querySelectorAll("script");
+        scripts.forEach(async oldScript => {
+            if (oldScript.src) {
+                oldScript.remove()
+                const srcUrl = oldScript.src.split('/').filter(seg => seg.length).pop();
+                if (window.scripts[srcUrl]) {
+
+                    window.scripts[srcUrl]()
+                }
+                console.log(srcUrl, window.scripts, window.scripts[srcUrl]);
+
+                const newScript = document.createElement('script')
+                newScript.src = srcUrl
+                newScript.type = 'module'
+                document.body.append(newScript)
+
+            }
+        });
+    }
+
+
+}
 
 
 console.log(authInstance);
@@ -81,6 +144,9 @@ export function waitForAuth() {
             unsubscribe();
             resolve(user);
             console.log(authInstance);
+            console.log(document.querySelectorAll("a"));
+
+
 
 
         }, (error) => {
@@ -106,6 +172,7 @@ async function updateuserdata() {
         userData.ref = docsSnap.ref;
 
         console.log(userData);
+
 
     } catch (error) {
         if (!navigator.onLine) {
