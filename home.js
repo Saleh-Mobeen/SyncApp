@@ -233,8 +233,8 @@ export async function init() {
     }
     navigator.serviceWorker.addEventListener('message', async (event) => {
         if (event.data.type === 'new-msg') {
-            console.log('new msg', document.querySelector(`div.contact[data-email='${event.data.sender}']`), await indexedStorage.getItem(event.data.sender));
-            const contact = document.querySelector(`div.contact[data-email='${event.data.sender}']`)
+            const contact = document.querySelector(`a[href$='${event.data.sender}']>div.contact`)
+            console.log('new msg', document.querySelector(`div.contact[data-email='${event.data.sender}']`), event.data.sender);
             contact.setAttribute('data-msg-count', event.data.value || 'none')
         }
     });

@@ -610,7 +610,8 @@ div.full-img {
     transition: background-color 0.3s ease;
 }
 
-#profile-opt div button {
+#profile-opt div button,
+#profile-opt div p {
     width: max-content;
     border: none;
     background-color: transparent;
@@ -621,7 +622,12 @@ div.full-img {
     cursor: pointer;
 }
 
-#profile-opt div:last-child * {
+#profile-opt>a {
+    text-decoration: none;
+    color: unset;
+}
+
+#profile-opt>div:last-child * {
     color: red;
     fill: red;
 }
@@ -1053,7 +1059,7 @@ svg {
     display: flex;
     flex-direction: column;
     height: 100%;
-    margin-bottom: 10%;
+    margin-bottom: 10px;
 }
 
 .message {

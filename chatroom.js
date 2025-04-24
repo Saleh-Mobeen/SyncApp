@@ -1,6 +1,5 @@
 import { getChat, waitForAuth, sendMessage, addListener, userData, initLinks, regScript } from "./firebase.js";
 import { indexedStorage } from './indexedStorage.js';
-let _initialized = false
 
 init()
 export async function init() {

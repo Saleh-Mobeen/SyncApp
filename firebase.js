@@ -83,6 +83,8 @@ export async function initLinks() {
 
         document.head.innerHTML = doc.head.innerHTML
         document.body.innerHTML = doc.body.innerHTML
+        document.body.id = doc.body.id
+
 
 
         reloadScripts(doc)
