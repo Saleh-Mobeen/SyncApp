@@ -103,15 +103,15 @@ export async function init() {
                 <h2>${e.username}</h2>`
 
 
-            contDiv.getElementsByClassName('contact-img')[0].addEventListener('click', () => {
-                contDiv.getElementsByClassName('contact-img')[0].classList.add('full-img')
-                setTimeout(() => {
-
-                    document.addEventListener('click', () => {
-                        contDiv.getElementsByClassName('contact-img')[0].classList.remove('full-img')
-
-                    }, { once: true })
-                }, 100)
+            const pic = contDiv.getElementsByClassName('contact-img')[0]
+            pic.addEventListener('click', (e) => {
+                e.stopPropagation()
+                e.preventDefault()
+                if (pic.classList.contains('full-img')) {
+                    pic.classList.remove('full-img')
+                } else {
+                    pic.classList.add('full-img')
+                }
             })
 
             chatSec.appendChild(linkWrap)
@@ -128,7 +128,9 @@ export async function init() {
 
     document.getElementById('SignOut').addEventListener('click', async () => {
         await clearCache()
+        await unsubscribeForNoti()
         await authInstance.signOut()
+
         showauth()
     })
 
@@ -267,6 +269,45 @@ export async function init() {
         }
 
         fetch('https://syncapp.glitch.me/subscribe', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(subscription)
+        }).then(succ => {
+
+            console.log('Subscribed:', subscription);
+        }).catch(err => {
+            console.log('Subscribition failed', err);
+        })
+
+    }
+
+    async function unsubscribeForNoti() {
+
+        const publicVapidKey = 'BK8CC-c42AiLrsY2Rg7md_0iUnqkrWbO_-xmAxv6vP-9JLqyYFAvFMxKWS_6htPwNCzClLG7U7se4X5g3P8b9OY';
+
+        function urlBase64ToUint8Array(base64String) {
+            const padding = '='.repeat((4 - (base64String.length % 4)) % 4);
+            const base64 = (base64String + padding).replace(/-/g, '+').replace(/_/g, '/');
+            const rawData = window.atob(base64);
+            const outputArray = new Uint8Array(rawData.length);
+            for (let i = 0; i < rawData.length; ++i) {
+                outputArray[i] = rawData.charCodeAt(i);
+            }
+            return outputArray;
+        }
+
+        const registration = await navigator.serviceWorker.getRegistration('./service worker.js')
+        var subscription = await registration.pushManager.subscribe({
+            userVisibleOnly: true,
+            applicationServerKey: urlBase64ToUint8Array(publicVapidKey)
+        });
+
+        subscription = {
+            id: userData.email,
+            sub: subscription
+        }
+
+        fetch('https://syncapp.glitch.me/unsubscribe', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(subscription)

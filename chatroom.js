@@ -15,7 +15,7 @@ export async function init() {
     let chatData;
     const chatArea = document.getElementsByClassName('chat-area')[0];
     let msgGdate = 10
-
+    let lastMsg = 1
 
 
     await waitForAuth()
@@ -44,20 +44,56 @@ export async function init() {
         chatref = chatsnap.docs[0].ref
         console.log(chatData);
 
+        let loadedMsgs = 0
+        const bunchsize = 15
         chatData.messages = chatData.messages.sort((a, b) => a.timestamp - b.timestamp)
+        document.addEventListener("scroll", e => {
+            console.log(e, document.documentElement.scrollTop);
+            if (document.documentElement.scrollTop === 0 && loadedMsgs) {
+                const html = document.querySelector('html')
 
-        chatData.messages.forEach(e => {
+                const prevScrollTop = html.scrollTop;
+                const prevScrollHeight = html.scrollHeight;
 
-            showmsg(e, false)
+                renderMsgs()
+
+                const newScrollHeight = html.scrollHeight;
+                console.log(newScrollHeight, prevScrollHeight, prevScrollTop);
+
+                html.scrollTop = prevScrollTop + (newScrollHeight - prevScrollHeight);
+
+            }
 
         })
+        renderMsgs()
+        function renderMsgs(params) {
+            let showMsgs = chatData.messages.slice(Math.max(0, chatData.messages.length - loadedMsgs - bunchsize), chatData.messages.length - loadedMsgs)
+            lastMsg = chatArea.firstElementChild
+            showMsgs.forEach(e => {
+
+                showmsg(e, false)
+
+            })
+            loadedMsgs += bunchsize
+            if (loadedMsgs > chatData.messages.length) {
+                loadedMsgs = null
+            }
+        }
 
         document.querySelector('html').scrollTop = document.querySelector('html').scrollHeight;
 
 
         messageF.addEventListener('submit', async e => {
             e.preventDefault()
-            msgsub()
+            await fetch('https://syncapp.glitch.me/ping').then((res) => {
+                console.log(res);
+
+
+                msgsub()
+            }, (err) => {
+                console.log(err);
+
+            })
 
 
 
@@ -99,7 +135,7 @@ export async function init() {
 
     function showmsg(msgdata, animate = true) {
 
-        // console.log(msgdata);
+        console.log(msgdata);
 
         const { text, timestamp, sender, replyTo } = msgdata
         // console.log('new msg' + text, replyTo, chatData.messages.includes(msgdata));
@@ -157,15 +193,13 @@ export async function init() {
             msgdiv.appendChild(replybtn)
         }
 
-        chatArea.appendChild(msgdiv)
+        chatArea.insertBefore(msgdiv, lastMsg)
 
-        const html = document.querySelector('html')
-        html.style.scrollBehavior = 'smooth'
-        html.scrollTop = html.scrollHeight;
-        html.style.scrollBehavior = 'auto'
+
 
 
         if (animate) {
+            scrollBtm()
             if (sender == userData.email) {
                 msgdiv.style.animation = 'UnewMsg 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)'
 
@@ -177,11 +211,18 @@ export async function init() {
         }
     }
 
+    function scrollBtm() {
+        const html = document.querySelector('html')
+        html.style.scrollBehavior = 'smooth'
+        html.scrollTop = html.scrollHeight;
+        html.style.scrollBehavior = 'auto'
+    }
+
     function addDateTag(date) {
         const tag = document.createElement('div')
         tag.classList.add('date-tag')
         tag.innerHTML = `<p>${date}</p>`
-        chatArea.appendChild(tag)
+        chatArea.insertBefore(tag, lastMsg)
     }
 
     async function handlereply(e) {

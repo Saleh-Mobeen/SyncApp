@@ -1,7 +1,7 @@
 import { indexedStorage } from './indexedStorage.js';
 
 
-const CACHE_NAME = 'SyncApp-cache-v1.2.3';
+const CACHE_NAME = 'syncapp';
 
 
 self.addEventListener('fetch', async (event) => {
@@ -39,10 +39,6 @@ self.addEventListener('fetch', async (event) => {
     }
 });
 
-self.addEventListener("navigate", async () => {
-    console.log('nav');
-
-})
 
 const assets = [
     './',
@@ -95,7 +91,12 @@ self.addEventListener('activate', (event) => {
     event.waitUntil(
         self.clients.claim().then(() => {
             console.log('Service Worker activated and clients claimed.');
-        })
+        }),
+        caches.keys().then(names =>
+            Promise.all(
+                names.filter(name => name !== 'v1').map(oldName => caches.delete(oldName))
+            )
+        )
     );
 });
 
