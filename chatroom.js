@@ -48,7 +48,6 @@ export async function init() {
         const bunchsize = 15
         chatData.messages = chatData.messages.sort((a, b) => a.timestamp - b.timestamp)
         document.addEventListener("scroll", e => {
-            console.log(e, document.documentElement.scrollTop);
             if (document.documentElement.scrollTop === 0 && loadedMsgs) {
                 const html = document.querySelector('html')
 
@@ -85,15 +84,7 @@ export async function init() {
 
         messageF.addEventListener('submit', async e => {
             e.preventDefault()
-            await fetch('https://syncapp.glitch.me/ping').then((res) => {
-                console.log(res);
-
-
-                msgsub()
-            }, (err) => {
-                console.log(err);
-
-            })
+            msgsub()
 
 
 
@@ -112,22 +103,33 @@ export async function init() {
         })
 
         function msgsub() {
-            if (msgInp.value.trim() != '') {
-                const message = {
-                    text: msgInp.value.trim(),
-                    sender: userData.email
 
-                }
-                console.log(msgInp.classList.contains('reply-inp'));
+            fetch('https://syncapp.glitch.me/ping').then((res) => {
+                console.warn(res);
 
-                if (messageF.classList.contains('reply-inp')) {
-                    message.replyTo = messageF.getAttribute('data-reply-ts')
+                if (msgInp.value.trim() != '') {
+                    const message = {
+                        text: msgInp.value.trim(),
+                        sender: userData.email
+
+                    }
+                    console.log(msgInp.classList.contains('reply-inp'));
+
+                    if (messageF.classList.contains('reply-inp')) {
+                        message.replyTo = messageF.getAttribute('data-reply-ts')
+                    }
+                    sendMessage(message, chatref)
+                    cancelReply()
+                    msgInp.value = ""
+                    msgInp.style.height = 'auto'; msgInp.style.height = `${msgInp.scrollHeight}px`
                 }
-                sendMessage(message, chatref)
-                cancelReply()
-                msgInp.value = ""
-                msgInp.style.height = 'auto'; msgInp.style.height = `${msgInp.scrollHeight}px`
-            }
+
+            }, (err) => {
+                console.log(err);
+
+            })
+
+
         }
 
         addListener(chatref, showmsg)
@@ -135,7 +137,6 @@ export async function init() {
 
     function showmsg(msgdata, animate = true) {
 
-        console.log(msgdata);
 
         const { text, timestamp, sender, replyTo } = msgdata
         // console.log('new msg' + text, replyTo, chatData.messages.includes(msgdata));

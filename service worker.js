@@ -1,69 +1,101 @@
 import { indexedStorage } from './indexedStorage.js';
 
 
-const CACHE_NAME = 'syncapp';
+const FILES_CACHE = 'syncapp';
+const PICS_CACHE = 'syncapp-pics';
+
 
 
 self.addEventListener('fetch', async (event) => {
 
     const request = event.request;
+    const isPic = request.url.includes('Profile%20pics')
+
+    console.log(isPic);
+    if (request.method === 'GET' && request.url.startsWith('http') && !request.url.includes('ping')) {
 
 
+        if (!isPic) {
 
-    if (request.destination === 'image' && request.url.startsWith('https://')) {
-        event.respondWith(
-            caches.match(request).then((cachedResponse) => {
+            event.respondWith((async () => {
+                if (navigator.onLine) {
+                    try {
 
-                if (cachedResponse) {
-                    return cachedResponse;
-                }
+                        const networkResponse = await fetch(request);
 
-                return caches.open(CACHE_NAME).then((cache) => {
-
-                    return fetch(request).then((networkResponse) => {
-                        console.log(networkResponse);
+                        const cache = await caches.open(FILES_CACHE);
 
                         cache.put(request, networkResponse.clone());
                         return networkResponse;
-                    });
-                });
-            })
-        );
-    } else {
-        // event.respondWith(
-        //     caches.match(event.request).then(response => {
-        //         return response || fetch(event.request);
-        //     })
-        // );
+
+                    } catch (err) {
+                        const cached = await caches.match(request);
+                        if (cached) return cached;
+                        return new Response('Offline and no cache available', { status: 503 });
+                    }
+                } else {
+                    const cached = await caches.match(request);
+
+                    if (cached) return cached;
+
+                    // return new Response('Offline and no cache available', { status: 503 });
+                }
+            })());
+
+        } else if (isPic) {
+            event.respondWith(
+                picFetch(request)
+            )
+        }
 
     }
+
 });
+
+async function picFetch(req) {
+
+    const cache = await caches.open(PICS_CACHE)
+    const cachedReq = await cache.match(req)
+    console.log(cachedReq);
+
+    if (cachedReq) {
+
+        return cachedReq
+    }
+
+    const freshRes = await fetch(req)
+    console.log(freshRes);
+    await cache.put(req, freshRes.clone())
+    return freshRes
+
+
+}
 
 
 const assets = [
-    './',
-    './auth.html',
-    './auth.js',
+    '/',
+    '/auth.html',
+    '/auth.js',
 
-    './chatroom.html',
-    './chatroom.js',
+    '/chatroom.html',
+    '/chatroom.js',
 
-    './firebase.js',
+    '/firebase.js',
 
-    './home.js',
-    './index.html',
+    '/home.js',
+    '/index.html',
 
-    './logo white.svg',
-    './logo.svg',
-    './icon 192.png',
-    './icon 512.png',
+    '/logo white.svg',
+    '/logo.svg',
+    '/icon 192.png',
+    '/icon 512.png',
 
-    './manifest.json',
+    '/manifest.json',
 
-    './settings.html',
-    './settings.js',
+    '/settings.html',
+    '/settings.js',
 
-    './style.css',
+    '/style.css',
 
 
 
@@ -79,11 +111,14 @@ self.addEventListener('message', event => {
 });
 
 self.addEventListener('install', event => {
-    self.skipWaiting()
+    self.skipWaiting();
     event.waitUntil(
-        caches.open(CACHE_NAME).then(cache => {
-            return cache.addAll(assets);
-        })
+        caches.open(FILES_CACHE)
+            .then(cache => {
+                console.log('[SW] Caching assets...');
+                return cache.addAll(assets);
+            })
+            .catch(err => console.error('[SW] Asset caching failed:', err))
     );
 });
 
@@ -119,7 +154,6 @@ self.addEventListener('push', async event => {
     } else {
         console.log('app close');
         console.log(data.data.from);
-
 
         event.waitUntil(self.registration.showNotification(data.title, data));
 

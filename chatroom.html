@@ -46,7 +46,7 @@
         <form id="message-f">
             <textarea rows="1" placeholder="Type your message..."
                 oninput="if(this.scrollHeight < 100){this.style.height = 'auto';this.style.height = `${this.scrollHeight}px`;this.style.overflow = 'hidden'}else{this.style.overflow = 'auto'}"></textarea>
-            <button type="submit">
+            <button type="submit" id="send-msg">
                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                     fill="#e8eaed">
                     <path
