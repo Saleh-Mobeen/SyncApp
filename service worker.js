@@ -146,16 +146,57 @@ self.addEventListener('update', event => {
 self.addEventListener('push', async event => {
     const data = event.data.json();
     console.log('Push received:', data);
-    addNewMsg(data.data.from)
+    addNewMsg(data.from)
 
     if (await checkClientIsVisible()) {
 
         console.log('app open');
     } else {
         console.log('app close');
-        console.log(data.data.from);
+        console.log(data.from);
 
-        event.waitUntil(self.registration.showNotification(data.title, data));
+        const tag = 'chat-' + data.from
+
+        const existing = await self.registration.getNotifications({ tag });
+        console.log(tag, existing);
+
+
+        let messages = [];
+        if (existing.length) {
+            const oldNotif = existing[0];
+            console.log(oldNotif);
+
+            messages = oldNotif.data.messages || [];
+            console.log(messages);
+
+            oldNotif.close();
+        }
+
+        messages.push(data.text);
+
+
+        const maxMessages = 5;
+        if (messages.length >= maxMessages) {
+            messages = messages.slice(messages.length - maxMessages);
+        }
+        const body = messages.join('\n');
+        console.log(body);
+
+        const options = {
+            tag: tag,
+            renotify: true,
+            icon: data.image,
+            badge: data.image,
+            body: `${data.from}: ${body}`,
+            data: {
+                from: data.from,
+                url: data.url,
+                text: data.text,
+                messages
+            }
+        };
+
+        event.waitUntil(self.registration.showNotification("Syncapp", options));
 
     }
 
