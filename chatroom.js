@@ -121,11 +121,11 @@ export async function init() {
                     sendMessage(message, chatref)
                     fetch('https://9n5t68-3000.csb.app/notify-user', {
                         method: "POST",
-                        body: {
+                        body: JSON.stringify({
                             email: email,
                             from: userData.email,
                             msg: msgInp.value.trim()
-                        }
+                        })
                     }).then((res) => { console.warn(res) })
                     cancelReply()
                     msgInp.value = ""
