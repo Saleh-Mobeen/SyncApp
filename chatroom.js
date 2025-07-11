@@ -119,6 +119,14 @@ export async function init() {
                         message.replyTo = messageF.getAttribute('data-reply-ts')
                     }
                     sendMessage(message, chatref)
+                    fetch('https://9n5t68-3000.csb.app/notify-user', {
+                        method: "POST",
+                        body: {
+                            email: email,
+                            from: userData.email,
+                            msg: msgInp.value.trim()
+                        }
+                    }).then((res) => { console.warn(res) })
                     cancelReply()
                     msgInp.value = ""
                     msgInp.style.height = 'auto'; msgInp.style.height = `${msgInp.scrollHeight}px`
