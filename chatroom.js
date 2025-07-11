@@ -121,6 +121,9 @@ export async function init() {
                     sendMessage(message, chatref)
                     fetch('https://9n5t68-3000.csb.app/notify-user', {
                         method: "POST",
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
                         body: JSON.stringify({
                             email: email,
                             from: userData.email,
