@@ -98,7 +98,10 @@ export async function init() {
             linkWrap.appendChild(contDiv)
             contDiv.innerHTML = `
                 <div class="contact-img">
-                    <img src="${e.profilePicurl}" alt="">
+                    <img src="${e.profilePicurl}" onError="
+                            this.onerror = null; this.src='default-user.png'
+                        " alt="">
+                    
                  </div>
                 <h2>${e.username}</h2>`
 
@@ -268,7 +271,7 @@ export async function init() {
             sub: subscription
         }
 
-        fetch('https://syncapp.glitch.me/subscribe', {
+        fetch('https://9n5t68-3000.csb.app/subscribe', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(subscription)
@@ -307,7 +310,7 @@ export async function init() {
             sub: subscription
         }
 
-        fetch('https://syncapp.glitch.me/unsubscribe', {
+        fetch('https://9n5t68-3000.csb.app/unsubscribe', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(subscription)

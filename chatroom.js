@@ -104,7 +104,7 @@ export async function init() {
 
         function msgsub() {
 
-            fetch('https://syncapp.glitch.me/ping').then((res) => {
+            fetch('https://9n5t68-3000.csb.app/ping').then((res) => {
                 console.warn(res);
 
                 if (msgInp.value.trim() != '') {
