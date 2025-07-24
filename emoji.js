@@ -10,7 +10,7 @@ export async function init() {
     const msginp = document.querySelector('#message-f>textarea')
 
 
-    fetch('/emoji_list.json')
+    fetch('emoji_list.json')
 
         .then(res => res.json())
         .then(data => {
