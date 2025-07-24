@@ -1,0 +1,4273 @@
+[
+  {
+    "emoji": "😀",
+    "name": "Grinning Face",
+    "category": "smilies",
+    "keywords": [
+      "grinning",
+      "face",
+      "happy",
+      "smile"
+    ]
+  },
+  {
+    "emoji": "😃",
+    "name": "Smiling Face With Open Mouth",
+    "category": "smilies",
+    "keywords": [
+      "smiling",
+      "face",
+      "open-mouth",
+      "happy",
+      "excited"
+    ]
+  },
+  {
+    "emoji": "😄",
+    "name": "Smiling Face With Open Mouth And Smiling Eyes",
+    "category": "smilies",
+    "keywords": [
+      "smiling",
+      "face",
+      "open-mouth",
+      "smiling-eyes",
+      "joy"
+    ]
+  },
+  {
+    "emoji": "😁",
+    "name": "Grinning Face With Smiling Eyes",
+    "category": "smilies",
+    "keywords": [
+      "grinning",
+      "face",
+      "smiling-eyes",
+      "excited"
+    ]
+  },
+  {
+    "emoji": "😆",
+    "name": "Smiling Face With Open Mouth And Tightly-Closed Eyes",
+    "category": "smilies",
+    "keywords": [
+      "smiling",
+      "face",
+      "open-mouth",
+      "closed-eyes",
+      "laughing"
+    ]
+  },
+  {
+    "emoji": "😅",
+    "name": "Smiling Face With Open Mouth And Cold Sweat",
+    "category": "smilies",
+    "keywords": [
+      "smiling",
+      "face",
+      "open-mouth",
+      "cold-sweat",
+      "nervous"
+    ]
+  },
+  {
+    "emoji": "😂",
+    "name": "Face With Tears Of Joy",
+    "category": "smilies",
+    "keywords": [
+      "face",
+      "tears-of-joy",
+      "laughing",
+      "crying-laugh"
+    ]
+  },
+  {
+    "emoji": "🤣",
+    "name": "Rolling On The Floor Laughing",
+    "category": "smilies",
+    "keywords": [
+      "rolling-floor-laughing",
+      "ROFL",
+      "hilarious",
+      "laughing"
+    ]
+  },
+  {
+    "emoji": "😊",
+    "name": "Smiling Face With Smiling Eyes",
+    "category": "smilies",
+    "keywords": [
+      "smiling",
+      "face",
+      "smiling-eyes",
+      "blush",
+      "happy"
+    ]
+  },
+  {
+    "emoji": "😇",
+    "name": "Smiling Face With Halo",
+    "category": "smilies",
+    "keywords": [
+      "smiling",
+      "face",
+      "halo",
+      "angel",
+      "innocent"
+    ]
+  },
+  {
+    "emoji": "🙂",
+    "name": "Slightly Smiling Face",
+    "category": "smilies",
+    "keywords": [
+      "slightly-smiling",
+      "face",
+      "calm",
+      "polite"
+    ]
+  },
+  {
+    "emoji": "🙃",
+    "name": "Upside-Down Face",
+    "category": "smilies",
+    "keywords": [
+      "upside-down",
+      "face",
+      "silly",
+      "sarcasm"
+    ]
+  },
+  {
+    "emoji": "😉",
+    "name": "Winking Face",
+    "category": "smilies",
+    "keywords": [
+      "winking",
+      "face",
+      "flirt",
+      "joke"
+    ]
+  },
+  {
+    "emoji": "😌",
+    "name": "Relieved Face",
+    "category": "smilies",
+    "keywords": [
+      "relieved",
+      "face",
+      "peace",
+      "calm"
+    ]
+  },
+  {
+    "emoji": "😍",
+    "name": "Smiling Face With Heart-Shaped Eyes",
+    "category": "smilies",
+    "keywords": [
+      "smiling",
+      "face",
+      "heart-shaped-eyes",
+      "love",
+      "adore"
+    ]
+  },
+  {
+    "emoji": "🥰",
+    "name": "Smiling Face With Smiling Eyes And Three Hearts",
+    "category": "smilies",
+    "keywords": [
+      "smiling",
+      "face",
+      "smiling-eyes",
+      "hearts",
+      "in-love"
+    ]
+  },
+  {
+    "emoji": "😘",
+    "name": "Face Throwing A Kiss",
+    "category": "smilies",
+    "keywords": [
+      "face",
+      "throwing-kiss",
+      "kiss",
+      "flirting"
+    ]
+  },
+  {
+    "emoji": "😗",
+    "name": "Kissing Face",
+    "category": "smilies",
+    "keywords": [
+      "kissing",
+      "face",
+      "affection"
+    ]
+  },
+  {
+    "emoji": "😙",
+    "name": "Kissing Face With Smiling Eyes",
+    "category": "smilies",
+    "keywords": [
+      "kissing",
+      "face",
+      "smiling-eyes",
+      "affection"
+    ]
+  },
+  {
+    "emoji": "😚",
+    "name": "Kissing Face With Closed Eyes",
+    "category": "smilies",
+    "keywords": [
+      "kissing",
+      "face",
+      "closed-eyes",
+      "affection",
+      "romantic"
+    ]
+  },
+  {
+    "emoji": "🥲",
+    "name": "Smiling Face With Tear",
+    "category": "smilies",
+    "keywords": [
+      "smiling",
+      "face",
+      "tear",
+      "emotional",
+      "touched"
+    ]
+  },
+  {
+    "emoji": "☺️",
+    "name": "White Smiling Face",
+    "category": "smilies",
+    "keywords": [
+      "white",
+      "smiling",
+      "face",
+      "happy"
+    ]
+  },
+  {
+    "emoji": "🤗",
+    "name": "Hugging Face",
+    "category": "smilies",
+    "keywords": [
+      "hugging",
+      "face",
+      "comfort",
+      "support"
+    ]
+  },
+  {
+    "emoji": "🤩",
+    "name": "Grinning Face With Star Eyes",
+    "category": "smilies",
+    "keywords": [
+      "grinning",
+      "face",
+      "star-eyes",
+      "excited",
+      "starstruck"
+    ]
+  },
+  {
+    "emoji": "🤔",
+    "name": "Thinking Face",
+    "category": "smilies",
+    "keywords": [
+      "thinking",
+      "face",
+      "ponder",
+      "question"
+    ]
+  },
+  {
+    "emoji": "🤨",
+    "name": "Face With One Eyebrow Raised",
+    "category": "smilies",
+    "keywords": [
+      "face",
+      "eyebrow-raised",
+      "skeptical",
+      "doubt"
+    ]
+  },
+  {
+    "emoji": "😐",
+    "name": "Neutral Face",
+    "category": "smilies",
+    "keywords": [
+      "neutral",
+      "face",
+      "blank",
+      "unimpressed"
+    ]
+  },
+  {
+    "emoji": "😑",
+    "name": "Expressionless Face",
+    "category": "smilies",
+    "keywords": [
+      "expressionless",
+      "face",
+      "blank",
+      "deadpan"
+    ]
+  },
+  {
+    "emoji": "😶",
+    "name": "Face Without Mouth",
+    "category": "smilies",
+    "keywords": [
+      "face",
+      "without-mouth",
+      "speechless",
+      "silent"
+    ]
+  },
+  {
+    "emoji": "😏",
+    "name": "Smirking Face",
+    "category": "smilies",
+    "keywords": [
+      "smirking",
+      "face",
+      "smug",
+      "sly"
+    ]
+  },
+  {
+    "emoji": "😣",
+    "name": "Persevering Face",
+    "category": "smilies",
+    "keywords": [
+      "persevering",
+      "face",
+      "struggle",
+      "endure"
+    ]
+  },
+  {
+    "emoji": "😥",
+    "name": "Disappointed But Relieved Face",
+    "category": "smilies",
+    "keywords": [
+      "disappointed",
+      "relieved",
+      "face",
+      "whew"
+    ]
+  },
+  {
+    "emoji": "😮",
+    "name": "Face With Open Mouth",
+    "category": "smilies",
+    "keywords": [
+      "face",
+      "open-mouth",
+      "surprise",
+      "shock"
+    ]
+  },
+  {
+    "emoji": "🤐",
+    "name": "Zipper-Mouth Face",
+    "category": "smilies",
+    "keywords": [
+      "zipper-mouth",
+      "face",
+      "secret",
+      "silent"
+    ]
+  },
+  {
+    "emoji": "😯",
+    "name": "Hushed Face",
+    "category": "smilies",
+    "keywords": [
+      "hushed",
+      "face",
+      "surprise",
+      "speechless"
+    ]
+  },
+  {
+    "emoji": "😪",
+    "name": "Sleepy Face",
+    "category": "smilies",
+    "keywords": [
+      "sleepy",
+      "face",
+      "tired",
+      "bored"
+    ]
+  },
+  {
+    "emoji": "😫",
+    "name": "Tired Face",
+    "category": "smilies",
+    "keywords": [
+      "tired",
+      "face",
+      "exhausted",
+      "upset"
+    ]
+  },
+  {
+    "emoji": "🥱",
+    "name": "Yawning Face",
+    "category": "smilies",
+    "keywords": [
+      "yawning",
+      "face",
+      "tired",
+      "bored"
+    ]
+  },
+  {
+    "emoji": "😴",
+    "name": "Sleeping Face",
+    "category": "smilies",
+    "keywords": [
+      "sleeping",
+      "face",
+      "zzz",
+      "tired"
+    ]
+  },
+  {
+    "emoji": "😛",
+    "name": "Face With Stuck-Out Tongue",
+    "category": "smilies",
+    "keywords": [
+      "face",
+      "stuck-out-tongue",
+      "playful",
+      "silly"
+    ]
+  },
+  {
+    "emoji": "😜",
+    "name": "Face With Stuck-Out Tongue And Winking Eye",
+    "category": "smilies",
+    "keywords": [
+      "face",
+      "stuck-out-tongue",
+      "winking",
+      "joke"
+    ]
+  },
+  {
+    "emoji": "😝",
+    "name": "Face With Stuck-Out Tongue And Tightly-Closed Eyes",
+    "category": "smilies",
+    "keywords": [
+      "face",
+      "stuck-out-tongue",
+      "closed-eyes",
+      "goofy"
+    ]
+  },
+  {
+    "emoji": "🤤",
+    "name": "Drooling Face",
+    "category": "smilies",
+    "keywords": [
+      "drooling",
+      "face",
+      "desire",
+      "hungry"
+    ]
+  },
+  {
+    "emoji": "😒",
+    "name": "Unamused Face",
+    "category": "smilies",
+    "keywords": [
+      "unamused",
+      "face",
+      "bored",
+      "unimpressed"
+    ]
+  },
+  {
+    "emoji": "😓",
+    "name": "Face With Cold Sweat",
+    "category": "smilies",
+    "keywords": [
+      "face",
+      "cold-sweat",
+      "anxious",
+      "stressed"
+    ]
+  },
+  {
+    "emoji": "😔",
+    "name": "Pensive Face",
+    "category": "smilies",
+    "keywords": [
+      "pensive",
+      "face",
+      "sad",
+      "reflective"
+    ]
+  },
+  {
+    "emoji": "😕",
+    "name": "Confused Face",
+    "category": "smilies",
+    "keywords": [
+      "confused",
+      "face",
+      "unsure",
+      "question"
+    ]
+  },
+  {
+    "emoji": "🥺",
+    "name": "Face With Pleading Eyes",
+    "category": "smilies",
+    "keywords": [
+      "face",
+      "pleading-eyes",
+      "begging",
+      "sad"
+    ]
+  },
+  {
+    "emoji": "😬",
+    "name": "Grimacing Face",
+    "category": "smilies",
+    "keywords": [
+      "grimacing",
+      "face",
+      "cringe",
+      "awkward"
+    ]
+  },
+  {
+    "emoji": "🤥",
+    "name": "Lying Face",
+    "category": "smilies",
+    "keywords": [
+      "lying",
+      "face",
+      "pinocchio",
+      "dishonest"
+    ]
+  },
+  {
+    "emoji": "😷",
+    "name": "Face With Medical Mask",
+    "category": "smilies",
+    "keywords": [
+      "face",
+      "medical-mask",
+      "sick",
+      "protection"
+    ]
+  },
+  {
+    "emoji": "🤒",
+    "name": "Face With Thermometer",
+    "category": "smilies",
+    "keywords": [
+      "face",
+      "thermometer",
+      "sick",
+      "fever"
+    ]
+  },
+  {
+    "emoji": "🤕",
+    "name": "Face With Head-Bandage",
+    "category": "smilies",
+    "keywords": [
+      "face",
+      "head-bandage",
+      "injured",
+      "hurt"
+    ]
+  },
+  {
+    "emoji": "🤢",
+    "name": "Nauseated Face",
+    "category": "smilies",
+    "keywords": [
+      "nauseated",
+      "face",
+      "sick",
+      "disgust"
+    ]
+  },
+  {
+    "emoji": "🤮",
+    "name": "Face With Open Mouth Vomiting",
+    "category": "smilies",
+    "keywords": [
+      "face",
+      "vomiting",
+      "sick",
+      "disgust"
+    ]
+  },
+  {
+    "emoji": "🤧",
+    "name": "Sneezing Face",
+    "category": "smilies",
+    "keywords": [
+      "sneezing",
+      "face",
+      "sick",
+      "allergy"
+    ]
+  },
+  {
+    "emoji": "😵",
+    "name": "Dizzy Face",
+    "category": "smilies",
+    "keywords": [
+      "dizzy",
+      "face",
+      "confused",
+      "spinning"
+    ]
+  },
+  {
+    "emoji": "🤯",
+    "name": "Shocked Face With Exploding Head",
+    "category": "smilies",
+    "keywords": [
+      "shocked",
+      "face",
+      "exploding-head",
+      "mind-blown"
+    ]
+  },
+  {
+    "emoji": "🤠",
+    "name": "Face With Cowboy Hat",
+    "category": "smilies",
+    "keywords": [
+      "face",
+      "cowboy-hat",
+      "yeehaw",
+      "cowboy"
+    ]
+  },
+  {
+    "emoji": "🥳",
+    "name": "Face With Party Horn And Party Hat",
+    "category": "smilies",
+    "keywords": [
+      "face",
+      "party-horn",
+      "party-hat",
+      "celebration"
+    ]
+  },
+  {
+    "emoji": "😎",
+    "name": "Smiling Face With Sunglasses",
+    "category": "smilies",
+    "keywords": [
+      "smiling",
+      "face",
+      "sunglasses",
+      "cool"
+    ]
+  },
+  {
+    "emoji": "🤓",
+    "name": "Nerd Face",
+    "category": "smilies",
+    "keywords": [
+      "nerd",
+      "face",
+      "geek",
+      "glasses"
+    ]
+  },
+  {
+    "emoji": "🧐",
+    "name": "Face With Monocle",
+    "category": "smilies",
+    "keywords": [
+      "face",
+      "monocle",
+      "examine",
+      "snobbish"
+    ]
+  },
+  {
+    "emoji": "😟",
+    "name": "Worried Face",
+    "category": "smilies",
+    "keywords": [
+      "worried",
+      "face",
+      "concerned",
+      "anxious"
+    ]
+  },
+  {
+    "emoji": "🙁",
+    "name": "Slightly Frowning Face",
+    "category": "smilies",
+    "keywords": [
+      "slightly-frowning",
+      "face",
+      "sad",
+      "disappointed"
+    ]
+  },
+  {
+    "emoji": "☹️",
+    "name": "White Frowning Face",
+    "category": "smilies",
+    "keywords": [
+      "white",
+      "frowning",
+      "face",
+      "sad"
+    ]
+  },
+  {
+    "emoji": "😲",
+    "name": "Astonished Face",
+    "category": "smilies",
+    "keywords": [
+      "astonished",
+      "face",
+      "shocked",
+      "amazed"
+    ]
+  },
+  {
+    "emoji": "🥹",
+    "name": "Face Holding Back Tears",
+    "category": "smilies",
+    "keywords": [
+      "face",
+      "holding-back-tears",
+      "moved",
+      "emotional"
+    ]
+  },
+  {
+    "emoji": "😳",
+    "name": "Flushed Face",
+    "category": "smilies",
+    "keywords": [
+      "flushed",
+      "face",
+      "embarrassed",
+      "shocked"
+    ]
+  },
+  {
+    "emoji": "🫣",
+    "name": "Face With Peeking Eye",
+    "category": "smilies",
+    "keywords": [
+      "face",
+      "peeking-eye",
+      "shy",
+      "curious"
+    ]
+  },
+  {
+    "emoji": "🫢",
+    "name": "Face With Open Eyes And Hand Over Mouth",
+    "category": "smilies",
+    "keywords": [
+      "face",
+      "open-eyes",
+      "hand-over-mouth",
+      "shock"
+    ]
+  },
+  {
+    "emoji": "😦",
+    "name": "Frowning Face With Open Mouth",
+    "category": "smilies",
+    "keywords": [
+      "frowning",
+      "face",
+      "open-mouth",
+      "disappointed"
+    ]
+  },
+  {
+    "emoji": "😧",
+    "name": "Anguished Face",
+    "category": "smilies",
+    "keywords": [
+      "anguished",
+      "face",
+      "stunned",
+      "distraught"
+    ]
+  },
+  {
+    "emoji": "😨",
+    "name": "Fearful Face",
+    "category": "smilies",
+    "keywords": [
+      "fearful",
+      "face",
+      "scared",
+      "terrified"
+    ]
+  },
+  {
+    "emoji": "😰",
+    "name": "Face With Open Mouth And Cold Sweat",
+    "category": "smilies",
+    "keywords": [
+      "face",
+      "open-mouth",
+      "cold-sweat",
+      "anxious"
+    ]
+  },
+  {
+    "emoji": "😢",
+    "name": "Crying Face",
+    "category": "smilies",
+    "keywords": [
+      "crying",
+      "face",
+      "sad",
+      "tears"
+    ]
+  },
+  {
+    "emoji": "😭",
+    "name": "Loudly Crying Face",
+    "category": "smilies",
+    "keywords": [
+      "loudly-crying",
+      "face",
+      "sobbing",
+      "heartbroken"
+    ]
+  },
+  {
+    "emoji": "😱",
+    "name": "Face Screaming In Fear",
+    "category": "smilies",
+    "keywords": [
+      "face",
+      "screaming-fear",
+      "horror",
+      "shock"
+    ]
+  },
+  {
+    "emoji": "😖",
+    "name": "Confounded Face",
+    "category": "smilies",
+    "keywords": [
+      "confounded",
+      "face",
+      "frustrated",
+      "annoyed"
+    ]
+  },
+  {
+    "emoji": "😞",
+    "name": "Disappointed Face",
+    "category": "smilies",
+    "keywords": [
+      "disappointed",
+      "face",
+      "sad",
+      "let-down"
+    ]
+  },
+  {
+    "emoji": "😩",
+    "name": "Weary Face",
+    "category": "smilies",
+    "keywords": [
+      "weary",
+      "face",
+      "tired",
+      "frustrated"
+    ]
+  },
+  {
+    "emoji": "😤",
+    "name": "Face With Look Of Triumph",
+    "category": "smilies",
+    "keywords": [
+      "face",
+      "triumph",
+      "smug",
+      "winner"
+    ]
+  },
+  {
+    "emoji": "😡",
+    "name": "Pouting Face",
+    "category": "smilies",
+    "keywords": [
+      "pouting",
+      "face",
+      "angry",
+      "rage"
+    ]
+  },
+  {
+    "emoji": "😠",
+    "name": "Angry Face",
+    "category": "smilies",
+    "keywords": [
+      "angry",
+      "face",
+      "mad",
+      "annoyed"
+    ]
+  },
+  {
+    "emoji": "🤬",
+    "name": "Serious Face With Symbols Covering Mouth",
+    "category": "smilies",
+    "keywords": [
+      "serious",
+      "face",
+      "symbols-covering-mouth",
+      "swearing"
+    ]
+  },
+  {
+    "emoji": "😈",
+    "name": "Smiling Face With Horns",
+    "category": "smilies",
+    "keywords": [
+      "smiling",
+      "face",
+      "horns",
+      "devil",
+      "mischievous"
+    ]
+  },
+  {
+    "emoji": "👿",
+    "name": "Imp",
+    "category": "smilies",
+    "keywords": [
+      "imp",
+      "devil",
+      "angry",
+      "evil"
+    ]
+  },
+  {
+    "emoji": "💀",
+    "name": "Skull",
+    "category": "smilies",
+    "keywords": [
+      "skull",
+      "death",
+      "danger",
+      "poison"
+    ]
+  },
+  {
+    "emoji": "☠️",
+    "name": "Skull And Crossbones",
+    "category": "smilies",
+    "keywords": [
+      "skull-crossbones",
+      "death",
+      "danger",
+      "pirate"
+    ]
+  },
+  {
+    "emoji": "🤡",
+    "name": "Clown Face",
+    "category": "smilies",
+    "keywords": [
+      "clown",
+      "face",
+      "comedy",
+      "creepy"
+    ]
+  },
+  {
+    "emoji": "👹",
+    "name": "Japanese Ogre",
+    "category": "smilies",
+    "keywords": [
+      "japanese-ogre",
+      "monster",
+      "folklore",
+      "demon"
+    ]
+  },
+  {
+    "emoji": "👺",
+    "name": "Japanese Goblin",
+    "category": "smilies",
+    "keywords": [
+      "japanese-goblin",
+      "monster",
+      "folklore",
+      "evil"
+    ]
+  },
+  {
+    "emoji": "👻",
+    "name": "Ghost",
+    "category": "smilies",
+    "keywords": [
+      "ghost",
+      "halloween",
+      "scary",
+      "spooky"
+    ]
+  },
+  {
+    "emoji": "👽",
+    "name": "Extraterrestrial Alien",
+    "category": "smilies",
+    "keywords": [
+      "alien",
+      "extraterrestrial",
+      "ufo",
+      "scifi"
+    ]
+  },
+  {
+    "emoji": "👾",
+    "name": "Alien Monster",
+    "category": "smilies",
+    "keywords": [
+      "alien-monster",
+      "space-invader",
+      "arcade",
+      "game"
+    ]
+  },
+  {
+    "emoji": "🤖",
+    "name": "Robot Face",
+    "category": "smilies",
+    "keywords": [
+      "robot",
+      "face",
+      "android",
+      "scifi"
+    ]
+  },
+  {
+    "emoji": "😺",
+    "name": "Smiling Cat Face With Open Mouth",
+    "category": "smilies",
+    "keywords": [
+      "smiling",
+      "cat",
+      "face",
+      "open-mouth",
+      "happy"
+    ]
+  },
+  {
+    "emoji": "😸",
+    "name": "Grinning Cat Face With Smiling Eyes",
+    "category": "smilies",
+    "keywords": [
+      "grinning",
+      "cat",
+      "face",
+      "smiling-eyes",
+      "joy"
+    ]
+  },
+  {
+    "emoji": "😹",
+    "name": "Cat Face With Tears Of Joy",
+    "category": "smilies",
+    "keywords": [
+      "cat",
+      "face",
+      "tears-of-joy",
+      "laughing"
+    ]
+  },
+  {
+    "emoji": "😻",
+    "name": "Smiling Cat Face With Heart-Shaped Eyes",
+    "category": "smilies",
+    "keywords": [
+      "smiling",
+      "cat",
+      "face",
+      "heart-shaped-eyes",
+      "love"
+    ]
+  },
+  {
+    "emoji": "😼",
+    "name": "Cat Face With Wry Smile",
+    "category": "smilies",
+    "keywords": [
+      "cat",
+      "face",
+      "wry-smile",
+      "sarcastic"
+    ]
+  },
+  {
+    "emoji": "😽",
+    "name": "Kissing Cat Face With Closed Eyes",
+    "category": "smilies",
+    "keywords": [
+      "kissing",
+      "cat",
+      "face",
+      "closed-eyes",
+      "affection"
+    ]
+  },
+  {
+    "emoji": "🙀",
+    "name": "Weary Cat Face",
+    "category": "smilies",
+    "keywords": [
+      "weary",
+      "cat",
+      "face",
+      "shocked"
+    ]
+  },
+  {
+    "emoji": "😿",
+    "name": "Crying Cat Face",
+    "category": "smilies",
+    "keywords": [
+      "crying",
+      "cat",
+      "face",
+      "sad",
+      "tears"
+    ]
+  },
+  {
+    "emoji": "😾",
+    "name": "Pouting Cat Face",
+    "category": "smilies",
+    "keywords": [
+      "pouting",
+      "cat",
+      "face",
+      "angry"
+    ]
+  },
+  {
+    "emoji": "🙈",
+    "name": "See-No-Evil Monkey",
+    "category": "smilies",
+    "keywords": [
+      "see-no-evil",
+      "monkey",
+      "embarrassed",
+      "shy"
+    ]
+  },
+  {
+    "emoji": "🙉",
+    "name": "Hear-No-Evil Monkey",
+    "category": "smilies",
+    "keywords": [
+      "hear-no-evil",
+      "monkey",
+      "ignore",
+      "avoid"
+    ]
+  },
+  {
+    "emoji": "🙊",
+    "name": "Speak-No-Evil Monkey",
+    "category": "smilies",
+    "keywords": [
+      "speak-no-evil",
+      "monkey",
+      "secret",
+      "hush"
+    ]
+  },
+  {
+    "emoji": "👍",
+    "name": "Thumbs Up",
+    "category": "hands",
+    "keywords": [
+      "thumbs-up",
+      "like",
+      "approve",
+      "okay",
+      "yes"
+    ]
+  },
+  {
+    "emoji": "👎",
+    "name": "Thumbs Down",
+    "category": "hands",
+    "keywords": [
+      "thumbs-down",
+      "dislike",
+      "disapprove",
+      "no",
+      "bad"
+    ]
+  },
+  {
+    "emoji": "👊",
+    "name": "Oncoming Fist",
+    "category": "hands",
+    "keywords": [
+      "oncoming-fist",
+      "punch",
+      "attack",
+      "bump",
+      "fistbump"
+    ]
+  },
+  {
+    "emoji": "🤛",
+    "name": "Left-Facing Fist",
+    "category": "hands",
+    "keywords": [
+      "left-fist",
+      "punch",
+      "power",
+      "side-fist"
+    ]
+  },
+  {
+    "emoji": "🤜",
+    "name": "Right-Facing Fist",
+    "category": "hands",
+    "keywords": [
+      "right-fist",
+      "punch",
+      "power",
+      "side-fist"
+    ]
+  },
+  {
+    "emoji": "👏",
+    "name": "Clapping Hands",
+    "category": "hands",
+    "keywords": [
+      "clap",
+      "applause",
+      "praise",
+      "congratulations",
+      "approval"
+    ]
+  },
+  {
+    "emoji": "🙌",
+    "name": "Raising Hands",
+    "category": "hands",
+    "keywords": [
+      "raising-hands",
+      "celebration",
+      "hooray",
+      "bless",
+      "praise"
+    ]
+  },
+  {
+    "emoji": "🤝",
+    "name": "Handshake",
+    "category": "hands",
+    "keywords": [
+      "handshake",
+      "agreement",
+      "partnership",
+      "deal",
+      "greeting"
+    ]
+  },
+  {
+    "emoji": "🙏",
+    "name": "Folded Hands",
+    "category": "hands",
+    "keywords": [
+      "folded-hands",
+      "pray",
+      "please",
+      "thank-you",
+      "hope"
+    ]
+  },
+  {
+    "emoji": "✋",
+    "name": "Raised Hand",
+    "category": "hands",
+    "keywords": [
+      "raised-hand",
+      "hi",
+      "stop",
+      "high-five",
+      "palm"
+    ]
+  },
+  {
+    "emoji": "🖐️",
+    "name": "Hand With Fingers Splayed",
+    "category": "hands",
+    "keywords": [
+      "splayed-hand",
+      "stop",
+      "palm",
+      "high-five",
+      "hover"
+    ]
+  },
+  {
+    "emoji": "👋",
+    "name": "Waving Hand",
+    "category": "hands",
+    "keywords": [
+      "wave",
+      "hello",
+      "goodbye",
+      "greeting",
+      "farewell"
+    ]
+  },
+  {
+    "emoji": "🤚",
+    "name": "Raised Back of Hand",
+    "category": "hands",
+    "keywords": [
+      "backhand",
+      "stop",
+      "palm",
+      "raised",
+      "gesture"
+    ]
+  },
+  {
+    "emoji": "🖖",
+    "name": "Vulcan Salute",
+    "category": "hands",
+    "keywords": [
+      "vulcan-salute",
+      "spock",
+      "star-trek",
+      "live-long",
+      "prosper"
+    ]
+  },
+  {
+    "emoji": "👌",
+    "name": "OK Hand",
+    "category": "hands",
+    "keywords": [
+      "ok-hand",
+      "okay",
+      "perfect",
+      "good",
+      "approve"
+    ]
+  },
+  {
+    "emoji": "🤌",
+    "name": "Pinched Fingers",
+    "category": "hands",
+    "keywords": [
+      "pinched-fingers",
+      "italian",
+      "gesture",
+      "money",
+      "question"
+    ]
+  },
+  {
+    "emoji": "🤏",
+    "name": "Pinching Hand",
+    "category": "hands",
+    "keywords": [
+      "pinching-hand",
+      "small",
+      "tiny",
+      "little",
+      "grasp"
+    ]
+  },
+  {
+    "emoji": "✌️",
+    "name": "Victory Hand",
+    "category": "hands",
+    "keywords": [
+      "victory-hand",
+      "peace",
+      "victory",
+      "v-sign",
+      "two"
+    ]
+  },
+  {
+    "emoji": "🤞",
+    "name": "Crossed Fingers",
+    "category": "hands",
+    "keywords": [
+      "crossed-fingers",
+      "luck",
+      "hopeful",
+      "wish",
+      "superstition"
+    ]
+  },
+  {
+    "emoji": "🤟",
+    "name": "Love-You Gesture",
+    "category": "hands",
+    "keywords": [
+      "love-you",
+      "ily",
+      "sign-language",
+      "gesture",
+      "deaf"
+    ]
+  },
+  {
+    "emoji": "🤘",
+    "name": "Sign of the Horns",
+    "category": "hands",
+    "keywords": [
+      "horns",
+      "rock-on",
+      "heavy-metal",
+      "devil-horns",
+      "rock"
+    ]
+  },
+  {
+    "emoji": "🤙",
+    "name": "Call Me Hand",
+    "category": "hands",
+    "keywords": [
+      "call-me",
+      "phone",
+      "hang-loose",
+      "shaka",
+      "surf"
+    ]
+  },
+  {
+    "emoji": "👈",
+    "name": "Backhand Index Pointing Left",
+    "category": "hands",
+    "keywords": [
+      "point-left",
+      "direction",
+      "previous",
+      "back",
+      "arrow"
+    ]
+  },
+  {
+    "emoji": "👉",
+    "name": "Backhand Index Pointing Right",
+    "category": "hands",
+    "keywords": [
+      "point-right",
+      "direction",
+      "next",
+      "forward",
+      "arrow"
+    ]
+  },
+  {
+    "emoji": "👆",
+    "name": "Backhand Index Pointing Up",
+    "category": "hands",
+    "keywords": [
+      "point-up",
+      "direction",
+      "above",
+      "increase",
+      "arrow"
+    ]
+  },
+  {
+    "emoji": "👇",
+    "name": "Backhand Index Pointing Down",
+    "category": "hands",
+    "keywords": [
+      "point-down",
+      "direction",
+      "below",
+      "decrease",
+      "arrow"
+    ]
+  },
+  {
+    "emoji": "☝️",
+    "name": "Index Pointing Up",
+    "category": "hands",
+    "keywords": [
+      "index-up",
+      "point-up",
+      "direction",
+      "above",
+      "attention"
+    ]
+  },
+  {
+    "emoji": "🫰",
+    "name": "Hand With Index Finger and Thumb Crossed",
+    "category": "hands",
+    "keywords": [
+      "fingers-crossed",
+      "money",
+      "expensive",
+      "pinch",
+      "gesture"
+    ]
+  },
+  {
+    "emoji": "🤳",
+    "name": "Selfie",
+    "category": "hands",
+    "keywords": [
+      "selfie",
+      "camera",
+      "phone",
+      "photography",
+      "self-portrait"
+    ]
+  },
+  {
+    "emoji": "💪",
+    "name": "Flexed Biceps",
+    "category": "hands",
+    "keywords": [
+      "flexed-biceps",
+      "muscle",
+      "strong",
+      "workout",
+      "power"
+    ]
+  },
+  {
+    "emoji": "👀",
+    "name": "Eyes",
+    "category": "hands",
+    "keywords": [
+      "eyes",
+      "look",
+      "watch",
+      "see",
+      "stare"
+    ]
+  },
+  {
+    "emoji": "👁️",
+    "name": "Eye",
+    "category": "hands",
+    "keywords": [
+      "eye",
+      "see",
+      "watch",
+      "look",
+      "vision"
+    ]
+  },
+  {
+    "emoji": "💯",
+    "name": "Hundred Points Symbol",
+    "category": "symbols",
+    "keywords": [
+      "hundred-points",
+      "perfect",
+      "score",
+      "excellent",
+      "100"
+    ]
+  },
+  {
+    "emoji": "💋",
+    "name": "Kiss Mark",
+    "category": "symbols",
+    "keywords": [
+      "kiss",
+      "lipstick",
+      "love",
+      "affection"
+    ]
+  },
+  {
+    "emoji": "💌",
+    "name": "Love Letter",
+    "category": "symbols",
+    "keywords": [
+      "love-letter",
+      "romance",
+      "email",
+      "affection"
+    ]
+  },
+  {
+    "emoji": "💘",
+    "name": "Heart With Arrow",
+    "category": "symbols",
+    "keywords": [
+      "heart",
+      "arrow",
+      "cupid",
+      "love"
+    ]
+  },
+  {
+    "emoji": "💝",
+    "name": "Heart With Ribbon",
+    "category": "symbols",
+    "keywords": [
+      "heart",
+      "ribbon",
+      "gift",
+      "valentine"
+    ]
+  },
+  {
+    "emoji": "💖",
+    "name": "Sparkling Heart",
+    "category": "symbols",
+    "keywords": [
+      "sparkling-heart",
+      "love",
+      "excited",
+      "shiny"
+    ]
+  },
+  {
+    "emoji": "💗",
+    "name": "Growing Heart",
+    "category": "symbols",
+    "keywords": [
+      "growing-heart",
+      "love",
+      "affection",
+      "excited"
+    ]
+  },
+  {
+    "emoji": "💓",
+    "name": "Beating Heart",
+    "category": "symbols",
+    "keywords": [
+      "beating-heart",
+      "love",
+      "affection",
+      "lively"
+    ]
+  },
+  {
+    "emoji": "💞",
+    "name": "Revolving Hearts",
+    "category": "symbols",
+    "keywords": [
+      "revolving-hearts",
+      "love",
+      "affection",
+      "couple"
+    ]
+  },
+  {
+    "emoji": "💕",
+    "name": "Two Hearts",
+    "category": "symbols",
+    "keywords": [
+      "two-hearts",
+      "love",
+      "affection",
+      "valentine"
+    ]
+  },
+  {
+    "emoji": "❣️",
+    "name": "Heavy Heart Exclamation Mark Ornament",
+    "category": "symbols",
+    "keywords": [
+      "heart-exclamation",
+      "love",
+      "emphasis",
+      "decoration"
+    ]
+  },
+  {
+    "emoji": "💔",
+    "name": "Broken Heart",
+    "category": "symbols",
+    "keywords": [
+      "broken-heart",
+      "sad",
+      "hurt",
+      "breakup"
+    ]
+  },
+  {
+    "emoji": "❤️",
+    "name": "Heavy Black Heart",
+    "category": "symbols",
+    "keywords": [
+      "red-heart",
+      "love",
+      "passion",
+      "romance"
+    ]
+  },
+  {
+    "emoji": "🧡",
+    "name": "Orange Heart",
+    "category": "symbols",
+    "keywords": [
+      "orange-heart",
+      "love",
+      "friendship",
+      "warmth"
+    ]
+  },
+  {
+    "emoji": "💛",
+    "name": "Yellow Heart",
+    "category": "symbols",
+    "keywords": [
+      "yellow-heart",
+      "love",
+      "friendship",
+      "happiness"
+    ]
+  },
+  {
+    "emoji": "💚",
+    "name": "Green Heart",
+    "category": "symbols",
+    "keywords": [
+      "green-heart",
+      "love",
+      "nature",
+      "jealousy"
+    ]
+  },
+  {
+    "emoji": "💙",
+    "name": "Blue Heart",
+    "category": "symbols",
+    "keywords": [
+      "blue-heart",
+      "love",
+      "trust",
+      "loyalty"
+    ]
+  },
+  {
+    "emoji": "💜",
+    "name": "Purple Heart",
+    "category": "symbols",
+    "keywords": [
+      "purple-heart",
+      "love",
+      "compassion",
+      "spirituality"
+    ]
+  },
+  {
+    "emoji": "🤎",
+    "name": "Brown Heart",
+    "category": "symbols",
+    "keywords": [
+      "brown-heart",
+      "love",
+      "earth",
+      "dependable"
+    ]
+  },
+  {
+    "emoji": "🖤",
+    "name": "Black Heart",
+    "category": "symbols",
+    "keywords": [
+      "black-heart",
+      "dark",
+      "evil",
+      "sad"
+    ]
+  },
+  {
+    "emoji": "🤍",
+    "name": "White Heart",
+    "category": "symbols",
+    "keywords": [
+      "white-heart",
+      "pure",
+      "innocent",
+      "peace"
+    ]
+  },
+  {
+    "emoji": "💢",
+    "name": "Anger Symbol",
+    "category": "symbols",
+    "keywords": [
+      "anger-symbol",
+      "angry",
+      "mad",
+      "annoyed"
+    ]
+  },
+  {
+    "emoji": "💥",
+    "name": "Collision Symbol",
+    "category": "symbols",
+    "keywords": [
+      "collision",
+      "explosion",
+      "boom",
+      "impact"
+    ]
+  },
+  {
+    "emoji": "💫",
+    "name": "Dizzy Symbol",
+    "category": "symbols",
+    "keywords": [
+      "dizzy",
+      "star",
+      "swoon",
+      "faint"
+    ]
+  },
+  {
+    "emoji": "💦",
+    "name": "Splashing Sweat Symbol",
+    "category": "symbols",
+    "keywords": [
+      "sweat-droplets",
+      "water",
+      "exercise",
+      "hot"
+    ]
+  },
+  {
+    "emoji": "💨",
+    "name": "Dash Symbol",
+    "category": "symbols",
+    "keywords": [
+      "dash",
+      "wind",
+      "air",
+      "fast"
+    ]
+  },
+  {
+    "emoji": "🕳️",
+    "name": "Hole",
+    "category": "symbols",
+    "keywords": [
+      "hole",
+      "empty",
+      "pit",
+      "opening"
+    ]
+  },
+  {
+    "emoji": "💣",
+    "name": "Bomb",
+    "category": "symbols",
+    "keywords": [
+      "bomb",
+      "explosion",
+      "danger",
+      "boom"
+    ]
+  },
+  {
+    "emoji": "🕛",
+    "name": "Clock Face Twelve Oclock",
+    "category": "symbols",
+    "keywords": [
+      "twelve-oclock",
+      "time",
+      "12:00",
+      "noon"
+    ]
+  },
+  {
+    "emoji": "🕧",
+    "name": "Clock Face Twelve-Thirty",
+    "category": "symbols",
+    "keywords": [
+      "twelve-thirty",
+      "time",
+      "12:30",
+      "half"
+    ]
+  },
+  {
+    "emoji": "🕐",
+    "name": "Clock Face One Oclock",
+    "category": "symbols",
+    "keywords": [
+      "one-oclock",
+      "time",
+      "1:00",
+      "early"
+    ]
+  },
+  {
+    "emoji": "🕜",
+    "name": "Clock Face One-Thirty",
+    "category": "symbols",
+    "keywords": [
+      "one-thirty",
+      "time",
+      "1:30",
+      "half"
+    ]
+  },
+  {
+    "emoji": "🕑",
+    "name": "Clock Face Two Oclock",
+    "category": "symbols",
+    "keywords": [
+      "two-oclock",
+      "time",
+      "2:00",
+      "afternoon"
+    ]
+  },
+  {
+    "emoji": "🕝",
+    "name": "Clock Face Two-Thirty",
+    "category": "symbols",
+    "keywords": [
+      "two-thirty",
+      "time",
+      "2:30",
+      "half"
+    ]
+  },
+  {
+    "emoji": "🕒",
+    "name": "Clock Face Three Oclock",
+    "category": "symbols",
+    "keywords": [
+      "three-oclock",
+      "time",
+      "3:00",
+      "afternoon"
+    ]
+  },
+  {
+    "emoji": "🕞",
+    "name": "Clock Face Three-Thirty",
+    "category": "symbols",
+    "keywords": [
+      "three-thirty",
+      "time",
+      "3:30",
+      "half"
+    ]
+  },
+  {
+    "emoji": "🕓",
+    "name": "Clock Face Four Oclock",
+    "category": "symbols",
+    "keywords": [
+      "four-oclock",
+      "time",
+      "4:00",
+      "afternoon"
+    ]
+  },
+  {
+    "emoji": "🕟",
+    "name": "Clock Face Four-Thirty",
+    "category": "symbols",
+    "keywords": [
+      "four-thirty",
+      "time",
+      "4:30",
+      "half"
+    ]
+  },
+  {
+    "emoji": "🕔",
+    "name": "Clock Face Five Oclock",
+    "category": "symbols",
+    "keywords": [
+      "five-oclock",
+      "time",
+      "5:00",
+      "evening"
+    ]
+  },
+  {
+    "emoji": "🕠",
+    "name": "Clock Face Five-Thirty",
+    "category": "symbols",
+    "keywords": [
+      "five-thirty",
+      "time",
+      "5:30",
+      "half"
+    ]
+  },
+  {
+    "emoji": "🕕",
+    "name": "Clock Face Six Oclock",
+    "category": "symbols",
+    "keywords": [
+      "six-oclock",
+      "time",
+      "6:00",
+      "dusk"
+    ]
+  },
+  {
+    "emoji": "🕡",
+    "name": "Clock Face Six-Thirty",
+    "category": "symbols",
+    "keywords": [
+      "six-thirty",
+      "time",
+      "6:30",
+      "half"
+    ]
+  },
+  {
+    "emoji": "🕖",
+    "name": "Clock Face Seven Oclock",
+    "category": "symbols",
+    "keywords": [
+      "seven-oclock",
+      "time",
+      "7:00",
+      "evening"
+    ]
+  },
+  {
+    "emoji": "🕢",
+    "name": "Clock Face Seven-Thirty",
+    "category": "symbols",
+    "keywords": [
+      "seven-thirty",
+      "time",
+      "7:30",
+      "half"
+    ]
+  },
+  {
+    "emoji": "🕗",
+    "name": "Clock Face Eight Oclock",
+    "category": "symbols",
+    "keywords": [
+      "eight-oclock",
+      "time",
+      "8:00",
+      "evening"
+    ]
+  },
+  {
+    "emoji": "🕣",
+    "name": "Clock Face Eight-Thirty",
+    "category": "symbols",
+    "keywords": [
+      "eight-thirty",
+      "time",
+      "8:30",
+      "half"
+    ]
+  },
+  {
+    "emoji": "🕘",
+    "name": "Clock Face Nine Oclock",
+    "category": "symbols",
+    "keywords": [
+      "nine-oclock",
+      "time",
+      "9:00",
+      "late"
+    ]
+  },
+  {
+    "emoji": "🕤",
+    "name": "Clock Face Nine-Thirty",
+    "category": "symbols",
+    "keywords": [
+      "nine-thirty",
+      "time",
+      "9:30",
+      "half"
+    ]
+  },
+  {
+    "emoji": "🕙",
+    "name": "Clock Face Ten Oclock",
+    "category": "symbols",
+    "keywords": [
+      "ten-oclock",
+      "time",
+      "10:00",
+      "late"
+    ]
+  },
+  {
+    "emoji": "🕥",
+    "name": "Clock Face Ten-Thirty",
+    "category": "symbols",
+    "keywords": [
+      "ten-thirty",
+      "time",
+      "10:30",
+      "half"
+    ]
+  },
+  {
+    "emoji": "🕚",
+    "name": "Clock Face Eleven Oclock",
+    "category": "symbols",
+    "keywords": [
+      "eleven-oclock",
+      "time",
+      "11:00",
+      "late"
+    ]
+  },
+  {
+    "emoji": "🕦",
+    "name": "Clock Face Eleven-Thirty",
+    "category": "symbols",
+    "keywords": [
+      "eleven-thirty",
+      "time",
+      "11:30",
+      "half"
+    ]
+  },
+  {
+    "emoji": "🌑",
+    "name": "New Moon Symbol",
+    "category": "symbols",
+    "keywords": [
+      "new-moon",
+      "astronomy",
+      "night",
+      "start"
+    ]
+  },
+  {
+    "emoji": "🌒",
+    "name": "Waxing Crescent Moon Symbol",
+    "category": "symbols",
+    "keywords": [
+      "waxing-crescent",
+      "moon",
+      "astronomy",
+      "growing"
+    ]
+  },
+  {
+    "emoji": "🌓",
+    "name": "First Quarter Moon Symbol",
+    "category": "symbols",
+    "keywords": [
+      "first-quarter",
+      "moon",
+      "astronomy",
+      "half"
+    ]
+  },
+  {
+    "emoji": "🌔",
+    "name": "Waxing Gibbous Moon Symbol",
+    "category": "symbols",
+    "keywords": [
+      "waxing-gibbous",
+      "moon",
+      "astronomy",
+      "almost-full"
+    ]
+  },
+  {
+    "emoji": "🌕",
+    "name": "Full Moon Symbol",
+    "category": "symbols",
+    "keywords": [
+      "full-moon",
+      "astronomy",
+      "night",
+      "werewolf"
+    ]
+  },
+  {
+    "emoji": "🌖",
+    "name": "Waning Gibbous Moon Symbol",
+    "category": "symbols",
+    "keywords": [
+      "waning-gibbous",
+      "moon",
+      "astronomy",
+      "fading"
+    ]
+  },
+  {
+    "emoji": "🌗",
+    "name": "Last Quarter Moon Symbol",
+    "category": "symbols",
+    "keywords": [
+      "last-quarter",
+      "moon",
+      "astronomy",
+      "half"
+    ]
+  },
+  {
+    "emoji": "🌘",
+    "name": "Waning Crescent Moon Symbol",
+    "category": "symbols",
+    "keywords": [
+      "waning-crescent",
+      "moon",
+      "astronomy",
+      "ending"
+    ]
+  },
+  {
+    "emoji": "🌙",
+    "name": "Crescent Moon",
+    "category": "symbols",
+    "keywords": [
+      "crescent-moon",
+      "night",
+      "sleep",
+      "sky"
+    ]
+  },
+  {
+    "emoji": "🌚",
+    "name": "New Moon With Face",
+    "category": "symbols",
+    "keywords": [
+      "new-moon-face",
+      "astronomy",
+      "cheeky",
+      "night"
+    ]
+  },
+  {
+    "emoji": "🌝",
+    "name": "Full Moon With Face",
+    "category": "symbols",
+    "keywords": [
+      "full-moon-face",
+      "astronomy",
+      "night",
+      "cheerful"
+    ]
+  },
+  {
+    "emoji": "🌛",
+    "name": "First Quarter Moon With Face",
+    "category": "symbols",
+    "keywords": [
+      "first-quarter-face",
+      "moon",
+      "astronomy",
+      "sly"
+    ]
+  },
+  {
+    "emoji": "🌜",
+    "name": "Last Quarter Moon With Face",
+    "category": "symbols",
+    "keywords": [
+      "last-quarter-face",
+      "moon",
+      "astronomy",
+      "sly"
+    ]
+  },
+  {
+    "emoji": "🌞",
+    "name": "Sun With Face",
+    "category": "symbols",
+    "keywords": [
+      "sun-face",
+      "happy",
+      "summer",
+      "weather"
+    ]
+  },
+  {
+    "emoji": "🌟",
+    "name": "Glowing Star",
+    "category": "symbols",
+    "keywords": [
+      "glowing-star",
+      "shine",
+      "sparkle",
+      "awesome"
+    ]
+  },
+  {
+    "emoji": "🌠",
+    "name": "Shooting Star",
+    "category": "symbols",
+    "keywords": [
+      "shooting-star",
+      "night",
+      "photo",
+      "wish"
+    ]
+  },
+  {
+    "emoji": "🌌",
+    "name": "Milky Way",
+    "category": "symbols",
+    "keywords": [
+      "milky-way",
+      "space",
+      "stars",
+      "universe"
+    ]
+  },
+  {
+    "emoji": "☁️",
+    "name": "Cloud",
+    "category": "symbols",
+    "keywords": [
+      "cloud",
+      "weather",
+      "sky",
+      "overcast"
+    ]
+  },
+  {
+    "emoji": "🌈",
+    "name": "Rainbow",
+    "category": "symbols",
+    "keywords": [
+      "rainbow",
+      "rain",
+      "sky",
+      "pride"
+    ]
+  },
+  {
+    "emoji": "⛅",
+    "name": "Sun Behind Cloud",
+    "category": "symbols",
+    "keywords": [
+      "sun-behind-cloud",
+      "weather",
+      "partly-sunny",
+      "overcast"
+    ]
+  },
+  {
+    "emoji": "🌤️",
+    "name": "White Sun With Small Cloud",
+    "category": "symbols",
+    "keywords": [
+      "sun-small-cloud",
+      "weather",
+      "sunny",
+      "partly-cloudy"
+    ]
+  },
+  {
+    "emoji": "🌥️",
+    "name": "White Sun Behind Cloud",
+    "category": "symbols",
+    "keywords": [
+      "sun-behind-large-cloud",
+      "weather",
+      "overcast",
+      "sun"
+    ]
+  },
+  {
+    "emoji": "🌦️",
+    "name": "White Sun Behind Cloud With Rain",
+    "category": "symbols",
+    "keywords": [
+      "sun-behind-rain-cloud",
+      "weather",
+      "sunshower",
+      "rain"
+    ]
+  },
+  {
+    "emoji": "🌧️",
+    "name": "Cloud With Rain",
+    "category": "symbols",
+    "keywords": [
+      "cloud-rain",
+      "weather",
+      "rainy",
+      "sad"
+    ]
+  },
+  {
+    "emoji": "⛈️",
+    "name": "Thunder Cloud And Rain",
+    "category": "symbols",
+    "keywords": [
+      "thunder-cloud-rain",
+      "weather",
+      "lightning",
+      "storm"
+    ]
+  },
+  {
+    "emoji": "🌩️",
+    "name": "Cloud With Lightning",
+    "category": "symbols",
+    "keywords": [
+      "cloud-lightning",
+      "weather",
+      "thunder",
+      "storm"
+    ]
+  },
+  {
+    "emoji": "🌨️",
+    "name": "Cloud With Snow",
+    "category": "symbols",
+    "keywords": [
+      "cloud-snow",
+      "weather",
+      "winter",
+      "cold"
+    ]
+  },
+  {
+    "emoji": "❄️",
+    "name": "Snowflake",
+    "category": "symbols",
+    "keywords": [
+      "snowflake",
+      "winter",
+      "cold",
+      "weather"
+    ]
+  },
+  {
+    "emoji": "🌬️",
+    "name": "Wind Blowing Face",
+    "category": "symbols",
+    "keywords": [
+      "wind-face",
+      "weather",
+      "blow",
+      "gust"
+    ]
+  },
+  {
+    "emoji": "🌪️",
+    "name": "Cloud With Tornado",
+    "category": "symbols",
+    "keywords": [
+      "tornado",
+      "weather",
+      "cyclone",
+      "twister"
+    ]
+  },
+  {
+    "emoji": "🌫️",
+    "name": "Fog",
+    "category": "symbols",
+    "keywords": [
+      "fog",
+      "weather",
+      "mist",
+      "haze"
+    ]
+  },
+  {
+    "emoji": "🌊",
+    "name": "Water Wave",
+    "category": "symbols",
+    "keywords": [
+      "wave",
+      "water",
+      "ocean",
+      "sea"
+    ]
+  },
+  {
+    "emoji": "🌐",
+    "name": "Globe With Meridians",
+    "category": "symbols",
+    "keywords": [
+      "globe-meridians",
+      "world",
+      "international",
+      "internet"
+    ]
+  },
+  {
+    "emoji": "💧",
+    "name": "Droplet",
+    "category": "symbols",
+    "keywords": [
+      "droplet",
+      "water",
+      "drip",
+      "rain"
+    ]
+  },
+  {
+    "emoji": "☔",
+    "name": "Umbrella With Rain Drops",
+    "category": "symbols",
+    "keywords": [
+      "umbrella-rain",
+      "rainy",
+      "weather",
+      "spring"
+    ]
+  },
+  {
+    "emoji": "🌁",
+    "name": "Foggy",
+    "category": "symbols",
+    "keywords": [
+      "foggy",
+      "weather",
+      "mist",
+      "mountain"
+    ]
+  },
+  {
+    "emoji": "🌅",
+    "name": "Sunrise",
+    "category": "symbols",
+    "keywords": [
+      "sunrise",
+      "morning",
+      "view",
+      "vacation"
+    ]
+  },
+  {
+    "emoji": "🌄",
+    "name": "Sunrise Over Mountains",
+    "category": "symbols",
+    "keywords": [
+      "sunrise-mountains",
+      "view",
+      "vacation",
+      "photo"
+    ]
+  },
+  {
+    "emoji": "🌇",
+    "name": "Sunset Over Buildings",
+    "category": "symbols",
+    "keywords": [
+      "sunset-buildings",
+      "photo",
+      "evening",
+      "city"
+    ]
+  },
+  {
+    "emoji": "🌆",
+    "name": "Cityscape At Dusk",
+    "category": "symbols",
+    "keywords": [
+      "cityscape-dusk",
+      "photo",
+      "night",
+      "buildings"
+    ]
+  },
+  {
+    "emoji": "🌃",
+    "name": "Night With Stars",
+    "category": "symbols",
+    "keywords": [
+      "night-stars",
+      "evening",
+      "city",
+      "photo"
+    ]
+  },
+  {
+    "emoji": "🌉",
+    "name": "Bridge At Night",
+    "category": "symbols",
+    "keywords": [
+      "bridge-night",
+      "photo",
+      "sanfrancisco",
+      "romantic"
+    ]
+  },
+  {
+    "emoji": "🌍",
+    "name": "Earth Globe Europe-Africa",
+    "category": "symbols",
+    "keywords": [
+      "globe-europe-africa",
+      "world",
+      "international",
+      "continent"
+    ]
+  },
+  {
+    "emoji": "🌎",
+    "name": "Earth Globe Americas",
+    "category": "symbols",
+    "keywords": [
+      "globe-americas",
+      "world",
+      "USA",
+      "international"
+    ]
+  },
+  {
+    "emoji": "🌏",
+    "name": "Earth Globe Asia-Australia",
+    "category": "symbols",
+    "keywords": [
+      "globe-asia-australia",
+      "world",
+      "east",
+      "international"
+    ]
+  },
+  {
+    "emoji": "🧨",
+    "name": "Firecracker",
+    "category": "objects",
+    "keywords": [
+      "firecracker",
+      "dynamite",
+      "explosive",
+      "festival"
+    ]
+  },
+  {
+    "emoji": "🪄",
+    "name": "Magic Wand",
+    "category": "objects",
+    "keywords": [
+      "magic-wand",
+      "fantasy",
+      "witch",
+      "wizard"
+    ]
+  },
+  {
+    "emoji": "🧿",
+    "name": "Nazar Amulet",
+    "category": "objects",
+    "keywords": [
+      "nazar-amulet",
+      "protection",
+      "evil-eye",
+      "superstition"
+    ]
+  },
+  {
+    "emoji": "🪬",
+    "name": "Hamsa",
+    "category": "objects",
+    "keywords": [
+      "hamsa",
+      "protection",
+      "religion",
+      "symbol"
+    ]
+  },
+  {
+    "emoji": "🕶️",
+    "name": "Dark Sunglasses",
+    "category": "objects",
+    "keywords": [
+      "sunglasses",
+      "cool",
+      "shades",
+      "accessory"
+    ]
+  },
+  {
+    "emoji": "🌂",
+    "name": "Closed Umbrella",
+    "category": "objects",
+    "keywords": [
+      "closed-umbrella",
+      "rain",
+      "weather",
+      "dry"
+    ]
+  },
+  {
+    "emoji": "☂️",
+    "name": "Umbrella",
+    "category": "objects",
+    "keywords": [
+      "umbrella",
+      "rain",
+      "weather",
+      "protection"
+    ]
+  },
+  {
+    "emoji": "🧵",
+    "name": "Spool Of Thread",
+    "category": "objects",
+    "keywords": [
+      "spool-thread",
+      "sewing",
+      "needlework",
+      "craft"
+    ]
+  },
+  {
+    "emoji": "🧶",
+    "name": "Ball Of Yarn",
+    "category": "objects",
+    "keywords": [
+      "ball-yarn",
+      "knitting",
+      "crochet",
+      "craft"
+    ]
+  },
+  {
+    "emoji": "👓",
+    "name": "Eyeglasses",
+    "category": "objects",
+    "keywords": [
+      "eyeglasses",
+      "glasses",
+      "vision",
+      "nerd"
+    ]
+  },
+  {
+    "emoji": "🧥",
+    "name": "Coat",
+    "category": "objects",
+    "keywords": [
+      "coat",
+      "jacket",
+      "outerwear",
+      "winter"
+    ]
+  },
+  {
+    "emoji": "🧤",
+    "name": "Gloves",
+    "category": "objects",
+    "keywords": [
+      "gloves",
+      "hands",
+      "winter",
+      "accessory"
+    ]
+  },
+  {
+    "emoji": "🧣",
+    "name": "Scarf",
+    "category": "objects",
+    "keywords": [
+      "scarf",
+      "neck",
+      "winter",
+      "accessory"
+    ]
+  },
+  {
+    "emoji": "🧦",
+    "name": "Socks",
+    "category": "objects",
+    "keywords": [
+      "socks",
+      "stockings",
+      "feet",
+      "clothing"
+    ]
+  },
+  {
+    "emoji": "🥿",
+    "name": "Flat Shoe",
+    "category": "objects",
+    "keywords": [
+      "flat-shoe",
+      "ballet-flat",
+      "comfort",
+      "slip-on"
+    ]
+  },
+  {
+    "emoji": "👠",
+    "name": "High-Heeled Shoe",
+    "category": "objects",
+    "keywords": [
+      "high-heel",
+      "shoe",
+      "fashion",
+      "stiletto"
+    ]
+  },
+  {
+    "emoji": "👡",
+    "name": "Womans Sandal",
+    "category": "objects",
+    "keywords": [
+      "sandal",
+      "shoe",
+      "beach",
+      "summer"
+    ]
+  },
+  {
+    "emoji": "👢",
+    "name": "Womans Boots",
+    "category": "objects",
+    "keywords": [
+      "boots",
+      "shoe",
+      "winter",
+      "fashion"
+    ]
+  },
+  {
+    "emoji": "👞",
+    "name": "Mans Shoe",
+    "category": "objects",
+    "keywords": [
+      "dress-shoe",
+      "formal",
+      "business",
+      "oxford"
+    ]
+  },
+  {
+    "emoji": "👟",
+    "name": "Athletic Shoe",
+    "category": "objects",
+    "keywords": [
+      "athletic-shoe",
+      "sneakers",
+      "running",
+      "sports"
+    ]
+  },
+  {
+    "emoji": "🥾",
+    "name": "Hiking Boot",
+    "category": "objects",
+    "keywords": [
+      "hiking-boot",
+      "outdoors",
+      "camping",
+      "adventure"
+    ]
+  },
+  {
+    "emoji": "🧳",
+    "name": "Luggage",
+    "category": "objects",
+    "keywords": [
+      "luggage",
+      "travel",
+      "suitcase",
+      "vacation"
+    ]
+  },
+  {
+    "emoji": "🎒",
+    "name": "School Satchel",
+    "category": "objects",
+    "keywords": [
+      "backpack",
+      "school",
+      "bag",
+      "education"
+    ]
+  },
+  {
+    "emoji": "👒",
+    "name": "Womans Hat",
+    "category": "objects",
+    "keywords": [
+      "hat",
+      "fashion",
+      "accessory",
+      "summer"
+    ]
+  },
+  {
+    "emoji": "🎩",
+    "name": "Top Hat",
+    "category": "objects",
+    "keywords": [
+      "top-hat",
+      "classy",
+      "magic",
+      "formal"
+    ]
+  },
+  {
+    "emoji": "🎓",
+    "name": "Graduation Cap",
+    "category": "objects",
+    "keywords": [
+      "graduation-cap",
+      "education",
+      "college",
+      "degree"
+    ]
+  },
+  {
+    "emoji": "🧢",
+    "name": "Billed Cap",
+    "category": "objects",
+    "keywords": [
+      "billed-cap",
+      "baseball",
+      "sports",
+      "casual"
+    ]
+  },
+  {
+    "emoji": "⛑️",
+    "name": "Helmet With White Cross",
+    "category": "objects",
+    "keywords": [
+      "rescue-helmet",
+      "safety",
+      "first-aid",
+      "emergency"
+    ]
+  },
+  {
+    "emoji": "🪖",
+    "name": "Military Helmet",
+    "category": "objects",
+    "keywords": [
+      "military-helmet",
+      "army",
+      "soldier",
+      "war"
+    ]
+  },
+  {
+    "emoji": "👑",
+    "name": "Crown",
+    "category": "objects",
+    "keywords": [
+      "crown",
+      "king",
+      "queen",
+      "royalty"
+    ]
+  },
+  {
+    "emoji": "🪙",
+    "name": "Coin",
+    "category": "objects",
+    "keywords": [
+      "coin",
+      "money",
+      "currency",
+      "gold"
+    ]
+  },
+  {
+    "emoji": "🛍️",
+    "name": "Shopping Bags",
+    "category": "objects",
+    "keywords": [
+      "shopping-bags",
+      "retail",
+      "purchase",
+      "gift"
+    ]
+  },
+  {
+    "emoji": "🎁",
+    "name": "Wrapped Present",
+    "category": "objects",
+    "keywords": [
+      "wrapped-gift",
+      "present",
+      "birthday",
+      "celebration"
+    ]
+  },
+  {
+    "emoji": "🎈",
+    "name": "Balloon",
+    "category": "objects",
+    "keywords": [
+      "balloon",
+      "party",
+      "celebration",
+      "birthday"
+    ]
+  },
+  {
+    "emoji": "🎏",
+    "name": "Carp Streamer",
+    "category": "objects",
+    "keywords": [
+      "carp-streamer",
+      "japan",
+      "childrens-day",
+      "celebration"
+    ]
+  },
+  {
+    "emoji": "🎀",
+    "name": "Ribbon",
+    "category": "objects",
+    "keywords": [
+      "ribbon",
+      "decoration",
+      "gift",
+      "craft"
+    ]
+  },
+  {
+    "emoji": "🎊",
+    "name": "Confetti Ball",
+    "category": "objects",
+    "keywords": [
+      "confetti-ball",
+      "party",
+      "celebration",
+      "festive"
+    ]
+  },
+  {
+    "emoji": "🎉",
+    "name": "Party Popper",
+    "category": "objects",
+    "keywords": [
+      "party-popper",
+      "tada",
+      "celebration",
+      "congratulations"
+    ]
+  },
+  {
+    "emoji": "🪅",
+    "name": "Pinata",
+    "category": "objects",
+    "keywords": [
+      "pinata",
+      "mexico",
+      "candy",
+      "celebration"
+    ]
+  },
+  {
+    "emoji": "🎎",
+    "name": "Japanese Dolls",
+    "category": "objects",
+    "keywords": [
+      "japanese-dolls",
+      "hina-matsuri",
+      "festival",
+      "japan"
+    ]
+  },
+  {
+    "emoji": "🧧",
+    "name": "Red Gift Envelope",
+    "category": "objects",
+    "keywords": [
+      "red-envelope",
+      "gift",
+      "lucky-money",
+      "chinese-new-year"
+    ]
+  },
+  {
+    "emoji": "🪩",
+    "name": "Mirror Ball",
+    "category": "objects",
+    "keywords": [
+      "mirror-ball",
+      "disco",
+      "party",
+      "dance"
+    ]
+  },
+  {
+    "emoji": "🪆",
+    "name": "Nesting Dolls",
+    "category": "objects",
+    "keywords": [
+      "nesting-dolls",
+      "russia",
+      "toy",
+      "layers"
+    ]
+  },
+  {
+    "emoji": "🔮",
+    "name": "Crystal Ball",
+    "category": "objects",
+    "keywords": [
+      "crystal-ball",
+      "fortune-teller",
+      "magic",
+      "future"
+    ]
+  },
+  {
+    "emoji": "💎",
+    "name": "Gem Stone",
+    "category": "objects",
+    "keywords": [
+      "gem-stone",
+      "diamond",
+      "jewel",
+      "expensive"
+    ]
+  },
+  {
+    "emoji": "⚖️",
+    "name": "Scales",
+    "category": "objects",
+    "keywords": [
+      "scales",
+      "justice",
+      "law",
+      "balance"
+    ]
+  },
+  {
+    "emoji": "📿",
+    "name": "Prayer Beads",
+    "category": "objects",
+    "keywords": [
+      "prayer-beads",
+      "religion",
+      "rosary",
+      "dhikr"
+    ]
+  },
+  {
+    "emoji": "🛒",
+    "name": "Shopping Trolley",
+    "category": "objects",
+    "keywords": [
+      "shopping-cart",
+      "supermarket",
+      "grocery",
+      "retail"
+    ]
+  },
+  {
+    "emoji": "🔧",
+    "name": "Wrench",
+    "category": "objects",
+    "keywords": [
+      "wrench",
+      "tool",
+      "diy",
+      "fix"
+    ]
+  },
+  {
+    "emoji": "🪛",
+    "name": "Screwdriver",
+    "category": "objects",
+    "keywords": [
+      "screwdriver",
+      "tool",
+      "diy",
+      "fix"
+    ]
+  },
+  {
+    "emoji": "🛠️",
+    "name": "Hammer And Wrench",
+    "category": "objects",
+    "keywords": [
+      "hammer-wrench",
+      "tools",
+      "build",
+      "repair"
+    ]
+  },
+  {
+    "emoji": "🧰",
+    "name": "Toolbox",
+    "category": "objects",
+    "keywords": [
+      "toolbox",
+      "diy",
+      "repair",
+      "maintenance"
+    ]
+  },
+  {
+    "emoji": "🔩",
+    "name": "Nut And Bolt",
+    "category": "objects",
+    "keywords": [
+      "nut-bolt",
+      "handyman",
+      "diy",
+      "construction"
+    ]
+  },
+  {
+    "emoji": "⚙️",
+    "name": "Gear",
+    "category": "objects",
+    "keywords": [
+      "gear",
+      "cog",
+      "machine",
+      "settings"
+    ]
+  },
+  {
+    "emoji": "🗜️",
+    "name": "Compression",
+    "category": "objects",
+    "keywords": [
+      "clamp",
+      "tool",
+      "compress",
+      "vise"
+    ]
+  },
+  {
+    "emoji": "⚒️",
+    "name": "Hammer And Pick",
+    "category": "objects",
+    "keywords": [
+      "hammer-pick",
+      "tools",
+      "mining",
+      "build"
+    ]
+  },
+  {
+    "emoji": "🧲",
+    "name": "Magnet",
+    "category": "objects",
+    "keywords": [
+      "magnet",
+      "attraction",
+      "magnetic",
+      "science"
+    ]
+  },
+  {
+    "emoji": "🔨",
+    "name": "Hammer",
+    "category": "objects",
+    "keywords": [
+      "hammer",
+      "tool",
+      "build",
+      "diy"
+    ]
+  },
+  {
+    "emoji": "🪓",
+    "name": "Axe",
+    "category": "objects",
+    "keywords": [
+      "axe",
+      "tool",
+      "chop",
+      "firewood"
+    ]
+  },
+  {
+    "emoji": "⛏️",
+    "name": "Pick",
+    "category": "objects",
+    "keywords": [
+      "pick",
+      "tool",
+      "mining",
+      "dig"
+    ]
+  },
+  {
+    "emoji": "🪚",
+    "name": "Carpentry Saw",
+    "category": "objects",
+    "keywords": [
+      "saw",
+      "carpentry",
+      "wood",
+      "cut"
+    ]
+  },
+  {
+    "emoji": "🧪",
+    "name": "Test Tube",
+    "category": "objects",
+    "keywords": [
+      "test-tube",
+      "chemistry",
+      "experiment",
+      "science"
+    ]
+  },
+  {
+    "emoji": "🧫",
+    "name": "Petri Dish",
+    "category": "objects",
+    "keywords": [
+      "petri-dish",
+      "bacteria",
+      "biology",
+      "culture"
+    ]
+  },
+  {
+    "emoji": "🧬",
+    "name": "Dna Double Helix",
+    "category": "objects",
+    "keywords": [
+      "dna",
+      "genetics",
+      "biology",
+      "science"
+    ]
+  },
+  {
+    "emoji": "🔬",
+    "name": "Microscope",
+    "category": "objects",
+    "keywords": [
+      "microscope",
+      "science",
+      "laboratory",
+      "research"
+    ]
+  },
+  {
+    "emoji": "🔭",
+    "name": "Telescope",
+    "category": "objects",
+    "keywords": [
+      "telescope",
+      "stars",
+      "space",
+      "astronomy"
+    ]
+  },
+  {
+    "emoji": "🩻",
+    "name": "X-Ray",
+    "category": "objects",
+    "keywords": [
+      "x-ray",
+      "medical",
+      "skeleton",
+      "diagnosis"
+    ]
+  },
+  {
+    "emoji": "💊",
+    "name": "Pill",
+    "category": "objects",
+    "keywords": [
+      "pill",
+      "medicine",
+      "health",
+      "pharmacy"
+    ]
+  },
+  {
+    "emoji": "💉",
+    "name": "Syringe",
+    "category": "objects",
+    "keywords": [
+      "syringe",
+      "needle",
+      "medicine",
+      "vaccine"
+    ]
+  },
+  {
+    "emoji": "🩹",
+    "name": "Adhesive Bandage",
+    "category": "objects",
+    "keywords": [
+      "bandage",
+      "heal",
+      "injury",
+      "plaster"
+    ]
+  },
+  {
+    "emoji": "🩺",
+    "name": "Stethoscope",
+    "category": "objects",
+    "keywords": [
+      "stethoscope",
+      "doctor",
+      "health",
+      "medical"
+    ]
+  },
+  {
+    "emoji": "🧻",
+    "name": "Roll Of Paper",
+    "category": "objects",
+    "keywords": [
+      "toilet-paper",
+      "bathroom",
+      "hygiene",
+      "emergency"
+    ]
+  },
+  {
+    "emoji": "🚽",
+    "name": "Toilet",
+    "category": "objects",
+    "keywords": [
+      "toilet",
+      "bathroom",
+      "restroom",
+      "wc"
+    ]
+  },
+  {
+    "emoji": "🚿",
+    "name": "Shower",
+    "category": "objects",
+    "keywords": [
+      "shower",
+      "bathroom",
+      "clean",
+      "water"
+    ]
+  },
+  {
+    "emoji": "🛁",
+    "name": "Bathtub",
+    "category": "objects",
+    "keywords": [
+      "bathtub",
+      "bathroom",
+      "clean",
+      "relax"
+    ]
+  },
+  {
+    "emoji": "🛀",
+    "name": "Bath",
+    "category": "objects",
+    "keywords": [
+      "bath",
+      "clean",
+      "relax",
+      "shower"
+    ]
+  },
+  {
+    "emoji": "🛎️",
+    "name": "Bellhop Bell",
+    "category": "objects",
+    "keywords": [
+      "bellhop-bell",
+      "hotel",
+      "service",
+      "assistance"
+    ]
+  },
+  {
+    "emoji": "🔑",
+    "name": "Key",
+    "category": "objects",
+    "keywords": [
+      "key",
+      "lock",
+      "door",
+      "password"
+    ]
+  },
+  {
+    "emoji": "🗝️",
+    "name": "Old Key",
+    "category": "objects",
+    "keywords": [
+      "old-key",
+      "lock",
+      "door",
+      "antique"
+    ]
+  },
+  {
+    "emoji": "🛏️",
+    "name": "Bed",
+    "category": "objects",
+    "keywords": [
+      "bed",
+      "sleep",
+      "rest",
+      "furniture"
+    ]
+  },
+  {
+    "emoji": "🛋️",
+    "name": "Couch And Lamp",
+    "category": "objects",
+    "keywords": [
+      "couch-lamp",
+      "living-room",
+      "furniture",
+      "relax"
+    ]
+  },
+  {
+    "emoji": "🪑",
+    "name": "Chair",
+    "category": "objects",
+    "keywords": [
+      "chair",
+      "sit",
+      "furniture",
+      "seat"
+    ]
+  },
+  {
+    "emoji": "🚪",
+    "name": "Door",
+    "category": "objects",
+    "keywords": [
+      "door",
+      "entry",
+      "exit",
+      "house"
+    ]
+  },
+  {
+    "emoji": "🪞",
+    "name": "Mirror",
+    "category": "objects",
+    "keywords": [
+      "mirror",
+      "reflection",
+      "vanity",
+      "bathroom"
+    ]
+  },
+  {
+    "emoji": "🪟",
+    "name": "Window",
+    "category": "objects",
+    "keywords": [
+      "window",
+      "view",
+      "transparent",
+      "house"
+    ]
+  },
+  {
+    "emoji": "🪠",
+    "name": "Plunger",
+    "category": "objects",
+    "keywords": [
+      "plunger",
+      "toilet",
+      "clog",
+      "repair"
+    ]
+  },
+  {
+    "emoji": "🧯",
+    "name": "Fire Extinguisher",
+    "category": "objects",
+    "keywords": [
+      "fire-extinguisher",
+      "safety",
+      "emergency",
+      "fire"
+    ]
+  },
+  {
+    "emoji": "🧺",
+    "name": "Basket",
+    "category": "objects",
+    "keywords": [
+      "basket",
+      "laundry",
+      "picnic",
+      "storage"
+    ]
+  },
+  {
+    "emoji": "🧼",
+    "name": "Bar Of Soap",
+    "category": "objects",
+    "keywords": [
+      "soap",
+      "clean",
+      "hygiene",
+      "bath"
+    ]
+  },
+  {
+    "emoji": "🪥",
+    "name": "Toothbrush",
+    "category": "objects",
+    "keywords": [
+      "toothbrush",
+      "dental",
+      "hygiene",
+      "clean"
+    ]
+  },
+  {
+    "emoji": "🪒",
+    "name": "Razor",
+    "category": "objects",
+    "keywords": [
+      "razor",
+      "shave",
+      "hair-removal",
+      "bathroom"
+    ]
+  },
+  {
+    "emoji": "🧽",
+    "name": "Sponge",
+    "category": "objects",
+    "keywords": [
+      "sponge",
+      "clean",
+      "absorb",
+      "kitchen"
+    ]
+  },
+  {
+    "emoji": "🧴",
+    "name": "Lotion Bottle",
+    "category": "objects",
+    "keywords": [
+      "lotion-bottle",
+      "moisturizer",
+      "skincare",
+      "cosmetics"
+    ]
+  },
+  {
+    "emoji": "⌛",
+    "name": "Hourglass",
+    "category": "objects",
+    "keywords": [
+      "hourglass",
+      "time",
+      "wait",
+      "expired"
+    ]
+  },
+  {
+    "emoji": "⏳",
+    "name": "Hourglass With Flowing Sand",
+    "category": "objects",
+    "keywords": [
+      "hourglass-sand",
+      "time",
+      "running-out",
+      "wait"
+    ]
+  },
+  {
+    "emoji": "⌚",
+    "name": "Watch",
+    "category": "objects",
+    "keywords": [
+      "watch",
+      "time",
+      "accessory",
+      "wrist"
+    ]
+  },
+  {
+    "emoji": "⏰",
+    "name": "Alarm Clock",
+    "category": "objects",
+    "keywords": [
+      "alarm-clock",
+      "time",
+      "wake-up",
+      "morning"
+    ]
+  },
+  {
+    "emoji": "⏱️",
+    "name": "Stopwatch",
+    "category": "objects",
+    "keywords": [
+      "stopwatch",
+      "time",
+      "sports",
+      "measure"
+    ]
+  },
+  {
+    "emoji": "⏲️",
+    "name": "Timer Clock",
+    "category": "objects",
+    "keywords": [
+      "timer-clock",
+      "alarm",
+      "cooking",
+      "countdown"
+    ]
+  },
+  {
+    "emoji": "🕰️",
+    "name": "Mantelpiece Clock",
+    "category": "objects",
+    "keywords": [
+      "mantelpiece-clock",
+      "time",
+      "vintage",
+      "decor"
+    ]
+  },
+  {
+    "emoji": "⭐",
+    "name": "White Medium Star",
+    "category": "objects",
+    "keywords": [
+      "star",
+      "night",
+      "sky",
+      "shape"
+    ]
+  },
+  {
+    "emoji": "🪐",
+    "name": "Ringed Planet",
+    "category": "objects",
+    "keywords": [
+      "ringed-planet",
+      "saturn",
+      "space",
+      "astronomy"
+    ]
+  },
+  {
+    "emoji": "🪨",
+    "name": "Rock",
+    "category": "objects",
+    "keywords": [
+      "rock",
+      "stone",
+      "heavy",
+      "nature"
+    ]
+  },
+  {
+    "emoji": "🪵",
+    "name": "Wood",
+    "category": "objects",
+    "keywords": [
+      "wood",
+      "nature",
+      "timber",
+      "material"
+    ]
+  },
+  {
+    "emoji": "🛖",
+    "name": "Hut",
+    "category": "objects",
+    "keywords": [
+      "hut",
+      "house",
+      "primitive",
+      "camping"
+    ]
+  },
+  {
+    "emoji": "🏕️",
+    "name": "Camping",
+    "category": "objects",
+    "keywords": [
+      "camping",
+      "outdoors",
+      "tent",
+      "nature"
+    ]
+  },
+  {
+    "emoji": "🏖️",
+    "name": "Beach With Umbrella",
+    "category": "objects",
+    "keywords": [
+      "beach-umbrella",
+      "vacation",
+      "summer",
+      "sand"
+    ]
+  },
+  {
+    "emoji": "🏜️",
+    "name": "Desert",
+    "category": "objects",
+    "keywords": [
+      "desert",
+      "hot",
+      "sandy",
+      "dry"
+    ]
+  },
+  {
+    "emoji": "🏝️",
+    "name": "Desert Island",
+    "category": "objects",
+    "keywords": [
+      "desert-island",
+      "tropical",
+      "uninhabited",
+      "vacation"
+    ]
+  },
+  {
+    "emoji": "🌋",
+    "name": "Volcano",
+    "category": "objects",
+    "keywords": [
+      "volcano",
+      "photo",
+      "nature",
+      "disaster"
+    ]
+  },
+  {
+    "emoji": "🗻",
+    "name": "Mount Fuji",
+    "category": "objects",
+    "keywords": [
+      "mount-fuji",
+      "photo",
+      "mountain",
+      "japan"
+    ]
+  },
+  {
+    "emoji": "🏔️",
+    "name": "Snow Capped Mountain",
+    "category": "objects",
+    "keywords": [
+      "snow-capped-mountain",
+      "photo",
+      "nature",
+      "environment"
+    ]
+  },
+  {
+    "emoji": "🏞️",
+    "name": "National Park",
+    "category": "objects",
+    "keywords": [
+      "national-park",
+      "photo",
+      "environment",
+      "nature"
+    ]
+  },
+  {
+    "emoji": "⛰️",
+    "name": "Mountain",
+    "category": "objects",
+    "keywords": [
+      "mountain",
+      "photo",
+      "nature",
+      "environment"
+    ]
+  },
+  {
+    "emoji": "🧭",
+    "name": "Compass",
+    "category": "objects",
+    "keywords": [
+      "compass",
+      "magnetic",
+      "navigation",
+      "orienteering"
+    ]
+  },
+  {
+    "emoji": "🗺️",
+    "name": "World Map",
+    "category": "objects",
+    "keywords": [
+      "world-map",
+      "location",
+      "direction",
+      "travel"
+    ]
+  },
+  {
+    "emoji": "🗾",
+    "name": "Silhouette Of Japan",
+    "category": "objects",
+    "keywords": [
+      "japan-map",
+      "nation",
+      "country",
+      "asia"
+    ]
+  },
+  {
+    "emoji": "🏟️",
+    "name": "Stadium",
+    "category": "objects",
+    "keywords": [
+      "stadium",
+      "sports",
+      "concert",
+      "venue"
+    ]
+  },
+  {
+    "emoji": "🏛️",
+    "name": "Classical Building",
+    "category": "objects",
+    "keywords": [
+      "classical-building",
+      "art",
+      "culture",
+      "history"
+    ]
+  },
+  {
+    "emoji": "🏗️",
+    "name": "Building Construction",
+    "category": "objects",
+    "keywords": [
+      "building-construction",
+      "work-in-progress",
+      "wip",
+      "crane"
+    ]
+  },
+  {
+    "emoji": "🧱",
+    "name": "Brick",
+    "category": "objects",
+    "keywords": [
+      "brick",
+      "blocks",
+      "build",
+      "wall"
+    ]
+  },
+  {
+    "emoji": "🪧",
+    "name": "Placard",
+    "category": "objects",
+    "keywords": [
+      "placard",
+      "sign",
+      "protest",
+      "demonstration"
+    ]
+  },
+  {
+    "emoji": "🏘️",
+    "name": "House Buildings",
+    "category": "objects",
+    "keywords": [
+      "houses",
+      "buildings",
+      "residence",
+      "neighborhood"
+    ]
+  },
+  {
+    "emoji": "🏚️",
+    "name": "Derelict House Building",
+    "category": "objects",
+    "keywords": [
+      "derelict-house",
+      "abandon",
+      "old",
+      "broken"
+    ]
+  },
+  {
+    "emoji": "🏠",
+    "name": "House Building",
+    "category": "objects",
+    "keywords": [
+      "house",
+      "building",
+      "home",
+      "residence"
+    ]
+  },
+  {
+    "emoji": "🏡",
+    "name": "House With Garden",
+    "category": "objects",
+    "keywords": [
+      "house-garden",
+      "home",
+      "nature",
+      "lawn"
+    ]
+  },
+  {
+    "emoji": "🏢",
+    "name": "Office Building",
+    "category": "objects",
+    "keywords": [
+      "office-building",
+      "work",
+      "business",
+      "bureaucracy"
+    ]
+  },
+  {
+    "emoji": "🏣",
+    "name": "Japanese Post Office",
+    "category": "objects",
+    "keywords": [
+      "japanese-post",
+      "building",
+      "envelope",
+      "mail"
+    ]
+  },
+  {
+    "emoji": "🏤",
+    "name": "European Post Office",
+    "category": "objects",
+    "keywords": [
+      "european-post",
+      "building",
+      "mail",
+      "envelope"
+    ]
+  },
+  {
+    "emoji": "🏥",
+    "name": "Hospital",
+    "category": "objects",
+    "keywords": [
+      "hospital",
+      "building",
+      "health",
+      "emergency"
+    ]
+  },
+  {
+    "emoji": "🏦",
+    "name": "Bank",
+    "category": "objects",
+    "keywords": [
+      "bank",
+      "building",
+      "money",
+      "business"
+    ]
+  },
+  {
+    "emoji": "🏨",
+    "name": "Hotel",
+    "category": "objects",
+    "keywords": [
+      "hotel",
+      "building",
+      "accommodation",
+      "check-in"
+    ]
+  },
+  {
+    "emoji": "🏩",
+    "name": "Love Hotel",
+    "category": "objects",
+    "keywords": [
+      "love-hotel",
+      "affection",
+      "couple",
+      "privacy"
+    ]
+  },
+  {
+    "emoji": "🏪",
+    "name": "Convenience Store",
+    "category": "objects",
+    "keywords": [
+      "convenience-store",
+      "building",
+      "shopping",
+      "groceries"
+    ]
+  },
+  {
+    "emoji": "🏫",
+    "name": "School",
+    "category": "objects",
+    "keywords": [
+      "school",
+      "building",
+      "education",
+      "student"
+    ]
+  },
+  {
+    "emoji": "🏬",
+    "name": "Department Store",
+    "category": "objects",
+    "keywords": [
+      "department-store",
+      "building",
+      "shopping",
+      "mall"
+    ]
+  },
+  {
+    "emoji": "🏭",
+    "name": "Factory",
+    "category": "objects",
+    "keywords": [
+      "factory",
+      "building",
+      "industry",
+      "pollution"
+    ]
+  },
+  {
+    "emoji": "🏯",
+    "name": "Japanese Castle",
+    "category": "objects",
+    "keywords": [
+      "japanese-castle",
+      "building",
+      "samurai",
+      "history"
+    ]
+  },
+  {
+    "emoji": "🏰",
+    "name": "European Castle",
+    "category": "objects",
+    "keywords": [
+      "european-castle",
+      "building",
+      "royalty",
+      "history"
+    ]
+  },
+  {
+    "emoji": "💒",
+    "name": "Wedding",
+    "category": "objects",
+    "keywords": [
+      "wedding",
+      "love",
+      "chapel",
+      "bride"
+    ]
+  },
+  {
+    "emoji": "🗼",
+    "name": "Tokyo Tower",
+    "category": "objects",
+    "keywords": [
+      "tokyo-tower",
+      "photo",
+      "japan",
+      "landmark"
+    ]
+  },
+  {
+    "emoji": "🗽",
+    "name": "Statue Of Liberty",
+    "category": "objects",
+    "keywords": [
+      "statue-liberty",
+      "american",
+      "new-york",
+      "landmark"
+    ]
+  },
+  {
+    "emoji": "🗿",
+    "name": "Moyai",
+    "category": "objects",
+    "keywords": [
+      "moai",
+      "easter-island",
+      "statue",
+      "landmark"
+    ]
+  },
+  {
+    "emoji": "⛩️",
+    "name": "Shinto Shrine",
+    "category": "objects",
+    "keywords": [
+      "shinto-shrine",
+      "temple",
+      "japan",
+      "religion"
+    ]
+  },
+  {
+    "emoji": "🪜",
+    "name": "Ladder",
+    "category": "objects",
+    "keywords": [
+      "ladder",
+      "climb",
+      "tool",
+      "access"
+    ]
+  },
+  {
+    "emoji": "🧹",
+    "name": "Broom",
+    "category": "objects",
+    "keywords": [
+      "broom",
+      "cleaning",
+      "sweeping",
+      "witch"
+    ]
+  },
+  {
+    "emoji": "🪝",
+    "name": "Hook",
+    "category": "objects",
+    "keywords": [
+      "hook",
+      "fishing",
+      "catch",
+      "tool"
+    ]
+  }
+]

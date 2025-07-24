@@ -34,6 +34,14 @@
 
     </section>
     <section class="msg-area">
+
+        <div class="img-preview">
+            <button id="cancel-img"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#5F6368">
+                    <path
+                        d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+                </svg></button>
+            <img src="" alt="" id="img-prev-src">
+        </div>
         <div class="reply-holder">
             <button id="cancel-reply"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#5F6368">
                     <path
@@ -46,6 +54,28 @@
         <form id="message-f">
             <textarea rows="1" placeholder="Type your message..."
                 oninput="if(this.scrollHeight < 100){this.style.height = 'auto';this.style.height = `${this.scrollHeight}px`;this.style.overflow = 'hidden'}else{this.style.overflow = 'auto'}"></textarea>
+            <div class="msg-opt">
+
+                <label for="img-upld-inp" class="img-upld">
+                    <svg width="24" height="24" fill="var(--acc)" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path
+                            d="M448 80c8.8 0 16 7.2 16 16l0 319.8-5-6.5-136-176c-4.5-5.9-11.6-9.3-19-9.3s-14.4 3.4-19 9.3L202 340.7l-30.5-42.7C167 291.7 159.8 288 152 288s-15 3.7-19.5 10.1l-80 112L48 416.3l0-.3L48 96c0-8.8 7.2-16 16-16l384 0zM64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zm80 192a48 48 0 1 0 0-96 48 48 0 1 0 0 96z" />
+                    </svg>
+                </label>
+                <label for="emoji-togg-btn" class="emoji-togg">
+                    <svg width="24" height="24" fill="var(--acc)" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 640 640">
+                        <path
+                            d="M320 576C461.4 576 576 461.4 576 320C576 178.6 461.4 64 320 64C178.6 64 64 178.6 64 320C64 461.4 178.6 576 320 576zM229.4 385.9C249.8 413.9 282.8 432 320 432C357.2 432 390.2 413.9 410.6 385.9C418.4 375.2 433.4 372.8 444.1 380.6C454.8 388.4 457.2 403.4 449.4 414.1C420.3 454 373.2 480 320 480C266.8 480 219.7 454 190.6 414.1C182.8 403.4 185.2 388.4 195.9 380.6C206.6 372.8 221.6 375.2 229.4 385.9zM208 272C208 254.3 222.3 240 240 240C257.7 240 272 254.3 272 272C272 289.7 257.7 304 240 304C222.3 304 208 289.7 208 272zM400 240C417.7 240 432 254.3 432 272C432 289.7 417.7 304 400 304C382.3 304 368 289.7 368 272C368 254.3 382.3 240 400 240z" />
+                    </svg>
+                </label>
+
+
+            </div>
+
+            </button>
+            <input type="file" accept="image/*" id="img-upld-inp" hidden>
             <button type="submit" id="send-msg">
                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                     fill="#e8eaed">
@@ -54,8 +84,23 @@
                 </svg>
             </button>
         </form>
+        <input type="checkbox" id="emoji-togg-btn" hidden>
+        <div id="emoji-kbd">
+
+        </div>
     </section>
+
+    <div class="toast-noti">
+        <svg width="24" height="24" fill="var(--prim-tx)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+            <path
+                d="M320 112C434.9 112 528 205.1 528 320C528 434.9 434.9 528 320 528C205.1 528 112 434.9 112 320C112 205.1 205.1 112 320 112zM320 576C461.4 576 576 461.4 576 320C576 178.6 461.4 64 320 64C178.6 64 64 178.6 64 320C64 461.4 178.6 576 320 576zM320 200C306.7 200 296 210.7 296 224L296 336C296 349.3 306.7 360 320 360C333.3 360 344 349.3 344 336L344 224C344 210.7 333.3 200 320 200zM346.7 416C347.3 406.1 342.4 396.7 333.9 391.5C325.4 386.4 314.7 386.4 306.2 391.5C297.7 396.7 292.8 406.1 293.4 416C292.8 425.9 297.7 435.3 306.2 440.5C314.7 445.6 325.4 445.6 333.9 440.5C342.4 435.3 347.3 425.9 346.7 416z" />
+        </svg>
+
+        <p>hello</p>
+    </div>
     <script src="chatroom.js" type="module"></script>
+    <script src="emoji.js" type="module"></script>
+
 </body>
 
 </html>

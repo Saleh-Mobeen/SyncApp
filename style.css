@@ -23,11 +23,19 @@
     --err-bg: #ffe6e6;
 }
 
+@font-face {
+    font-family: 'Noto';
+    src: url('/NotoColorEmoji.ttf') format('truetype');
+}
+
 body {
     margin: 0px;
     background-color: var(--bg);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif, 'NoTo' !important;
+
+    overflow-x: hidden;
 }
+
 
 #auth-body {
     display: flex;
@@ -48,7 +56,8 @@ body {
 
 #profile-body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: centers;
     align-items: center;
     margin: 0px;
     width: 100vw;
@@ -69,6 +78,36 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+
+.toast-noti {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    background-color: var(--err-tx);
+    top: 10px;
+    right: 10px;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 1em;
+    z-index: 9999999;
+    min-width: 15vw;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    transform: translateX(120%);
+    transition: transform 0.5s ease;
+}
+
+.toast-noti.show {
+    transform: translateX(0);
+}
+
+.toast-noti:hover {
+    transform: translateX(0);
+}
+
+.toast-noti p {
+    margin: 0 10px;
+    color: var(--prim-tx);
 }
 
 .logo {
@@ -183,7 +222,7 @@ body {
     border: 1px solid var(--inp-bord);
     border-radius: 5px;
     background-color: var(--inp-bg);
-    font-size: 1.3rem;
+    font-size: 1rem;
 
 
 }
@@ -559,7 +598,7 @@ input:-moz-autofill {
     pointer-events: none;
 }
 
-div.full-img {
+.contact-img.full-img {
     position: fixed;
     width: auto;
     height: auto;
@@ -572,7 +611,7 @@ div.full-img {
     transform: translate(-50%, -50%);
 }
 
-.full-img::after {
+.contact-img.full-img::after {
     content: '';
     position: absolute;
     width: 100vw;
@@ -582,7 +621,7 @@ div.full-img {
     pointer-events: all;
 }
 
-.full-img img {
+.contact-img.full-img img {
     width: auto;
     height: auto;
     max-width: 90vw;
@@ -826,6 +865,7 @@ details summary::marker {
     box-sizing: border-box;
     border-radius: 30px;
     box-shadow: 0 0 10px 2px#333;
+    margin-top: 100px;
 }
 
 #profile-body>a {
@@ -889,6 +929,12 @@ details summary::marker {
 
 .file-inp label:hover {
     background-color: var(--head-bg);
+}
+
+.tp-set {
+
+    display: inline;
+    margin-top: 30px;
 }
 
 
@@ -1022,6 +1068,7 @@ svg {
 
 
 #message-f textarea {
+    font-family: Arial, Helvetica, sans-serif, 'NoTo' !important;
     display: inline-block;
     box-sizing: border-box;
     border: 1px solid var(--inp-bord);
@@ -1032,6 +1079,7 @@ svg {
     resize: none;
     overflow: hidden;
     padding: 0.5em;
+    padding-right: 50px;
     width: calc(100% - 85px);
     height: auto;
     min-height: 1.5rem;
@@ -1039,8 +1087,77 @@ svg {
     outline: none;
 }
 
-#message-f button {
+#message-f .msg-opt {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 100px;
+    top: 50%;
+    padding: 5px;
+    background-color: transparent;
+    transform: translateY(-50%);
+}
+
+#message-f .msg-opt label,
+#message-f .msg-opt button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+
+#message-f .msg-opt label:hover,
+#message-f .msg-opt button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+.img-preview {
+    visibility: hidden;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    max-width: 200px;
+    max-height: 200px;
+    padding: 0px 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    background-color: var(--bg-secon);
+}
+
+.img-preview.show {
+    visibility: visible;
+}
+
+.img-preview img {
+    width: auto;
+    height: auto;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.img-preview button {
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+
+
+#message-f button#send-msg {
     right: 0%;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1055,13 +1172,51 @@ svg {
     border-radius: 50px;
 }
 
+#message-f #send-msg.sending {
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
 
+#message-f #send-msg.sending::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 14px;
+    height: 14px;
+    border: 2px solid #fff;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}
+
+#message-f #send-msg.sending svg {
+    visibility: hidden;
+}
+
+@keyframes spin {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
 
 .chat-area {
     display: flex;
     flex-direction: column;
     height: 100%;
     margin-bottom: 10px;
+    transition: margin 0.5s ease 0.3s;
+}
+
+.chat-area:has(+ .msg-area>#emoji-togg-btn:checked) {
+    margin-bottom: 210px;
+    transition: none;
 }
 
 .message {
@@ -1132,6 +1287,45 @@ svg {
 
 }
 
+.message .image-box img {
+    width: auto;
+    height: auto;
+    max-width: 300px;
+    max-height: 300px;
+    margin: 10px;
+}
+
+.message .image-box.full-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.message .image-box.full-img::after {
+    content: '';
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    pointer-events: all;
+}
+
+.message .image-box.full-img img {
+    max-width: 90vw;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+}
+
 .message[type=other]>span {
     left: 0;
 }
@@ -1171,6 +1365,64 @@ svg {
 .date-tag p {
     margin: 0;
     font-size: 0.7rem;
+}
+
+#emoji-togg-btn:checked+#emoji-kbd {
+    transform: translateY(0);
+    height: auto;
+    padding: 15px;
+
+}
+
+#emoji-kbd {
+    display: flex;
+    /* justify-content: ; */
+    transform: translateY(200px);
+    flex-wrap: wrap;
+    background-color: var(--bg-secon);
+    width: calc(100% - 85px);
+    height: 0;
+    margin-right: auto;
+    margin-top: 10px;
+    padding: 0;
+    gap: 5px;
+    max-height: 200px;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    interpolate-size: allow-keywords;
+    transition: transform 0.5s ease, height 0.5s ease, padding 0.5s ease;
+}
+
+
+
+#emoji-kbd div {
+    font-family: 'NoTo', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    font-size: 1.5em;
+    user-select: none;
+}
+
+#emoji-kbd div:hover {
+
+    background-color: rgba(0, 0, 0, 0.2);
+
+}
+
+#emoji-kbd p {
+    display: flex;
+    width: 100%;
+    user-select: none;
+}
+
+#emoji-kbd img {
+    width: auto;
+    height: 24px;
+    pointer-events: none;
 }
 
 @keyframes OnewMsg {

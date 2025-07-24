@@ -1,4 +1,4 @@
-import { getChat, waitForAuth, sendMessage, addListener, userData, initLinks, regScript } from "./firebase.js";
+import { getChat, waitForAuth, sendMessage, addListener, userData, initLinks, regScript, showToast } from "./firebase.js";
 import { indexedStorage } from './indexedStorage.js';
 
 init()
@@ -11,6 +11,16 @@ export async function init() {
     const messageF = document.getElementById('message-f');
     const msgInp = messageF.querySelector('textarea')
     const replymsg = document.getElementById('reply-message');
+    const imgUpld = document.getElementById('img-upld-inp');
+    const imgPrev = document.getElementById('img-prev-src');
+
+    document.querySelector('.emoji-togg').addEventListener('click', () => {
+        requestAnimationFrame(() => {
+            scrollBtm()
+        });
+    })
+
+
     let chatref;
     let chatData;
     const chatArea = document.getElementsByClassName('chat-area')[0];
@@ -73,6 +83,8 @@ export async function init() {
                 showmsg(e, false)
 
             })
+            lastMsg = null
+
             loadedMsgs += bunchsize
             if (loadedMsgs > chatData.messages.length) {
                 loadedMsgs = null
@@ -102,12 +114,66 @@ export async function init() {
             }
         })
 
-        function msgsub() {
+        imgUpld.addEventListener('change', () => {
+            const file = imgUpld.files[0];
+            if (!file) {
 
-            fetch('https://9n5t68-3000.csb.app/ping').then((res) => {
+                return;
+            }
+            showToast("Images are secure, but don't upload personal or sensitive info.")
+            const url = URL.createObjectURL(file);
+            imgPrev.src = url;
+            imgPrev.parentElement.classList.add('show')
+
+            imgPrev.onload = () => URL.revokeObjectURL(url);
+            imgPrev.parentElement.querySelector('button').onclick = () => {
+                imgPrev.src = '';
+                imgUpld.value = ''
+                imgPrev.parentElement.classList.remove('show')
+
+            };
+        })
+
+        async function uploadImage(file) {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.readAsDataURL(file);
+                reader.onload = async () => {
+                    try {
+                        const image = reader.result.split(',')[1];
+                        const imageres = await (await fetch('https://9n5t68-3000.csb.app/uploadImage', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ image })
+                        })).json();
+                        if (imageres.ok) {
+                            resolve(imageres.imgUrl);
+                        } else {
+                            reject("Image upload failed");
+                        }
+                    } catch (e) {
+                        reject(e);
+                    }
+                };
+                reader.onerror = reject;
+            });
+        }
+
+        async function msgsub() {
+            document.querySelector('#send-msg').classList.add('sending')
+
+            fetch('https://9n5t68-3000.csb.app/ping').then(async (res) => {
                 console.warn(res);
 
-                if (msgInp.value.trim() != '') {
+                if (msgInp.value.trim() != '' || imgUpld.value != '') {
+                    console.log('sending');
+                    let imageurl = ''
+
+                    if (imgUpld.value != '') {
+                        const file = imgUpld.files[0]
+                        imageurl = await uploadImage(file);
+                    }
+
                     const message = {
                         text: msgInp.value.trim(),
                         sender: userData.email
@@ -117,6 +183,15 @@ export async function init() {
 
                     if (messageF.classList.contains('reply-inp')) {
                         message.replyTo = messageF.getAttribute('data-reply-ts')
+                    }
+
+                    if (imageurl) {
+                        console.log('yes image');
+
+                        message.imageUrl = imageurl
+                    } else {
+                        console.log(imageurl);
+
                     }
                     sendMessage(message, chatref)
                     fetch('https://9n5t68-3000.csb.app/notify-user', {
@@ -131,12 +206,16 @@ export async function init() {
                         })
                     }).then((res) => { console.warn(res) })
                     cancelReply()
+                    cancelImg()
+                    document.querySelector('#send-msg').classList.remove('sending')
+
                     msgInp.value = ""
                     msgInp.style.height = 'auto'; msgInp.style.height = `${msgInp.scrollHeight}px`
                 }
 
             }, (err) => {
                 console.log(err);
+                document.querySelector('#send-msg').classList.remove('sending')
 
             })
 
@@ -149,7 +228,7 @@ export async function init() {
     function showmsg(msgdata, animate = true) {
 
 
-        const { text, timestamp, sender, replyTo } = msgdata
+        const { text, timestamp, sender, replyTo, imageUrl } = msgdata
         // console.log('new msg' + text, replyTo, chatData.messages.includes(msgdata));
 
 
@@ -188,6 +267,21 @@ export async function init() {
 
         // console.log(replyTo);
 
+        if (imageUrl) {
+            const imagebox = document.createElement('div')
+            const imageele = document.createElement('img')
+
+            console.log(imageele);
+
+
+            imagebox.addEventListener('click', () => imagebox.classList.toggle('full-img'))
+            imageele.addEventListener('load', scrollBtm, { once: true })
+            imagebox.classList.add('image-box')
+            imageele.src = imageUrl
+            imagebox.append(imageele)
+            msgdiv.prepend(imagebox)
+        }
+
         if (replyTo) {
             const replybox = document.createElement('div')
 
@@ -195,6 +289,7 @@ export async function init() {
             replybox.innerHTML = `<p>${chatData.messages.find(msg => msg.timestamp == replyTo).text}</p>`
             msgdiv.prepend(replybox)
         }
+
 
         if (sender != userData.email) {
 
@@ -204,6 +299,8 @@ export async function init() {
             replybtn.onclick = handlereply
             msgdiv.appendChild(replybtn)
         }
+
+        console.log(lastMsg);
 
         chatArea.insertBefore(msgdiv, lastMsg)
 
@@ -253,4 +350,12 @@ export async function init() {
             replymsg.innerHTML = ''
         }, 500);
     }
+
+
+    function cancelImg() {
+        imgPrev.src = '';
+        imgUpld.value = ''
+        imgPrev.parentElement.classList.remove('show')
+    }
+
 }

@@ -48,6 +48,22 @@ export async function goOffline() {
         });
 }
 
+export function showToast(msg) {
+    try {
+        const toast = document.querySelector('.toast-noti')
+        toast.querySelector('p').textContent = msg
+        toast.classList.add('show')
+
+        setTimeout(() => {
+            toast.classList.remove('show')
+        }, 3000);
+
+        return
+    } catch (error) {
+        throw new Error('Toast elemnt cant be found')
+    }
+}
+
 
 export async function initLinks() {
     window.addEventListener("popstate", popstate)
