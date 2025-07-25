@@ -163,8 +163,6 @@ self.addEventListener('push', async event => {
         console.log(data.from);
 
         const options = {
-            tag: tag,
-            renotify: true,
             icon: data.image,
             badge: data.image,
             body: `${data.from}: ${data.text}`,
